@@ -69,7 +69,7 @@ posts = "/posts/:year/:month/:day/:slug/"
 [params.lang]
 
     [params.lang.author]
-      en = "Your Name"
+      en = "黎凿"
       cn = "你的名字"
 
     [params.lang.madeWith]
