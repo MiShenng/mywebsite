@@ -7,7 +7,7 @@ draft: false
 toc: false
 categories:
   - poem
-tags: article
+tags: poem
 ---
 太阳令日历下地走路<br>
 干涸的河流倒映在玻璃高楼<br>
