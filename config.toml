@@ -62,10 +62,10 @@ posts = "/posts/:year/:month/:day/:slug/"
 
 [params.logo]
   # Change the logo picture as your prefer:
-  url = "media/hugo-logo.png" # you can change it
+  url = "https://github.com/MiShenng/mywebsite/blob/main/images/logo.png?raw=true" # you can change it
   width = 50.0
   height = 50.0
-  alt = "Hugo-ht"
+  alt = "Lizao"
 
 [params.lang]
 
