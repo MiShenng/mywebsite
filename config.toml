@@ -11,25 +11,25 @@ cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
 posts = "/posts/:year/:month/:day/:slug/"
 
-[[menu.cn]]
-    name = "主页"
+[[menu.en]]
+    name = "Home"
     url = "/"
     weight = 1
-[[menu.cn]]
-    name = "关于"
-    url = "/cn/about/"
+[[menu.en]]
+    name = "About"
+    url = "/en/about/"
     weight = 2
-[[menu.cn]]
+[[menu.en]]
     name = "Posts"
     url = "/en/posts/"
     weight = 3
-[[menu.cn]]
-    name = "英文"
-    url = "/en/posts/"
+[[menu.en]]
+    name = "中文"
+    url = "/cn/posts/"
     weight = 4
 [[menu.cn]]
     name = "关于"
-    url = "/en/about/"
+    url = "/cn/about/"
     weight = 1
 [[menu.cn]]
     name = "日志"
@@ -39,6 +39,26 @@ posts = "/posts/:year/:month/:day/:slug/"
     name = "English"
     url = "/"
     weight = 3
+[[menu.cn]]
+    name = "主页"
+    url = "/"
+    weight = 1
+[[menu.cn]]
+    name = "关于"
+    url = "/cn/about/"
+    weight = 2
+[[menu.cn]]
+    name = "English"
+    url = "/en/about"
+    weight = 3
+[[menu.en]]
+    name = "About"
+    url = "/en/about"
+    weight = 1
+[[menu.en]]
+    name = "中文"
+    url = "/"
+    weight = 2
 
 [params]
     description = "Persnal website of Lizao"
