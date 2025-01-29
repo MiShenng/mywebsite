@@ -39,26 +39,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     name = "English"
     url = "/"
     weight = 3
-[[menu.cn]]
-    name = "主页"
-    url = "/"
-    weight = 1
-[[menu.cn]]
-    name = "关于"
-    url = "/cn/about/"
-    weight = 2
-[[menu.cn]]
-    name = "English"
-    url = "/en/about"
-    weight = 3
-[[menu.en]]
-    name = "About"
-    url = "/en/about"
-    weight = 1
-[[menu.en]]
-    name = "中文"
-    url = "/"
-    weight = 2
+
 
 [params]
     description = "Persnal website of Lizao"
@@ -66,7 +47,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "posts"
     # singleLang = true
-    defaultLang = "cn"
+    defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
     favicon = "media/hugo-logo.png"
@@ -110,7 +91,7 @@ posts = "/posts/:year/:month/:day/:slug/"
 
     [params.lang.sourceCode]
       en = "Content in"
-      cn = "内容存于"
+      cn = "Content in"
 
     [params.lang.subscribe]
       en = "Subscribe"
