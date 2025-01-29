@@ -1,6 +1,6 @@
 baseURL = "https://mybolg-lizao.vercel.app/"
 languageCode = "en-us"
-title = "Hugo-HT"
+title = "Lizao's blog"
 theme = "hugo-ht"
 footnotereturnlinkcontents = "↩"
 enableRobotsTXT = true
@@ -46,7 +46,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "posts"
     # singleLang = true
-    defaultLang = "en"
+    defaultLang = "cn"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
     favicon = "media/hugo-logo.png"
@@ -69,8 +69,8 @@ posts = "/posts/:year/:month/:day/:slug/"
 [params.lang]
 
     [params.lang.author]
-      en = "黎凿"
-      cn = "你的名字"
+      en = "Lizao"
+      cn = "黎凿"
 
     [params.lang.madeWith]
       en = "Made with"
