@@ -1,6 +1,6 @@
 ---
 title: "不是读后感"
-date: 2024-9-16
+date: 2024-09-16
 author: 黎凿
 slug: Not a review
 draft: false
