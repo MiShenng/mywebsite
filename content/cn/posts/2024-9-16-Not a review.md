@@ -1,8 +1,8 @@
 ---
-title: "失眠"
-date: 2024-10-25
+title: "不是读后感"
+date: 2024-9-16
 author: 黎凿
-slug: Lost sleep
+slug: Not a review
 draft: false
 toc: false
 categories:
