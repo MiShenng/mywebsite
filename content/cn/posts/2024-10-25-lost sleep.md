@@ -1,7 +1,7 @@
 ---
 title: "失眠"
 date: 2024-10-25
-author: 黎凿
+author: "黎凿"
 slug: Lost sleep
 draft: false
 toc: false
