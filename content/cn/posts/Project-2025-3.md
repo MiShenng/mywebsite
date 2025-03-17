@@ -1,8 +1,8 @@
 ---
-title: "仅有的日子"
+title: "2025春-项目1"
 date: 2025-03-17
 author: "李凿"
-slug: The last days
+slug: Project_record_1
 draft: false
 toc: false
 categories:
