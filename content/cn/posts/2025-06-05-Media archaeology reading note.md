@@ -1,30 +1,15 @@
 ---
-title: "无题"
-date: 2025-01-22
+title: "媒介考古学读书笔记"
+date: 2025-06-05
 author: "黎凿"
-slug: No name
+slug: media-archaeology
 draft: false
 toc: false
 categories:
-  - poem
+  - reading note
 tags:
-  - poem
+  - reading note
 ---
 
-红砖白楼寄放照片，关于<br>
-春天的味道，在你头发上复苏<br>
-可是作为故乡青山和大江大河意象的代替<br>
-没有一条路，通向你<br>
-也许没关系，都一样<br>
-车道两侧也曾迷失过很多村庄<br>
-拴马柱忘不掉水浪曾上岸<br>
-带来白色玉兰花和渔网<br>
-所以<br>
-疲惫而嘶叫的马，还给我<br>
-从黑夜到黎明反复沸腾的酒<br>
-半个易拉罐的量，这么多就好<br>
-渔夫啊渔夫，能否荡开你的木头朋友<br>
-我请求你，破开藏在酒里的弧光<br>
-但不要再漏出<br>
-我那浸润卑劣的肺叶<br>
-透明发亮的心脏<br>
+## 媒介考古学笔记
+

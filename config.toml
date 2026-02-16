@@ -42,7 +42,7 @@ posts = "/posts/:year/:month/:day/:slug/"
 
 
 [params]
-    description = "Persnal website of Lizao"
+    description = "Personal website of Lizao"
     homeText = "Welcome to my backend"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "posts"

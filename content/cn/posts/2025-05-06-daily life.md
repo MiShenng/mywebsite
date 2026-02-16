@@ -2,7 +2,7 @@
 title: "四月、春天、重庆鸡公煲与榆中幻象"
 date: 2025-05-06
 author: "黎凿"
-slug: round about stree
+slug: round-about-street
 draft: false
 toc: false
 categories:

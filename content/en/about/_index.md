@@ -1,6 +1,6 @@
 ---
 title: "Curriculum Vitae"
-type : list-single
+type: list-single
 ---
 
 ## No serve for English

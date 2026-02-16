@@ -2,7 +2,7 @@
 title: "仅有的日子"
 date: 2025-03-16
 author: "帕斯捷尔纳克/刘文飞"
-slug: The last days
+slug: the-last-days
 draft: false
 toc: false
 categories:
