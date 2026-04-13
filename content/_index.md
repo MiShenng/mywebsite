@@ -6,4 +6,4 @@ title: Home
 
 欢迎来到我的网站——我的后台！我是Lizao（黎凿），兰州大学新闻学本科三年级。此处一片荒芜还待开发，请给时间一点时间。
 
-Welcome to my website – my backstage! I am Lizao (黎凿), a sophomore majoring in Journalism at Lanzhou University. This space is still barren and awaits development, so please give time some time.
+Welcome to my website - my backstage! I'm Chisel Li, a third-year journalism undergraduate at Lanzhou University. This is a barren area still to be developed, so please give time a little time.
