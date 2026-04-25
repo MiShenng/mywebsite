@@ -3,7 +3,7 @@
   .custom-footer {
     text-align: center;
     padding: 20px 0 40px; /* 控制上下留白 */
-    font-family: 'CirceSlabB-Light', sans-serif;
+    font-family: inherit;
   }
   
   .footer-social-line {
@@ -43,11 +43,17 @@
   
   .social-github:hover { color: #333333 !important; }
   
-  /* 豆瓣图片默认变灰，悬浮恢复彩色 */
-  .social-douban img { filter: grayscale(100%); transition: filter 0.3s ease; }
-  .social-douban:hover img { filter: grayscale(0%) !important; }
+  /* 豆瓣图片默认灰化，悬停恢复本色，并与字体图标视觉大小对齐 */
+  .social-douban .douban-icon {
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: grayscale(100%) brightness(0.9);
+    transition: filter 0.3s ease;
+  }
+  .social-douban:hover .douban-icon { filter: none; }
 
-  .social-douban:hover { color: #007722 !important; } /* 豆瓣绿 */
   .social-facebook:hover { color: #1877F2 !important; } /* Facebook 蓝 */
   .social-email:hover { color: #D44638 !important; } /* 邮箱红 */
 
@@ -77,7 +83,7 @@
       
       {{ if .douban }}
       <a href="{{ .douban }}" class="social-douban" target="_blank" title="Douban">
-        <img src="/media/douban.png" alt="Douban" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle;">
+        <img src="/media/douban.png" alt="Douban" class="douban-icon">
       </a>
       {{ end }}
       
