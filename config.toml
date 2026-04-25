@@ -62,7 +62,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    favicon = "media/symbol.png"
+    favicon = "media/symbol.svg"
     # Edit by yourself:
     GithubEdit = "https://github.com/MiShenng/mywebsite/edit/main/content"
     copyright = "&copy;"
@@ -74,7 +74,7 @@ posts = "/posts/:year/:month/:day/:slug/"
 
 [params.logo]
   # Change the logo picture as your prefer:
-  url = "media/symbol.png" # you can change it
+  url = "media/symbol.svg" # you can change it
   width = 50.0
   height = 50.0
   alt = "Lizao"
