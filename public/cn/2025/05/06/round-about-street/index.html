@@ -38,8 +38,8 @@
         <nav class="nav" >
       <a href="/" class="nav-logo">
         <img src="/media/symbol.svg"
-         width="50"
-         height="50"
+         width="67"
+         height="67"
          alt="Lizao">
       </a>
 
@@ -125,7 +125,9 @@
   .custom-footer {
     text-align: center;
     padding: 20px 0 40px;  
-    font-family: 'CirceSlabB-Light', sans-serif;
+    font-family: Charter, Georgia, 'Helvetica Neue', Arial,
+      'Songti SC', 'SimSun', 'Hiragino Sans GB', '宋体', 'Microsoft YaHei',
+      'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体', sans-serif;
   }
   
   .footer-social-line {
@@ -156,6 +158,11 @@
     transition: color 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .footer-social-icons a i {
+    line-height: 1;
   }
 
    
@@ -166,10 +173,22 @@
   .social-github:hover { color: #333333 !important; }
   
    
-  .social-douban img { filter: grayscale(100%); transition: filter 0.3s ease; }
-  .social-douban:hover img { filter: grayscale(0%) !important; }
-
+  .social-douban .douban-icon {
+    width: 21px;
+    height: 21px;
+    display: block;
+    background-color: currentColor;
+    -webkit-mask-image: url('/media/douban.png');
+    mask-image: url('/media/douban.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
   .social-douban:hover { color: #007722 !important; }  
+
   .social-facebook:hover { color: #1877F2 !important; }  
   .social-email:hover { color: #D44638 !important; }  
 
@@ -217,7 +236,7 @@
       
       
       <a href="https://www.douban.com/people/MiShenng/" class="social-douban" target="_blank" title="Douban">
-        <img src="/media/douban.png" alt="Douban" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle;">
+        <span class="douban-icon" aria-hidden="true"></span>
       </a>
       
       
