@@ -1,4 +1,4 @@
-baseURL = "https://myblog-lizao.vercel.app/"
+baseURL = "https://www.chiselli.com/"
 languageCode = "en-us"
 title = "Lizao's blog"
 theme = "hugo-ht"
