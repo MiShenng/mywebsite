@@ -126,7 +126,7 @@
   .custom-footer {
     text-align: center;
     padding: 20px 0 40px;  
-    font-family: inherit;
+    font-family: 'CirceSlabB-Light', sans-serif;
   }
   
   .footer-social-line {
@@ -161,9 +161,17 @@
 
    
   .footer-social-icons a:hover {
-    color: #0056b3; 
     transform: translateY(-2px);
   }
+  
+  .social-github:hover { color: #333333 !important; }
+  
+   
+  .social-douban img { filter: grayscale(100%); transition: filter 0.3s ease; }
+  .social-douban:hover img { filter: grayscale(0%) !important; }
+
+  .social-facebook:hover { color: #1877F2 !important; }  
+  .social-email:hover { color: #D44638 !important; }  
 
   .footer-copyright {
     color: #666666;
@@ -190,25 +198,25 @@
     <div class="footer-social-icons">
     
       
-      <a href="https://github.com/MiShenng" target="_blank" title="GitHub">
+      <a href="https://github.com/MiShenng" class="social-github" target="_blank" title="GitHub">
         <i class="fa fa-github"></i>
       </a>
       
       
       
-      <a href="https://www.douban.com/people/your-id/" target="_blank" title="Douban">
-        <i class="fa fa-book"></i>
+      <a href="https://www.douban.com/people/MiShenng/" class="social-douban" target="_blank" title="Douban">
+        <img src="/media/douban.png" alt="Douban" style="width: 26px; height: 26px; display: inline-block; vertical-align: middle;">
       </a>
       
       
       
-      <a href="https://www.facebook.com/your-profile" target="_blank" title="Facebook">
+      <a href="https://www.facebook.com/share/1CRZUWhnFp/" class="social-facebook" target="_blank" title="Facebook">
         <i class="fa fa-facebook-square"></i>
       </a>
       
       
       
-      <a href="mailto:your-email@example.com" title="Email">
+      <a href="mailto:lizihao2023@lzu.edu.cn" class="social-email" title="Email">
         <i class="fa fa-envelope"></i>
       </a>
       

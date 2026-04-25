@@ -3,7 +3,7 @@
   .custom-footer {
     text-align: center;
     padding: 20px 0 40px; /* 控制上下留白 */
-    font-family: inherit;
+    font-family: 'CirceSlabB-Light', sans-serif;
   }
   
   .footer-social-line {
@@ -36,11 +36,19 @@
     align-items: center;
   }
 
-  /* 悬停动效：低调深蓝/深灰，并微微上浮 */
+  /* 悬停动效：微微上浮并分别赋予独立颜色 */
   .footer-social-icons a:hover {
-    color: #0056b3; 
     transform: translateY(-2px);
   }
+  
+  .social-github:hover { color: #333333 !important; }
+  
+  /* 豆瓣使用图片，悬浮时取消灰度恢复彩色 */
+  .social-douban img { filter: grayscale(100%); transition: filter 0.3s ease; }
+  .social-douban:hover img { filter: grayscale(0%) !important; }
+
+  .social-facebook:hover { color: #1877F2 !important; } /* Facebook 蓝占位 */
+  .social-email:hover { color: #D44638 !important; } /* 邮箱红占位 */
 
   .footer-copyright {
     color: #666666;
@@ -61,25 +69,25 @@
     <div class="footer-social-icons">
     {{ with .Site.Params.social }}
       {{ if .github }}
-      <a href="{{ .github }}" target="_blank" title="GitHub">
+      <a href="{{ .github }}" class="social-github" target="_blank" title="GitHub">
         <i class="fa fa-github"></i>
       </a>
       {{ end }}
       
       {{ if .douban }}
-      <a href="{{ .douban }}" target="_blank" title="Douban">
-        <i class="fa fa-book"></i>
+      <a href="{{ .douban }}" class="social-douban" target="_blank" title="Douban">
+        <img src="/media/douban.png" alt="Douban" style="width: 26px; height: 26px; display: inline-block; vertical-align: middle;">
       </a>
       {{ end }}
       
       {{ if .facebook }}
-      <a href="{{ .facebook }}" target="_blank" title="Facebook">
+      <a href="{{ .facebook }}" class="social-facebook" target="_blank" title="Facebook">
         <i class="fa fa-facebook-square"></i>
       </a>
       {{ end }}
       
       {{ if .email }}
-      <a href="mailto:{{ .email }}" title="Email">
+      <a href="mailto:{{ .email }}" class="social-email" title="Email">
         <i class="fa fa-envelope"></i>
       </a>
       {{ end }}
