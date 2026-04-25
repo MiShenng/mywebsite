@@ -36,6 +36,11 @@
     transition: color 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .footer-social-icons a i {
+    line-height: 1;
   }
 
   /* 悬停动效：微微上浮并分别赋予独立颜色 */
@@ -45,16 +50,22 @@
   
   .social-github:hover { color: #333333 !important; }
   
-  /* 豆瓣图片默认灰化，悬停恢复本色，并与字体图标视觉大小对齐 */
+  /* 用 mask 把豆瓣位图转为单色图标，行为与字体图标一致 */
   .social-douban .douban-icon {
-    width: 22px;
-    height: 22px;
-    display: inline-block;
-    vertical-align: middle;
-    filter: grayscale(100%) brightness(0.9);
-    transition: filter 0.3s ease;
+    width: 21px;
+    height: 21px;
+    display: block;
+    background-color: currentColor;
+    -webkit-mask-image: url('/media/douban.png');
+    mask-image: url('/media/douban.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
   }
-  .social-douban:hover .douban-icon { filter: none; }
+  .social-douban:hover { color: #007722 !important; } /* 豆瓣绿 */
 
   .social-facebook:hover { color: #1877F2 !important; } /* Facebook 蓝 */
   .social-email:hover { color: #D44638 !important; } /* 邮箱红 */
@@ -85,7 +96,7 @@
       
       {{ if .douban }}
       <a href="{{ .douban }}" class="social-douban" target="_blank" title="Douban">
-        <img src="/media/douban.png" alt="Douban" class="douban-icon">
+        <span class="douban-icon" aria-hidden="true"></span>
       </a>
       {{ end }}
       
