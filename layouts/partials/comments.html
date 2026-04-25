@@ -1,5 +1,5 @@
-<div class="content">
 {{ if and (not .IsSection) (not .IsHome) (not (eq .Kind "term"))}}
+<div class="content">
 <!-- 这里默认使用了 Utterances 留言板系统，它比 Giscus 配置更简单。
      注意：你需要在使用前前往 https://github.com/apps/utterances 
      点击 Install 并授权给你的 MiShenng/mywebsite 仓库。 -->
@@ -10,6 +10,6 @@
         crossorigin="anonymous"
         async>
 </script>
-</br>
-{{ end }} 
+<br>
 </div>
+{{ end }} 

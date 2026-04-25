@@ -1,40 +1,94 @@
-<footer class="footer">
+<style>
+  /* 极简高级感 Footer 样式 */
+  .custom-footer {
+    text-align: center;
+    padding: 20px 0 40px; /* 控制上下留白 */
+    font-family: inherit;
+  }
+  
+  .footer-social-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px; /* 第一行和第二行的间距 */
+  }
+
+  .footer-text-prefix {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-right: 12px;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* 图标之间的间距 */
+  }
+
+  .footer-social-icons a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 18px; /* 文字的1.2倍 (15px * 1.2 = 18px) */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 悬停动效：低调深蓝/深灰，并微微上浮 */
+  .footer-social-icons a:hover {
+    color: #0056b3; 
+    transform: translateY(-2px);
+  }
+
+  .footer-copyright {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<footer class="custom-footer">
   {{ partial "comments.html" . }}
   {{ partial "foot_custom.html" . }}
 
   <!-- 第一行：社交媒体链接区 -->
-  <div style="text-align: center; margin-bottom: 10px;">
-    <span style="color: #666; font-size: 16px; margin-right: 10px; vertical-align: middle;">More information in</span>
+  <div class="footer-social-line">
+    <span class="footer-text-prefix">More information in</span>
     
+    <div class="footer-social-icons">
     {{ with .Site.Params.social }}
-      {{ with .github }}
-      <a href="{{ . }}" target="_blank" title="GitHub" style="margin: 0 5px; color: #555; text-decoration: none; transition: color 0.3s; vertical-align: middle;">
-        <i class="fa fa-github" style="font-size: 20px"></i>
+      {{ if .github }}
+      <a href="{{ .github }}" target="_blank" title="GitHub">
+        <i class="fa fa-github"></i>
       </a>
       {{ end }}
       
-      {{ with .douban }}
-      <a href="{{ . }}" target="_blank" title="豆瓣" style="margin: 0 5px; color: #555; text-decoration: none; transition: color 0.3s; vertical-align: middle;">
-        <i class="fa fa-book" style="font-size: 18px"></i>
+      {{ if .douban }}
+      <a href="{{ .douban }}" target="_blank" title="Douban">
+        <i class="fa fa-book"></i>
       </a>
       {{ end }}
       
-      {{ with .facebook }}
-      <a href="{{ . }}" target="_blank" title="Facebook" style="margin: 0 5px; color: #555; text-decoration: none; transition: color 0.3s; vertical-align: middle;">
-        <i class="fa fa-facebook-square" style="font-size: 20px"></i>
+      {{ if .facebook }}
+      <a href="{{ .facebook }}" target="_blank" title="Facebook">
+        <i class="fa fa-facebook-square"></i>
       </a>
       {{ end }}
       
-      {{ with .email }}
-      <a href="mailto:{{ . }}" title="Email" style="margin: 0 5px; color: #555; text-decoration: none; transition: color 0.3s; vertical-align: middle;">
-        <i class="fa fa-envelope" style="font-size: 18px"></i>
+      {{ if .email }}
+      <a href="mailto:{{ .email }}" title="Email">
+        <i class="fa fa-envelope"></i>
       </a>
       {{ end }}
     {{ end }}
+    </div>
   </div>
 
   <!-- 第二行：版权信息 -->
-  <div class="copyright-text" style="text-align: center; color: #888; font-size: 14px;">
+  <div class="footer-copyright">
     &copy; Lizao 2024-2026
   </div>
 
