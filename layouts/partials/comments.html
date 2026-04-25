@@ -1,0 +1,15 @@
+<div class="content">
+{{ if and (not .IsSection) (not .IsHome) (not (eq .Kind "term"))}}
+<!-- 这里默认使用了 Utterances 留言板系统，它比 Giscus 配置更简单。
+     注意：你需要在使用前前往 https://github.com/apps/utterances 
+     点击 Install 并授权给你的 MiShenng/mywebsite 仓库。 -->
+<script src="https://utteranc.es/client.js"
+        repo="MiShenng/mywebsite"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</br>
+{{ end }} 
+</div>

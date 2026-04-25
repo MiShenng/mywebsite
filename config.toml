@@ -1,4 +1,4 @@
-baseURL = "https://mybolg-lizao.vercel.app/"
+baseURL = "https://myblog-lizao.vercel.app/"
 languageCode = "en-us"
 title = "Lizao's blog"
 theme = "hugo-ht"
@@ -24,27 +24,39 @@ posts = "/posts/:year/:month/:day/:slug/"
     url = "/en/posts/"
     weight = 3
 [[menu.en]]
-    name = "中文"
-    url = "/cn/posts/"
+    name = "CV"
+    url = "/en/about/cv/"
     weight = 4
+[[menu.en]]
+    name = "中文"
+    url = "/cn/"
+    weight = 5
+[[menu.cn]]
+    name = "首页"
+    url = "/cn/"
+    weight = 1
 [[menu.cn]]
     name = "关于"
     url = "/cn/about/"
-    weight = 1
+    weight = 2
 [[menu.cn]]
     name = "日志"
     url = "/cn/posts/"
-    weight = 2
+    weight = 3
+[[menu.cn]]
+    name = "简历"
+    url = "/cn/about/cv/"
+    weight = 4
 [[menu.cn]]
     name = "English"
     url = "/"
-    weight = 3
+    weight = 5
 
 
 [params]
     description = "Personal website of Lizao"
     homeText = "Welcome to my backend"
-    # Please make sure `blogDirNmae` matches the name used in `menu` above:
+    # Please make sure `blogDirName` matches the name used in `menu` above:
     blogDirName = "posts"
     # singleLang = true
     defaultLang = "en"
@@ -52,7 +64,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     MathJaxVersion = "2.7.5"
     favicon = "media/hugo-logo.png"
     # Edit by yourself:
-    GithubEdit = "https://github.com/MiShenng"
+    GithubEdit = "https://github.com/MiShenng/mywebsite/edit/main/content"
     copyright = "&copy;"
     copyrightYear = "2024-2025"
     # Edit by yourself:
