@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Lizao&#39;s blog</title>
+    <link>https://myblog-lizao.vercel.app/tags/</link>
+    <description>Recent content in Tags on Lizao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://myblog-lizao.vercel.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>reading note</title>
+      <link>https://myblog-lizao.vercel.app/tags/reading-note/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://myblog-lizao.vercel.app/tags/reading-note/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lizao Diary</title>
+      <link>https://myblog-lizao.vercel.app/tags/lizao-diary/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://myblog-lizao.vercel.app/tags/lizao-diary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project records</title>
+      <link>https://myblog-lizao.vercel.app/tags/project-records/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://myblog-lizao.vercel.app/tags/project-records/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>poem</title>
+      <link>https://myblog-lizao.vercel.app/tags/poem/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://myblog-lizao.vercel.app/tags/poem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>article</title>
+      <link>https://myblog-lizao.vercel.app/tags/article/</link>
+      <pubDate>Thu, 07 Jan 2021 13:37:57 -0500</pubDate>
+      <guid>https://myblog-lizao.vercel.app/tags/article/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>English</title>
+      <link>https://myblog-lizao.vercel.app/tags/english/</link>
+      <pubDate>Thu, 07 Jan 2021 13:37:57 -0500</pubDate>
+      <guid>https://myblog-lizao.vercel.app/tags/english/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

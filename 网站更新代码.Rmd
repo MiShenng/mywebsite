@@ -4,7 +4,7 @@ output: html_document
 date: "2025-01-28"
 ---
 #网站更新代码
-cd desktop/quickstart
+cd ~/Desktop/quickstart
 git add . 
 git commit -m "鬼知道第几次更新"
 git push
