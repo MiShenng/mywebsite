@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  26 APR 2026 23:17
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  27 APR 2026 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1229,7 +1229,7 @@ Package rerunfilecheck Info: File `chinese_cv.out' has not changed.
 Here is how much of TeX's memory you used:
  27329 strings out of 468168
  565432 string characters out of 5432815
- 1034201 words of memory out of 5000000
+ 1034199 words of memory out of 5000000
  55589 multiletter control sequences out of 15000+600000
  631898 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
