@@ -1,0 +1,24 @@
+<a name="top"></a>
+{{ partial "header.html" . }}
+
+<style>
+  .cv-frame {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border: none;
+  }
+</style>
+
+<iframe class="cv-frame" src="{{ .Params.pdf }}" title="{{ .Title }}"></iframe>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var header = document.querySelector('.header');
+    var frame = document.querySelector('.cv-frame');
+    var top = header ? header.offsetHeight : 70;
+    frame.style.top = top + 'px';
+  });
+</script>

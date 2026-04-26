@@ -1,13 +1,6 @@
 ---
-title: "黎子豪简历"
-type: list-single
-toc: true
+title: "简历"
+type: cv
+url: "/cn/about/cv/"
+pdf: "/media/chinese_cv.pdf"
 ---
-
-#### 简介
-###### 你好我是黎子豪
-
-
-
-
-
