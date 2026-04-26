@@ -1,8 +1,6 @@
 ---
-title: "CV / Resume"
-type: list-single
-toc: true
+title: "CV"
+type: cv
+url: "/en/about/cv/"
+pdf: "/media/english_cv.pdf"
 ---
-
-#### Introduction
-###### Hello, I am Lizao.

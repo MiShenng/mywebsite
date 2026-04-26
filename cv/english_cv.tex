@@ -1,0 +1,254 @@
+%----------------------------------------------------------------------------------------
+%   CV - Jun-yu Jiang
+%   Based on Jitin Nair template, modified for XeLaTeX with photo
+%----------------------------------------------------------------------------------------
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%   FONT
+%----------------------------------------------------------------------------------------
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+% Section formatting: small caps with rule (matching original)
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+% Hyperlinks
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%----------------------------------------------------------------------------------------
+%   ICON FALLBACKS (replace with \usepackage{fontawesome5} if available)
+%----------------------------------------------------------------------------------------
+\newcommand{\faGlobe}{$\oplus$}
+\newcommand{\faEnvelope}{$\boxtimes$}
+\newcommand{\faGithub}{$\odot$}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%   HEADER: PHOTO + NAME/CONTACT
+%----------------------------------------------------------------------------------------
+\noindent
+\begin{minipage}[c]{0.18\textwidth}
+\includegraphics[width=\linewidth]{photo-for-cv.png}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.80\textwidth}
+\begin{center}
+{\Huge\textbf{Jun-yu Jiang}}\\[7pt]
+\href{https://chiselli.com}{\raisebox{-0.05\height}\faGlobe\ chiselli.com} \ $|$ \ 
+\href{mailto:lizihao2023@lzu.edu.cn}{\raisebox{-0.05\height}\faEnvelope\ lizihao2023@lzu.edu.cn} \ $|$ \ 
+\href{https://github.com/MiShenng}{\raisebox{-0.05\height}\faGithub\ MiShenng}
+\end{center}
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+$\bullet$ \textbf{Lanzhou University, Lanzhou} & \textit{Sep. 2023 -} \\
+\end{tabularx}
+\quad \textit{B.A. in Journalism}
+\quad\quad $\circ$ \textbf{Relevant Coursework:} New Media User Analysis, Communication Psychology, Media Criticism, Research Methods in Communication Studies, Data Journalism, Introduction to Communication Studies
+\quad\quad $\circ$ \textbf{GPA: 4.07/5.0} %這裏要加個連結跳轉到成績單
+
+\vspace{4pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+$\bullet$ \textbf{National Taiwan Normal University, Taipei} & \textit{Aug. 2025 - Dec. 2025} \\
+\end{tabularx}
+\quad \textit{Exchange Student}
+\quad\quad $\circ$ \textbf{Relevant Coursework:} Visual Culture and Communication, Research Methods in the Social Sciences, New Media and Society
+\quad\quad $\circ$ \textbf{GPA: 3.9/4.0} %這裏要加個連結too
+
+
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Conference Papers}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ Framing} & \textit{AEJMC 2026} \\
+\end{tabularx}
+\quad \textit{Li, Z.} \hfill [\href{https://some-link.com}{\faGlobe}]
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Developed the Discursive Polysemy Model (DPM)---a Defining--Positioning--Mobilizing framework that operationalizes the nation-as-floating-signifier concept and maps structured frame configurations in Taiwanese national identity discourse.
+\item Constructed frame co-occurrence networks and sequence patterns to identify cross-party equivalence chains of national identity, revealing divergent articulation of sovereignty, democracy, and security across major candidates.
+\end{itemize}
+
+\vspace{6pt}
+
+%----------------------------------------------------------------------------------------
+%   WORKING PAPERS
+%----------------------------------------------------------------------------------------
+\section{Working Papers \& Research in Progress}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ Scripted Rage and Patriotic Camouflage: The Algorithmic Commodification of Han Chauvinism in Chinese Platform} & \textit{IAMCR 2026} \\
+\end{tabularx}
+\quad \textit{Jiang, J.*} \hfill [\href{https://some-link.com}{\faGlobe}]
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item say something
+\item say something
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   RESEARCH EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Research Experience}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ Basic Research Projects of Central Universities in China} & \textit{Sep. 2024 - May 2025} \\
+\end{tabularx}
+\textit{say something} \quad [\href{https://some-link.com}{\faGlobe}] \hfill \textbf{Rearch Assistant}
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Proposed the ``Frame-Emotion Dual-Track Interaction Model,'' demonstrating how frames and emotional appeals co-evolve to shape perception.
+\item Used LLMs (DeepSeek) and CARER model for large-scale analysis, revealing systematic patterns by media ownership and region.
+\item Constructed a 48-year longitudinal corpus, including manual digitization of pre-2008 print and microfiche archives.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ Ukrainian Poetry Digital Archive Project} & \textit{Jun. 2025 - Jan. 2026 (Expected)} \\
+\end{tabularx}
+\textit{PI: Prof. Amelia Glasser, University of California, San Diego} \hfill \textbf{Research Assistant}
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Built a Chrome extension and data pipeline to systematically collect and de-duplicate 4,000+ Ukrainian Facebook poems, turning an ad-hoc workflow into a reproducible corpus for annotation and analysis.
+\item Co-developed an advanced annotation manual for Ukrainian pronouns, specifying referent categories (SELF\slash INTIMATE\slash LOCAL\slash NATION\slash STATE\slash ENEMY\slash etc.), ``we''-inclusivity, syntactic and semantic roles, discourse functions, and stratified sampling protocols for 400--600 tokens.
+\item Annotating and modeling shifts in poetic voice and polyphony (monologic vs.\ mediated vs.\ choral) together with collocation networks (2014--2025) to trace how person perspective and national-identity vocabularies transform across wartime phases.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ The Symbiotic Development of Digital Nomads and Rural Communities} & \textit{Mar. 2024 - Jul. 2024} \\
+\end{tabularx}
+\textit{PI: Prof. Rui Wang, Communication University of China} \hfill \textbf{Research Assistant}
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Modeled interpersonal communication networks through 20 in-depth interviews, identifying pathways for virtual identity formation and community integration.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ Big Data Project on Global Opinions} & \textit{Jan. 2024 - Jan. 2026 (Expected)} \\
+\end{tabularx}
+\textit{PI: Prof. Ting Zhou, Communication University of China} \hfill \textbf{Research Assistant}
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Executed sentiment analysis on 500+ Western media articles regarding China's ``Two Sessions'' for China's National News Agency.
+\item Monitored credibility risks for foreign social media accounts, producing weekly analytical briefings.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ Desire to Remain Young: An Investigation of Elderly Matchmaking in China} & \textit{Mar. 2023 - Jun. 2023} \\
+\end{tabularx}
+\textit{2024 Paper Data Content Annual Case Collection Award} \hfill \textbf{Research Project Developer}
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Collected and coded qualitative dataset from 22 in-depth interviews to analyze identity and desire in matchmaking contexts.
+\item Designed an award-winning interactive data story website [link], implementing full-stack solution for dynamic user profile comparison.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Selected Work Experience}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ China Telecom} & \textit{Jan. 2022 - Mar. 2022} \\
+\end{tabularx}
+\textit{Event Operations Intern}
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Analyzed real-time social media data (Weibo, WeChat) to model user engagement patterns and public opinion trends.
+\item Performed large-scale comment analysis to identify key audience demographics and public sentiment, guiding content development.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{$\bullet$ iFeng} & \textit{Sep. 2023 - Dec. 2023} \\
+\end{tabularx}
+\textit{News Editing Intern} \hfill [\href{https://some-link.com}{\faGlobe}]
+\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
+\item Authored and published press releases on emerging technology for iFeng.com, covering major industry events.
+\item Developed video scripts for the \textit{ifengTech} column and conducted daily public opinion monitoring, providing analytical briefings.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   ACADEMIC SERVICE
+%----------------------------------------------------------------------------------------
+\section{Academic Service}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+$\bullet$ \textbf{Peer Reviewer}\quad International Communication Association (ICA) & \textit{Nov. 2024} \\[4pt]
+$\bullet$ \textbf{Peer Reviewer}\quad International Political Science Association (IPSA) & \textit{Nov. 2024} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   COMMUNITY
+%----------------------------------------------------------------------------------------
+\section{Community and Volunteer Engagement}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+$\bullet$ \textbf{Outstanding Volunteer}\quad The Third Belt and Road Forum for International Cooperation & \textit{Oct. 2023} \\[4pt]
+$\bullet$ \textbf{Outstanding Volunteer}\quad China International Fair for Trade in Service (CIFTIS) & \textit{Sep. 2023} \\[4pt]
+$\bullet$ \textbf{Volunteer Teacher}\quad Guanghua Foundation Voluntary Teaching Programme & \textit{Jun. 2023} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   AWARDS
+%----------------------------------------------------------------------------------------
+\section{Selected Awards and Honors}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+$\bullet$ \textbf{Outstanding Undergraduate Thesis Award (University-Level)} & \textit{May 2025} \\[4pt]
+$\bullet$ \textbf{Paper Data Content Annual Case Collection Award} & \textit{Jun. 2024} \\[4pt]
+$\bullet$ \textbf{Second-Class Scholarship (University-Level)} & \textit{Nov. 2024} \\[4pt]
+$\bullet$ \textbf{Meritorious Student (University-Level)} & \textit{Sep. 2022 - Sep. 2024} \\[4pt]
+$\bullet$ \textbf{Practical Scholarship (University-Level)} & \textit{Oct. 2023} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Programming} &  Python (Pandas, Scikit-learn, PyTorch, NLTK, spaCy), R, Web (HTML, CSS, JavaScript) \\
+\textbf{Analytical Tools} &  SPSS, NVivo, Tableau, ECharts \\
+\textbf{NLP/ML Models} &  BERT, SBERT, LDA, and other transformer-based architectures \\
+\textbf{Production Tools} &  \LaTeX, Microsoft Office Suite, Adobe Creative Suite (Premiere, Photoshop) \\
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
