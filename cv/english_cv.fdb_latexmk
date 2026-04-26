@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1777220110.47941 "english_cv.xdv" "english_cv.pdf" "english_cv" 1777220112.41069 0
-  "english_cv.xdv" 1777220110.43819 58352 c18879b9a016d92fc0ac3714991a9f41 "xelatex"
+["xdvipdfmx"] 1777221233.51449 "english_cv.xdv" "english_cv.pdf" "english_cv" 1777221235.43049 0
+  "english_cv.xdv" 1777221233.47464 57728 d7fff87ca512ca41f95c0cb4dc8b5a1a "xelatex"
   (generated)
   "english_cv.pdf"
   (rewritten before read)
-["xelatex"] 1777220107.76634 "/Users/mishenng/Desktop/quickstart/cv/english_cv.tex" "english_cv.xdv" "english_cv" 1777220112.4097 0
-  "/Users/mishenng/Desktop/quickstart/cv/english_cv.tex" 1777220107.46887 13801 d1784f08dac58da3ddc705a8800fd706 ""
+["xelatex"] 1777221230.84961 "/Users/mishenng/Desktop/quickstart/cv/english_cv.tex" "english_cv.xdv" "english_cv" 1777221235.42971 0
+  "/Users/mishenng/Desktop/quickstart/cv/english_cv.tex" 1777221230.73438 13771 54c3289bfdb2287d33cbfd827856b14a ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -98,9 +98,9 @@
   "/usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf" 1770478701 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "/usr/local/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1774209578 5948559 ca66a59f4cdd4ce9709bed46018cb9cb ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "english_cv.aux" 1777220110.43738 825 e77c993139adaceaf8ffd372f3499c6e "xelatex"
-  "english_cv.out" 1777220110.43788 861 6d7bb6bb3e222ec4fd1dfb1159e41695 "xelatex"
-  "english_cv.tex" 1777220107.46887 13801 d1784f08dac58da3ddc705a8800fd706 ""
+  "english_cv.aux" 1777221233.47401 825 e77c993139adaceaf8ffd372f3499c6e "xelatex"
+  "english_cv.out" 1777221233.47435 861 6d7bb6bb3e222ec4fd1dfb1159e41695 "xelatex"
+  "english_cv.tex" 1777221230.73438 13771 54c3289bfdb2287d33cbfd827856b14a ""
   "photo-for-cv.png" 1777176819.47706 1648596 cd9e38bc300f54f3d42bc7ea9c8ae7a3 ""
   (generated)
   "english_cv.aux"
