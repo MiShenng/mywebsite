@@ -8,8 +8,27 @@
 %   FONT
 %----------------------------------------------------------------------------------------
 \usepackage{fontspec}
-\setmainfont{TeX Gyre Termes}
-\setsansfont{TeX Gyre Heros}
+\usepackage{xeCJK}
+% Body: a refined serif. Prefer Playfair Display headings + EB Garamond body if available.
+\IfFontExistsTF{EB Garamond}{%
+  \setmainfont{EB Garamond}[Ligatures=TeX, Numbers=OldStyle]
+}{%
+  \setmainfont{Times New Roman}
+}
+\setsansfont{Helvetica Neue}
+% CJK fallback so the single Chinese token "豆瓣" in the header renders cleanly.
+\setCJKmainfont{Songti SC}
+\setCJKsansfont{PingFang SC}
+% Display font for the name — Playfair Display preferred, Garamond fallback.
+\IfFontExistsTF{Playfair Display}{%
+  \newfontfamily{\namefont}{Playfair Display}[LetterSpace=4.0]
+}{%
+  \IfFontExistsTF{Garamond}{%
+    \newfontfamily{\namefont}{Garamond}[LetterSpace=4.0]
+  }{%
+    \newfontfamily{\namefont}{Times New Roman}[LetterSpace=4.0]
+  }%
+}
 
 %----------------------------------------------------------------------------------------
 %   PACKAGES
@@ -27,22 +46,25 @@
 \usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{fontawesome5}
 
 % Section formatting: small caps with rule (matching original)
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
+% Page background — light grey-white for a refined feel
+\usepackage{xcolor}
+\definecolor{pagebg}{HTML}{F7F7F5}
+\usepackage{pagecolor}
+\pagecolor{pagebg}
+
 % Hyperlinks
 \usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\definecolor{linkcolour}{HTML}{2B6CB0}   % refined professional blue
+\definecolor{doubangreen}{HTML}{2A8C3F}  % Douban-style green
+\definecolor{fbblue}{HTML}{1877F2}       % official Facebook blue
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-
-%----------------------------------------------------------------------------------------
-%   ICON FALLBACKS (replace with \usepackage{fontawesome5} if available)
-%----------------------------------------------------------------------------------------
-\newcommand{\faGlobe}{$\oplus$}
-\newcommand{\faEnvelope}{$\boxtimes$}
-\newcommand{\faGithub}{$\odot$}
 
 %----------------------------------------------------------------------------------------
 \begin{document}
@@ -52,18 +74,30 @@
 %   HEADER: PHOTO + NAME/CONTACT
 %----------------------------------------------------------------------------------------
 \noindent
-\begin{minipage}[c]{0.18\textwidth}
+\begin{minipage}[c]{0.20\textwidth}
 \includegraphics[width=\linewidth]{photo-for-cv.png}
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.80\textwidth}
+\begin{minipage}[c]{0.78\textwidth}
 \begin{center}
-{\Huge\textbf{Jun-yu Jiang}}\\[7pt]
-\href{https://chiselli.com}{\raisebox{-0.05\height}\faGlobe\ chiselli.com} \ $|$ \ 
-\href{mailto:lizihao2023@lzu.edu.cn}{\raisebox{-0.05\height}\faEnvelope\ lizihao2023@lzu.edu.cn} \ $|$ \ 
-\href{https://github.com/MiShenng}{\raisebox{-0.05\height}\faGithub\ MiShenng}
+\vspace{50pt}
+% Name — large refined serif with subtle letter-spacing
+{\namefont\fontsize{40}{44}\selectfont Li Zihao}\\[14pt]
+% Top row: 3 primary contacts
+{\sffamily\small\color{linkcolour}%
+  \href{https://chiselli.com}{\faGlobe\,\,chiselli.com}\hspace{2.2em}%
+  \href{mailto:lizihao2023@lzu.edu.cn}{\faEnvelope[regular]\,\,lizihao2023@lzu.edu.cn}\hspace{2.2em}%
+  \href{https://github.com/MiShenng}{\faGithub\,\,MiShenng}%
+}\\[8pt]
+% Bottom row: 2 secondary social contacts, centered beneath
+{\sffamily\small%
+  \href{https://www.douban.com/people/chiselli}{\color{doubangreen}\faBookOpen}\,\,{\color{linkcolour}\href{https://www.douban.com/people/chiselli}{Douban}}\hspace{2.6em}%
+  \href{https://www.facebook.com/chiselli}{\color{fbblue}\faFacebookF}\,\,{\color{linkcolour}\href{https://www.facebook.com/chiselli}{Facebook}}%
+}
 \end{center}
 \end{minipage}
+
+\vspace{6pt}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION
@@ -73,18 +107,18 @@
 \begin{tabularx}{\linewidth}{@{}X r@{}}
 $\bullet$ \textbf{Lanzhou University, Lanzhou} & \textit{Sep. 2023 -} \\
 \end{tabularx}
-\quad \textit{B.A. in Journalism}
-\quad\quad $\circ$ \textbf{Relevant Coursework:} New Media User Analysis, Communication Psychology, Media Criticism, Research Methods in Communication Studies, Data Journalism, Introduction to Communication Studies
-\quad\quad $\circ$ \textbf{GPA: 4.07/5.0} %這裏要加個連結跳轉到成績單
+\quad \textit{B.A. in Journalism}\\
+\quad\quad $\circ$ \textbf{Relevant Coursework:} New Media User Analysis, Communication Psychology, Media Criticism, Research Methods in Communication Studies, Data Journalism, Introduction to Communication Studies\\
+\quad\quad $\circ$ \textbf{GPA: \href{pdfs/en_Transcript_of_Academic_Record.pdf}{4.05/5.0}}
 
 \vspace{4pt}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
 $\bullet$ \textbf{National Taiwan Normal University, Taipei} & \textit{Aug. 2025 - Dec. 2025} \\
 \end{tabularx}
-\quad \textit{Exchange Student}
-\quad\quad $\circ$ \textbf{Relevant Coursework:} Visual Culture and Communication, Research Methods in the Social Sciences, New Media and Society
-\quad\quad $\circ$ \textbf{GPA: 3.9/4.0} %這裏要加個連結too
+\quad \textit{Exchange Student}\\
+\quad\quad $\circ$ \textbf{Relevant Coursework:} Visual Culture and Communication, Research Methods in the Social Sciences, New Media and Society\\
+\quad\quad $\circ$ \textbf{GPA: \href{pdfs/Taiwan_records.pdf}{3.9/4.0}}
 
 
 
@@ -94,12 +128,13 @@ $\bullet$ \textbf{National Taiwan Normal University, Taipei} & \textit{Aug. 2025
 \section{Conference Papers}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{$\bullet$ Framing} & \textit{AEJMC 2026} \\
+\textbf{$\bullet$ Should I stay calm:
+How does the combination of visual and textual frames influence expressions of anger in short video comment sections?} & \textit{AEJMC 2026} \\
 \end{tabularx}
-\quad \textit{Li, Z.} \hfill [\href{https://some-link.com}{\faGlobe}]
+\quad \textit{Li, Zihao.*} \hfill [\href{https://some-link.com}{\faGlobe}]
 \begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
-\item Developed the Discursive Polysemy Model (DPM)---a Defining--Positioning--Mobilizing framework that operationalizes the nation-as-floating-signifier concept and maps structured frame configurations in Taiwanese national identity discourse.
-\item Constructed frame co-occurrence networks and sequence patterns to identify cross-party equivalence chains of national identity, revealing divergent articulation of sovereignty, democracy, and security across major candidates.
+\item This study proposes an analytical method for measuring visual and textual frames in dynamic videos, which was subsequently tested on 439 short videos on Douyin related to the issue of drug addiction in China. Machine learning was then used to identify expressions of anger on a large scale in the comment sections of short video platforms covering this topic, which were used as the dependent variable in a regression analysis.
+\item The results indicate that visual frames take precedence in emotional framing. Different combinations of visual and textual frames correspond significantly to varying degrees of anger expression, and consistency between them influences anger expression in comment sections. Multimodal combinations better explain emotional differences in comment sections than single-modal factors.
 \end{itemize}
 
 \vspace{6pt}
@@ -110,12 +145,12 @@ $\bullet$ \textbf{National Taiwan Normal University, Taipei} & \textit{Aug. 2025
 \section{Working Papers \& Research in Progress}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{$\bullet$ Scripted Rage and Patriotic Camouflage: The Algorithmic Commodification of Han Chauvinism in Chinese Platform} & \textit{IAMCR 2026} \\
+\textbf{$\bullet$ How Social Media Bots Use AI to Manipulate Information Through Images} & \textit{Under review} \\
 \end{tabularx}
-\quad \textit{Jiang, J.*} \hfill [\href{https://some-link.com}{\faGlobe}]
+\quad \textit{Li, Zihao.*} \hfill [\href{https://some-link.com}{\faGlobe}]
 \begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
-\item say something
-\item say something
+\item I made all of this content up myself. I just hope to write a review paper in May to get a better grasp of this topic, because I think it has a lot of potential.
+\item This article may shed light on the widespread government involvement behind social media bots, noting that such activities have evolved from simple text manipulation to manipulation through images.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -124,58 +159,90 @@ $\bullet$ \textbf{National Taiwan Normal University, Taipei} & \textit{Aug. 2025
 \section{Research Experience}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{$\bullet$ Basic Research Projects of Central Universities in China} & \textit{Sep. 2024 - May 2025} \\
+\textbf{$\bullet$ A Study on Discourse Construction and Visual Narrative Strategies in the New Mainstream Media Environment of the Converged Media Era} & \textit{Dec. 2024 - Apr. 2025} \\
 \end{tabularx}
-\textit{say something} \quad [\href{https://some-link.com}{\faGlobe}] \hfill \textbf{Rearch Assistant}
+\textit{PI: Li xinxin, Lanzhou  University} \quad [\href{https://some-link.com}{\faGlobe}] \hfill \textbf{Rearch Assistant}
 \begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
-\item Proposed the ``Frame-Emotion Dual-Track Interaction Model,'' demonstrating how frames and emotional appeals co-evolve to shape perception.
-\item Used LLMs (DeepSeek) and CARER model for large-scale analysis, revealing systematic patterns by media ownership and region.
-\item Constructed a 48-year longitudinal corpus, including manual digitization of pre-2008 print and microfiche archives.
+\item Basic Research Projects of Central Universities in China
+\item Using reports from the People’s Daily as representative examples of mainstream media, I constructed a dataset of environmental news coverage from 1949 to the present. I then developed an LLM-driven automated content analysis program to perform coding. Applying Fairclough’s discourse analysis methodology and combining the coding results with the evolution of China’s environmental protection policies, I broadly divided the historical development of China’s environmental protection discourse into distinct phases.
+\item Using a self-built web crawler to collect Weibo posts related to environmental protection from the People's Daily to date, and conducted a comparative analysis of this data with content from the newspaper's print editions.
 \end{itemize}
 
 \vspace{6pt}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{$\bullet$ Ukrainian Poetry Digital Archive Project} & \textit{Jun. 2025 - Jan. 2026 (Expected)} \\
+\textbf{$\bullet$ A Study on the “Human-Machine Co-creation” Mechanism and Innovative Practices in AI-Empowered Cultural Narratives Along the Silk Road} & \textit{Mar. 2025 - May. 2025} \\
 \end{tabularx}
-\textit{PI: Prof. Amelia Glasser, University of California, San Diego} \hfill \textbf{Research Assistant}
+\textit{PI: Li xinxin, Lanzhou  University} \quad [\href{https://some-link.com}{\faGlobe}] \hfill \textbf{Research Assistant}
 \begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
-\item Built a Chrome extension and data pipeline to systematically collect and de-duplicate 4,000+ Ukrainian Facebook poems, turning an ad-hoc workflow into a reproducible corpus for annotation and analysis.
-\item Co-developed an advanced annotation manual for Ukrainian pronouns, specifying referent categories (SELF\slash INTIMATE\slash LOCAL\slash NATION\slash STATE\slash ENEMY\slash etc.), ``we''-inclusivity, syntactic and semantic roles, discourse functions, and stratified sampling protocols for 400--600 tokens.
-\item Annotating and modeling shifts in poetic voice and polyphony (monologic vs.\ mediated vs.\ choral) together with collocation networks (2014--2025) to trace how person perspective and national-identity vocabularies transform across wartime phases.
+\item Compilation of narrative resources on the history of the Silk Road
+\item Compile the research trends in various social sciences related to the Silk Road and write a comprehensive review
 \end{itemize}
 
 \vspace{6pt}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{$\bullet$ The Symbiotic Development of Digital Nomads and Rural Communities} & \textit{Mar. 2024 - Jul. 2024} \\
+\textbf{$\bullet$ Lanzhou Bathing Assistant：Seeing Aging at Mobile Bathhouses} & \textit{Aug. 2024 - Jan. 2025} \\
 \end{tabularx}
-\textit{PI: Prof. Rui Wang, Communication University of China} \hfill \textbf{Research Assistant}
+\textit{PI: Shiping, Lanzhou University} \quad [\href{https://some-link.com}{\faGlobe}]  \hfill \textbf{Field Research}
 \begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
-\item Modeled interpersonal communication networks through 20 in-depth interviews, identifying pathways for virtual identity formation and community integration.
+\item waitting for writing
+\item waitting for writing
 \end{itemize}
 
 \vspace{6pt}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{$\bullet$ Big Data Project on Global Opinions} & \textit{Jan. 2024 - Jan. 2026 (Expected)} \\
+\textbf{$\bullet$ Why Do College Students Have a Particular Affinity for Life “Within the System”?
+—A Mechanism Analysis of College Students’ Employment Behavior and Policy Recommendations
+} & \textit{Apr. 2024 - Apr. 2025} \\
 \end{tabularx}
-\textit{PI: Prof. Ting Zhou, Communication University of China} \hfill \textbf{Research Assistant}
+\textit{PI: Zhangchi, Lanzhou University} \quad [\href{pdfs/acdamic_record1.pdf}{\faGlobe}] \hfill \textbf{Co Worker}
 \begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
-\item Executed sentiment analysis on 500+ Western media articles regarding China's ``Two Sessions'' for China's National News Agency.
-\item Monitored credibility risks for foreign social media accounts, producing weekly analytical briefings.
+\item A Study of the Craze for Civil Service Exams in China
+\item waitting for writing
 \end{itemize}
 
 \vspace{6pt}
 
-\begin{tabularx}{\linewidth}{@{}X r@{}}
-\textbf{$\bullet$ Desire to Remain Young: An Investigation of Elderly Matchmaking in China} & \textit{Mar. 2023 - Jun. 2023} \\
+%----------------------------------------------------------------------------------------
+%   AWARDS
+%----------------------------------------------------------------------------------------
+\section{Selected Awards and Honors}
+
+% Each award uses two rows: title (bold) on row 1, level (italic, gray) + date on row 2
+\newcommand{\awarditem}[3]{%
+$\bullet$ \textbf{#1} \\
+\quad \textit{\textcolor{gray}{#2}} \hfill \textit{#3} \\[4pt]
+}
+
+\noindent
+\awarditem{China Data Journalism Competition}{Second Prize (National Level)}{Nov. 2025}
+\awarditem{China Statistical Modeling Competition}{Third Prize (Provincial Level)}{May. 2026}
+\awarditem{Central China Mathematical Modeling Competition}{Second Prize (Provincial Level)}{May. 2026}
+\awarditem{China University Campus Media Competition}{Public Service Communication Award(Provinvial Level)}{Nov. 2025}
+\awarditem{14th China Tower Journalists' Day}{Grand Prize in the Communications Category(Provincial Level)}{Dec. 2025}
+\awarditem{Lanzhou University Outstanding Student Scholarship}{University Level}{Sep. 2023 - Sep. 2024}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Programming} &  Python, R, Web (HTML, CSS, JavaScript) \\
+\textbf{Analytical Tools} &  SPSS, NVivo \\
+\textbf{NLP/ML Models} &  BERT, LDA, and other transformer-based architectures \\
+\textbf{Production Tools} &  \LaTeX, Microsoft Office Suite, Photography \\
 \end{tabularx}
-\textit{2024 Paper Data Content Annual Case Collection Award} \hfill \textbf{Research Project Developer}
-\begin{itemize}[nosep, leftmargin=2em, itemsep=3pt, label=$\circ$]
-\item Collected and coded qualitative dataset from 22 in-depth interviews to analyze identity and desire in matchmaking contexts.
-\item Designed an award-winning interactive data story website [link], implementing full-stack solution for dynamic user profile comparison.
-\end{itemize}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE
@@ -201,54 +268,3 @@ $\bullet$ \textbf{National Taiwan Normal University, Taipei} & \textit{Aug. 2025
 \item Authored and published press releases on emerging technology for iFeng.com, covering major industry events.
 \item Developed video scripts for the \textit{ifengTech} column and conducted daily public opinion monitoring, providing analytical briefings.
 \end{itemize}
-
-%----------------------------------------------------------------------------------------
-%   ACADEMIC SERVICE
-%----------------------------------------------------------------------------------------
-\section{Academic Service}
-
-\begin{tabularx}{\linewidth}{@{}X r@{}}
-$\bullet$ \textbf{Peer Reviewer}\quad International Communication Association (ICA) & \textit{Nov. 2024} \\[4pt]
-$\bullet$ \textbf{Peer Reviewer}\quad International Political Science Association (IPSA) & \textit{Nov. 2024} \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%   COMMUNITY
-%----------------------------------------------------------------------------------------
-\section{Community and Volunteer Engagement}
-
-\begin{tabularx}{\linewidth}{@{}X r@{}}
-$\bullet$ \textbf{Outstanding Volunteer}\quad The Third Belt and Road Forum for International Cooperation & \textit{Oct. 2023} \\[4pt]
-$\bullet$ \textbf{Outstanding Volunteer}\quad China International Fair for Trade in Service (CIFTIS) & \textit{Sep. 2023} \\[4pt]
-$\bullet$ \textbf{Volunteer Teacher}\quad Guanghua Foundation Voluntary Teaching Programme & \textit{Jun. 2023} \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%   AWARDS
-%----------------------------------------------------------------------------------------
-\section{Selected Awards and Honors}
-
-\begin{tabularx}{\linewidth}{@{}X r@{}}
-$\bullet$ \textbf{Outstanding Undergraduate Thesis Award (University-Level)} & \textit{May 2025} \\[4pt]
-$\bullet$ \textbf{Paper Data Content Annual Case Collection Award} & \textit{Jun. 2024} \\[4pt]
-$\bullet$ \textbf{Second-Class Scholarship (University-Level)} & \textit{Nov. 2024} \\[4pt]
-$\bullet$ \textbf{Meritorious Student (University-Level)} & \textit{Sep. 2022 - Sep. 2024} \\[4pt]
-$\bullet$ \textbf{Practical Scholarship (University-Level)} & \textit{Oct. 2023} \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%   SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Programming} &  Python (Pandas, Scikit-learn, PyTorch, NLTK, spaCy), R, Web (HTML, CSS, JavaScript) \\
-\textbf{Analytical Tools} &  SPSS, NVivo, Tableau, ECharts \\
-\textbf{NLP/ML Models} &  BERT, SBERT, LDA, and other transformer-based architectures \\
-\textbf{Production Tools} &  \LaTeX, Microsoft Office Suite, Adobe Creative Suite (Premiere, Photoshop) \\
-\end{tabularx}
-
-\vfill
-\center{\footnotesize Last updated: \today}
-
-\end{document}

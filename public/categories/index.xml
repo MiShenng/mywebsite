@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Lizao&#39;s blog</title>
-    <link>https://myblog-lizao.vercel.app/categories/</link>
+    <link>https://www.chiselli.com/categories/</link>
     <description>Recent content in Categories on Lizao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://myblog-lizao.vercel.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.chiselli.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>reading note</title>
-      <link>https://myblog-lizao.vercel.app/categories/reading-note/</link>
+      <link>https://www.chiselli.com/categories/reading-note/</link>
       <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://myblog-lizao.vercel.app/categories/reading-note/</guid>
+      <guid>https://www.chiselli.com/categories/reading-note/</guid>
       <description></description>
     </item>
     <item>
       <title>Lizao Diary</title>
-      <link>https://myblog-lizao.vercel.app/categories/lizao-diary/</link>
+      <link>https://www.chiselli.com/categories/lizao-diary/</link>
       <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://myblog-lizao.vercel.app/categories/lizao-diary/</guid>
+      <guid>https://www.chiselli.com/categories/lizao-diary/</guid>
       <description></description>
     </item>
     <item>
       <title>Project records</title>
-      <link>https://myblog-lizao.vercel.app/categories/project-records/</link>
+      <link>https://www.chiselli.com/categories/project-records/</link>
       <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://myblog-lizao.vercel.app/categories/project-records/</guid>
+      <guid>https://www.chiselli.com/categories/project-records/</guid>
       <description></description>
     </item>
     <item>
       <title>poem</title>
-      <link>https://myblog-lizao.vercel.app/categories/poem/</link>
+      <link>https://www.chiselli.com/categories/poem/</link>
       <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://myblog-lizao.vercel.app/categories/poem/</guid>
+      <guid>https://www.chiselli.com/categories/poem/</guid>
       <description></description>
     </item>
     <item>
       <title>test</title>
-      <link>https://myblog-lizao.vercel.app/categories/test/</link>
+      <link>https://www.chiselli.com/categories/test/</link>
       <pubDate>Thu, 07 Jan 2021 13:37:57 -0500</pubDate>
-      <guid>https://myblog-lizao.vercel.app/categories/test/</guid>
+      <guid>https://www.chiselli.com/categories/test/</guid>
       <description></description>
     </item>
   </channel>

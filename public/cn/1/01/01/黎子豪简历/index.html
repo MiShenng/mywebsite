@@ -24,7 +24,7 @@
 
 
 
-            <link rel="icon" href="https://myblog-lizao.vercel.app/media/symbol.png">
+            <link rel="icon" href="https://www.chiselli.com/media/symbol.png">
 
 
 
@@ -38,8 +38,8 @@
         <nav class="nav" >
       <a href="/" class="nav-logo">
         <img src="/media/symbol.svg"
-         width="67"
-         height="67"
+         width="100"
+         height="100"
          alt="Lizao">
       </a>
 
@@ -88,23 +88,52 @@
 </span>
 
 
-<aside class="toc">
-Table of Contents:
-<nav id="TableOfContents">
-  <ol>
-    <li>
-      <ol>
-        <li></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-</aside>
-
 
 <div class="body-text list-text">
-<h4 id="简介">简介<a href="#简介" class="header-anchor" ariaLabel="Anchor"> # </a></h4>
-<h6 id="你好我是黎子豪">你好我是黎子豪<a href="#你好我是黎子豪" class="header-anchor" ariaLabel="Anchor"> # </a></h6>
+<div style="margin-bottom: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+  <span style="color: #666; font-size: 15px;">语言：</span>
+  <div id="cv-lang-toggle" style="display: flex; border: 1px solid #ccc; border-radius: 4px; overflow: hidden; font-size: 14px;">
+    <button id="btn-en" onclick="switchCV('en')"
+      style="padding: 6px 18px; background: #fff; color: #333; border: none; cursor: pointer;">
+      English
+    </button>
+    <button id="btn-cn" onclick="switchCV('cn')"
+      style="padding: 6px 18px; background: #333; color: #fff; border: none; cursor: pointer;">
+      中文
+    </button>
+  </div>
+  <a id="cv-download-link" href="/media/chinese_cv.pdf" target="_blank"
+    style="padding: 6px 16px; background: #555; color: #fff; text-decoration: none; border-radius: 4px; font-size: 14px;">
+    下载简历
+  </a>
+</div>
+<div style="margin-top: 8px;">
+  <iframe id="cv-frame" src="/media/chinese_cv.pdf"
+    width="100%" height="850px"
+    style="border: 1px solid #ddd; border-radius: 4px; display: block;">
+  </iframe>
+</div>
+<script>
+function switchCV(lang) {
+  var frame = document.getElementById('cv-frame');
+  var dlLink = document.getElementById('cv-download-link');
+  var btnEn = document.getElementById('btn-en');
+  var btnCn = document.getElementById('btn-cn');
+  if (lang === 'en') {
+    frame.src = '/media/english_cv.pdf';
+    dlLink.href = '/media/english_cv.pdf';
+    dlLink.textContent = 'Download PDF';
+    btnEn.style.background = '#333'; btnEn.style.color = '#fff';
+    btnCn.style.background = '#fff'; btnCn.style.color = '#333';
+  } else {
+    frame.src = '/media/chinese_cv.pdf';
+    dlLink.href = '/media/chinese_cv.pdf';
+    dlLink.textContent = '下载简历';
+    btnCn.style.background = '#333'; btnCn.style.color = '#fff';
+    btnEn.style.background = '#fff'; btnEn.style.color = '#333';
+  }
+}
+</script>
 
 
 <p style="color:#777;">最后一次修改于 0001-01-01</p>
@@ -117,22 +146,20 @@ Table of Contents:
    
   .custom-footer {
     text-align: center;
-    padding: 20px 0 40px;  
-    font-family: Charter, Georgia, 'Helvetica Neue', Arial,
-      'Songti SC', 'SimSun', 'Hiragino Sans GB', '宋体', 'Microsoft YaHei',
-      'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体', sans-serif;
+    padding: 20px 0 40px;
   }
-  
+
   .footer-social-line {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;  
+    margin-bottom: 8px;
+     
   }
 
   .footer-text-prefix {
     color: #666666;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.5px;
     margin-right: 12px;
@@ -141,49 +168,44 @@ Table of Contents:
   .footer-social-icons {
     display: flex;
     align-items: center;
-    gap: 12px;  
+    gap: 12px;
+     
   }
 
   .footer-social-icons a {
     color: #666666;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
+     
     transition: color 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-
-  .footer-social-icons a i {
-    line-height: 1;
   }
 
    
   .footer-social-icons a:hover {
     transform: translateY(-2px);
   }
-  
-  .social-github:hover { color: #333333 !important; }
-  
-   
-  .social-douban .douban-icon {
-    width: 21px;
-    height: 21px;
-    display: block;
-    background-color: currentColor;
-    -webkit-mask-image: url('/media/douban.png');
-    mask-image: url('/media/douban.png');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-  }
-  .social-douban:hover { color: #007722 !important; }  
 
-  .social-facebook:hover { color: #1877F2 !important; }  
-  .social-email:hover { color: #D44638 !important; }  
+  .social-github:hover {
+    color: #333333 !important;
+  }
+
+  .social-douban:hover {
+    color: #007722 !important;
+  }
+
+   
+  .social-facebook:hover {
+    color: #1877F2 !important;
+  }
+
+   
+  .social-email:hover {
+    color: #D44638 !important;
+  }
+
+   
 
   .footer-copyright {
     color: #666666;
@@ -218,33 +240,35 @@ Table of Contents:
   
   <div class="footer-social-line">
     <span class="footer-text-prefix">More information in</span>
-    
+
     <div class="footer-social-icons">
-    
+      
       
       <a href="https://github.com/MiShenng" class="social-github" target="_blank" title="GitHub">
         <i class="fa fa-github"></i>
       </a>
       
-      
+
       
       <a href="https://www.douban.com/people/MiShenng/" class="social-douban" target="_blank" title="Douban">
-        <span class="douban-icon" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1em; height: 1em;">
+          <path d="M.51 3.06h22.98V.755H.51V3.06Zm20.976 2.537v9.608h-2.137l-1.669 5.76H24v2.28H0v-2.28h6.32l-1.67-5.76H2.515V5.597h18.972Zm-5.066 9.608H7.58l1.67 5.76h5.501l1.67-5.76ZM18.367 7.9H5.634v5.025h12.733V7.9Z"/>
+        </svg>
       </a>
       
-      
+
       
       <a href="https://www.facebook.com/share/1CRZUWhnFp/" class="social-facebook" target="_blank" title="Facebook">
         <i class="fa fa-facebook-square"></i>
       </a>
       
-      
+
       
       <a href="mailto:lizihao2023@lzu.edu.cn" class="social-email" title="Email">
         <i class="fa fa-envelope"></i>
       </a>
       
-    
+      
     </div>
   </div>
 
@@ -254,5 +278,4 @@ Table of Contents:
   </div>
 
 </footer>
-
 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>关于 on Lizao&#39;s blog</title>
-    <link>https://myblog-lizao.vercel.app/cn/about/</link>
+    <link>https://www.chiselli.com/cn/about/</link>
     <description>Recent content in 关于 on Lizao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://myblog-lizao.vercel.app/cn/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.chiselli.com/cn/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>黎子豪简历</title>
-      <link>https://myblog-lizao.vercel.app/cn/1/01/01/%E9%BB%8E%E5%AD%90%E8%B1%AA%E7%AE%80%E5%8E%86/</link>
+      <link>https://www.chiselli.com/cn/about/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://myblog-lizao.vercel.app/cn/1/01/01/%E9%BB%8E%E5%AD%90%E8%B1%AA%E7%AE%80%E5%8E%86/</guid>
-      <description>简介 你好我是黎子豪 </description>
+      <guid>https://www.chiselli.com/cn/about/cv/</guid>
+      <description> 语言： English 中文 下载简历 </description>
     </item>
   </channel>
 </rss>
