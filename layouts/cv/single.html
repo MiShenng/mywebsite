@@ -1,24 +1,49 @@
-<a name="top"></a>
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="{{ "/media/symbol.png" | relURL }}">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow: hidden; }
+    body { display: flex; flex-direction: column; }
 
-<style>
-  .cv-frame {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    border: none;
-  }
-</style>
+    .cv-nav {
+      flex-shrink: 0;
+      background: #f5f5f5;
+      border-bottom: 1px solid #eaeaea;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cv-nav-logo img { display: block; border-radius: 50%; }
+    .cv-nav-links { list-style: none; display: flex; gap: 20px; }
+    .cv-nav-links a { text-decoration: none; color: #111; font-size: 14px; }
+    .cv-nav-links a:hover { color: #555; }
 
-<iframe class="cv-frame" src="{{ .Params.pdf }}" title="{{ .Title }}"></iframe>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var header = document.querySelector('.header');
-    var frame = document.querySelector('.cv-frame');
-    var top = header ? header.offsetHeight : 70;
-    frame.style.top = top + 'px';
-  });
-</script>
+    .cv-body { flex: 1; min-height: 0; }
+    .cv-body iframe { width: 100%; height: 100%; border: none; display: block; }
+  </style>
+</head>
+<body>
+  <nav class="cv-nav">
+    <a href="{{ "/" | relURL }}">
+      <img src="{{ print "" .Site.Params.logo.url | relURL }}"
+           width="40" height="40" alt="{{ .Site.Params.logo.alt }}">
+    </a>
+    <ul class="cv-nav-links">
+      {{ range (default .Site.Menus.main (index .Site.Menus $.Section)) }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+  <div class="cv-body">
+    <iframe src="{{ .Params.pdf }}" title="{{ .Title }}"></iframe>
+  </div>
+</body>
+</html>
