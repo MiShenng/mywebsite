@@ -1,0 +1,210 @@
+{{ partial "header.html" . }}
+
+<style>
+  .csslit { max-width: 100%; }
+  .csslit-intro { color: #555; margin: 16px 0 24px; }
+  .csslit-stats {
+    display: flex;
+    gap: 32px;
+    margin: 24px 0;
+    padding: 16px 20px;
+    background: #fafafa;
+    border-radius: 6px;
+    flex-wrap: wrap;
+  }
+  .csslit-stat-num {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+  }
+  .csslit-stat-label {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 2px;
+  }
+  .csslit-tagcloud {
+    margin: 24px 0;
+    line-height: 2;
+  }
+  .csslit-tagcloud strong { color: #555; margin-right: 6px; }
+  .csslit-tagcloud a {
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 2px 3px;
+    background: #eee;
+    border-radius: 3px;
+    font-size: 0.88em;
+    text-decoration: none;
+    color: #555;
+    transition: background 0.2s;
+  }
+  .csslit-tagcloud a:hover { background: #333; color: #fff; }
+  .csslit-year {
+    text-align: left;
+    margin-top: 32px;
+    color: #999;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+  }
+  .csslit-entry {
+    margin: 20px 0;
+    padding: 16px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .csslit-entry-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+    font-size: 0.88em;
+    color: #777;
+  }
+  .csslit-entry-type {
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+  .csslit-entry-type-book { background: #e8f0e8; color: #2a6b2a; }
+  .csslit-entry-type-paper { background: #e8e8f0; color: #2a2a6b; }
+  .csslit-entry h3 {
+    margin: 4px 0;
+    font-size: 1.1em;
+  }
+  .csslit-entry h3 a { color: #222; text-decoration: none; }
+  .csslit-entry h3 a:hover { text-decoration: underline; }
+  .csslit-entry-citation {
+    font-style: italic;
+    color: #666;
+    margin: 6px 0;
+    font-size: 0.93em;
+  }
+  .csslit-entry-points {
+    margin: 8px 0 8px 1.4em;
+    color: #444;
+    font-size: 0.95em;
+  }
+  .csslit-entry-points li { margin: 3px 0; }
+  .csslit-entry-tags { margin-top: 8px; }
+  .csslit-entry-tags a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.83em;
+    color: #888;
+    text-decoration: none;
+  }
+  .csslit-entry-tags a:hover { color: #333; }
+  .csslit-rating { color: #f5a623; letter-spacing: 1px; }
+  .csslit-empty {
+    color: #999;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.95em;
+  }
+</style>
+
+<main class="content">
+<div class="csslit">
+
+<h1>{{ .Title }}</h1>
+<div class="csslit-intro">{{ .Content }}</div>
+
+{{ $entries := .Pages }}
+{{ $books := where $entries "Params.type" "book" }}
+{{ $papers := where $entries "Params.type" "paper" }}
+
+{{ if $entries }}
+<div class="csslit-stats">
+  <div>
+    <div class="csslit-stat-num">{{ len $entries }}</div>
+    <div class="csslit-stat-label">总条目</div>
+  </div>
+  {{ if $papers }}
+  <div>
+    <div class="csslit-stat-num">{{ len $papers }}</div>
+    <div class="csslit-stat-label">论文</div>
+  </div>
+  {{ end }}
+  {{ if $books }}
+  <div>
+    <div class="csslit-stat-num">{{ len $books }}</div>
+    <div class="csslit-stat-label">书</div>
+  </div>
+  {{ end }}
+  <div>
+    <div class="csslit-stat-num">{{ (index $entries 0).Date.Format "2006-01-02" }}</div>
+    <div class="csslit-stat-label">最近更新</div>
+  </div>
+</div>
+
+{{ $allTags := slice }}
+{{ range $entries }}
+  {{ with .Params.tags }}
+    {{ range . }}
+      {{ $allTags = $allTags | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if $allTags }}
+<div class="csslit-tagcloud">
+  <strong>标签</strong>
+  {{ range $tag := uniq $allTags }}
+    <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}/">#{{ $tag }}</a>
+  {{ end }}
+</div>
+{{ end }}
+
+{{ range $entries.GroupByDate "2006" }}
+<h2 class="csslit-year">{{ .Key }}</h2>
+{{ range .Pages }}
+<article class="csslit-entry">
+  <div class="csslit-entry-meta">
+    <span>{{ .Date.Format "2006-01-02" }}</span>
+    {{ with .Params.type }}
+      <span class="csslit-entry-type csslit-entry-type-{{ . }}">{{ if eq . "book" }}📖 书{{ else if eq . "paper" }}📄 论文{{ else }}{{ . }}{{ end }}</span>
+    {{ end }}
+    {{ with .Params.rating }}
+      <span class="csslit-rating">{{ range seq . }}★{{ end }}{{ range seq (sub 5 .) }}☆{{ end }}</span>
+    {{ end }}
+    {{ with .Params.reading_time }}
+      <span>⏱ {{ . }} 分钟</span>
+    {{ end }}
+    {{ with .Params.source }}
+      <span>来源：{{ . }}</span>
+    {{ end }}
+    {{ with .Params.link }}
+      <span><a href="{{ . }}" target="_blank" rel="noopener">原文 ↗</a></span>
+    {{ end }}
+  </div>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{ with .Params.citation }}
+  <div class="csslit-entry-citation">{{ . | markdownify }}</div>
+  {{ end }}
+  {{ with .Params.points }}
+  <ul class="csslit-entry-points">
+    {{ range . }}
+    <li>{{ . | markdownify }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  {{ with .Params.tags }}
+  <div class="csslit-entry-tags">
+    {{ range . }}
+    <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+{{ end }}
+{{ end }}
+
+{{ else }}
+<div class="csslit-empty">尚无条目。第一篇阅读笔记发布后会自动出现在这里。</div>
+{{ end }}
+
+</div>
+</main>
+
+{{ partial "footer.html" . }}
