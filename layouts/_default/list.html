@@ -12,19 +12,32 @@
 
 
 {{if not .IsHome}}
-<ul>
+<ul class="post-list">
   {{ range .Pages.GroupByDate "2006" }}
   <h2 style="text-align: left;">{{ .Key }}</h2>
   {{ range .Pages.GroupByDate "2006-01-02" }}
   {{ range .Pages }}
-  <p>
-    <span class="date">
-    {{ .Date.Format "2006-01-02" }}
-    </span>
-    <a href="{{ .RelPermalink }}">
-    {{ .Title }}
-    </a>
-  </p>
+  <li class="post-list-item">
+    <p style="margin-bottom: 4px;">
+      <span class="date">
+      {{ .Date.Format "2006-01-02" }}
+      </span>
+      <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+      </a>
+    </p>
+    {{ $excerpt := "" }}
+    {{ if .Description }}
+      {{ $excerpt = .Description }}
+    {{ else if .Summary }}
+      {{ $excerpt = .Summary | plainify | truncate 140 }}
+    {{ end }}
+    {{ with $excerpt }}
+    <p class="post-summary" style="color:#666; font-size: 0.95em; margin: 0 0 16px 5em;">
+      {{ . }}
+    </p>
+    {{ end }}
+  </li>
   {{ end }}
   {{ end }}
   {{ end }}
