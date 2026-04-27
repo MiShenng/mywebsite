@@ -24,13 +24,17 @@ posts = "/posts/:year/:month/:day/:slug/"
     url = "/en/posts/"
     weight = 3
 [[menu.en]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 4
+[[menu.en]]
     name = "CV"
     url = "/en/about/cv/"
-    weight = 4
+    weight = 5
 [[menu.en]]
     name = "中文"
     url = "/cn/"
-    weight = 5
+    weight = 6
 [[menu.cn]]
     name = "首页"
     url = "/cn/"
@@ -44,13 +48,17 @@ posts = "/posts/:year/:month/:day/:slug/"
     url = "/cn/posts/"
     weight = 3
 [[menu.cn]]
+    name = "分类"
+    url = "/categories/"
+    weight = 4
+[[menu.cn]]
     name = "简历"
     url = "/cn/about/cv/"
-    weight = 4
+    weight = 5
 [[menu.cn]]
     name = "English"
     url = "/"
-    weight = 5
+    weight = 6
 
 
 [params]
