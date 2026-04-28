@@ -141,34 +141,6 @@
   margin: 4px 0 10px;
 }
 
-/* ── 折叠笔记 ── */
-.readings-notes {
-  background: #fafafa;
-  border: 1px solid #efefef;
-  border-radius: 5px;
-  padding: 8px 14px;
-  margin-top: 8px;
-}
-.readings-notes summary {
-  font-size: 0.85em;
-  color: #888;
-  cursor: pointer;
-  font-weight: 500;
-  list-style: none;
-  outline: none;
-  user-select: none;
-}
-.readings-notes summary::-webkit-details-marker { display: none; }
-.readings-notes summary::before { content: "▶  "; font-size: 0.7em; }
-.readings-notes[open] summary::before { content: "▼  "; }
-.readings-notes-content {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px dashed #e8e8e8;
-  font-size: 0.92em;
-  line-height: 1.65;
-  color: #444;
-}
 
 .readings-empty {
   color: #aaa;
@@ -271,17 +243,8 @@
           {{ with .Params.subtitle }}
           <div class="readings-entry-subtitle">{{ . }}</div>
           {{ end }}
-          {{ with .Params.points }}
-          <details class="readings-notes">
-            <summary>查看笔记要点</summary>
-            <div class="readings-notes-content">
-              <ul>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
-            </div>
-          </details>
-          {{ end }}
           {{ if .Content }}
-          <div class="readings-summary">{{ .Summary }}</div>
-          <a href="{{ .RelPermalink }}" class="readings-fullnote-link">▶ 阅读完整笔记</a>
+          <a href="{{ .RelPermalink }}" style="font-size: 0.85em; color: #888; text-decoration: none;">阅读完整笔记 →</a>
           {{ end }}
         </article>
         {{ end }}
