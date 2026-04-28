@@ -6,9 +6,9 @@ slug: media-archaeology
 draft: false
 toc: false
 categories:
-  - reading note
+  - 阅读和观影笔记
 tags:
-  - reading note
+  - 阅读和观影笔记
 ---
 
 ## 媒介考古学笔记

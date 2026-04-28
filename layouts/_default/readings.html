@@ -1,0 +1,302 @@
+{{ partial "header.html" . }}
+
+<style>
+/* ── 两栏容器 ── */
+.readings-container {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 48px auto;
+  padding: 0 15px;
+  align-items: start;
+}
+
+/* ── 左侧边栏 ── */
+.readings-sidebar {
+  position: sticky;
+  top: 24px;
+}
+
+.readings-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 8px;
+  margin-bottom: 24px;
+}
+.readings-stat-num {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.1;
+}
+.readings-stat-label {
+  font-size: 0.72em;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.readings-sidebar hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.readings-az-index h4 {
+  font-size: 0.75em;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+.readings-az-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.88em;
+}
+.readings-az-list li { margin-bottom: 6px; }
+.readings-az-list a { color: #888; text-decoration: none; }
+.readings-az-list a:hover { color: #111; }
+
+/* ── 右侧主内容 ── */
+.readings-main { min-width: 0; }
+
+.readings-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.readings-intro {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.readings-intro blockquote {
+  border-left: 3px solid #eaeaea;
+  margin: 12px 0 0 0;
+  padding-left: 14px;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.readings-letter-group { margin-bottom: 40px; }
+.readings-letter-header {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* ── 条目卡片 ── */
+.readings-entry {
+  border-left: 3px solid #c8b8a2;
+  padding: 4px 0 4px 20px;
+  margin-bottom: 32px;
+}
+.readings-entry-medium-电影 { border-left-color: #a2b8c8; }
+.readings-entry-medium-书目 { border-left-color: #a2c8a8; }
+.readings-entry-medium-文章 { border-left-color: #c8a2a2; }
+
+.readings-entry-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+  font-size: 0.83em;
+  color: #999;
+}
+.readings-badge {
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.readings-badge-电影 { background: #e8eef5; color: #2a4a7a; }
+.readings-badge-书目 { background: #e8f0e8; color: #2a6b2a; }
+.readings-badge-文章 { background: #f5e8e8; color: #7a2a2a; }
+.readings-badge-default { background: #f0f0f0; color: #555; }
+
+.readings-stars { color: #f5a623; letter-spacing: 1px; font-size: 0.9em; }
+
+.readings-entry h3 {
+  margin: 4px 0 4px;
+  font-size: 1.08em;
+  line-height: 1.4;
+}
+.readings-entry h3 a { color: #1a1a1a; text-decoration: none; }
+.readings-entry h3 a:hover { text-decoration: underline; }
+
+.readings-entry-subtitle {
+  font-style: italic;
+  color: #777;
+  font-size: 0.88em;
+  margin: 4px 0 10px;
+}
+
+/* ── 折叠笔记 ── */
+.readings-notes {
+  background: #fafafa;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 8px 14px;
+  margin-top: 8px;
+}
+.readings-notes summary {
+  font-size: 0.85em;
+  color: #888;
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  outline: none;
+  user-select: none;
+}
+.readings-notes summary::-webkit-details-marker { display: none; }
+.readings-notes summary::before { content: "▶  "; font-size: 0.7em; }
+.readings-notes[open] summary::before { content: "▼  "; }
+.readings-notes-content {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e8e8e8;
+  font-size: 0.92em;
+  line-height: 1.65;
+  color: #444;
+}
+
+.readings-empty {
+  color: #aaa;
+  text-align: center;
+  padding: 60px 0;
+  font-size: 0.95em;
+}
+
+/* ── 移动端 ── */
+@media screen and (max-width: 768px) {
+  .readings-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 24px auto;
+  }
+  .readings-sidebar {
+    position: static;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+  }
+  .readings-az-index { display: none; }
+  .readings-stats { grid-template-columns: repeat(3, auto); gap: 12px 20px; }
+}
+</style>
+
+{{ $entries := .Pages }}
+
+{{ $bookCount    := 0 }}
+{{ $movieCount   := 0 }}
+{{ $articleCount := 0 }}
+{{ $totalWords   := 0 }}
+{{ range $entries }}
+  {{ $totalWords = add $totalWords .WordCount }}
+  {{ $m := .Params.medium | default "" }}
+  {{ if eq $m "书目"  }}{{ $bookCount    = add $bookCount    1 }}{{ end }}
+  {{ if eq $m "电影"  }}{{ $movieCount   = add $movieCount   1 }}{{ end }}
+  {{ if eq $m "文章"  }}{{ $articleCount = add $articleCount 1 }}{{ end }}
+{{ end }}
+
+<div class="readings-container">
+
+  <!-- 左侧边栏 -->
+  <aside class="readings-sidebar">
+    {{ if $entries }}
+    <div class="readings-stats">
+      {{ if gt $bookCount 0 }}
+      <div>
+        <div class="readings-stat-num">{{ $bookCount }}</div>
+        <div class="readings-stat-label">书目</div>
+      </div>
+      {{ end }}
+      {{ if gt $movieCount 0 }}
+      <div>
+        <div class="readings-stat-num">{{ $movieCount }}</div>
+        <div class="readings-stat-label">电影</div>
+      </div>
+      {{ end }}
+      {{ if gt $articleCount 0 }}
+      <div>
+        <div class="readings-stat-num">{{ $articleCount }}</div>
+        <div class="readings-stat-label">文章</div>
+      </div>
+      {{ end }}
+      <div>
+        <div class="readings-stat-num">{{ $totalWords }}</div>
+        <div class="readings-stat-label">总字数</div>
+      </div>
+    </div>
+    <hr>
+    <div class="readings-az-index">
+      <h4>INDEX (A–Z)</h4>
+      <ul class="readings-az-list">
+        {{ range $entries.GroupByParam "letter" }}
+        <li><a href="#letter-{{ .Key }}">{{ .Key }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </aside>
+
+  <!-- 右侧主内容 -->
+  <main class="readings-main">
+    <h1 class="readings-title">{{ .Title }}</h1>
+    <div class="readings-intro">{{ .Content }}</div>
+
+    {{ if $entries }}
+      {{ range $entries.GroupByParam "letter" }}
+      <div class="readings-letter-group" id="letter-{{ .Key }}">
+        <div class="readings-letter-header">{{ .Key }}</div>
+        {{ range .Pages }}
+        {{ $medium := .Params.medium | default "笔记" }}
+        <article class="readings-entry readings-entry-medium-{{ $medium }}"
+                 id="entry-{{ .File.BaseFileName | urlize }}">
+          <div class="readings-entry-meta">
+            <span class="readings-badge readings-badge-{{ $medium }}">{{ $medium }}</span>
+            {{ with .Params.stars }}<span class="readings-stars">{{ . }}</span>{{ end }}
+            {{ with .Params.link }}<a href="{{ . }}" target="_blank" rel="noopener" style="color:#aaa;text-decoration:none;">豆瓣 ↗</a>{{ end }}
+          </div>
+          <h3>
+            {{ if .Params.link }}
+              <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+            {{ else }}
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ end }}
+          </h3>
+          {{ with .Params.subtitle }}
+          <div class="readings-entry-subtitle">{{ . }}</div>
+          {{ end }}
+          {{ if or .Params.points .Content }}
+          <details class="readings-notes">
+            <summary>查看笔记</summary>
+            <div class="readings-notes-content">
+              {{ with .Params.points }}
+              <ul>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
+              {{ end }}
+              {{ with .Content }}<div>{{ . }}</div>{{ end }}
+            </div>
+          </details>
+          {{ end }}
+        </article>
+        {{ end }}
+      </div>
+      {{ end }}
+    {{ else }}
+    <div class="readings-empty">尚无条目。第一篇笔记发布后会自动出现在这里。</div>
+    {{ end }}
+  </main>
+
+</div>
+
+{{ partial "footer.html" . }}
