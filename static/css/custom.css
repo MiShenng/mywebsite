@@ -32,6 +32,17 @@
   text-align: left;
 }
 
+/* csslit: shrink notes font so it's secondary to the title */
+.csslit-notes-content {
+  font-size: 0.88em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.csslit-notes-content ul {
+  margin-top: 4px;
+}
+
 /* Mobile: stack logo above nav links, center both */
 @media screen and (max-width: 768px) {
   .nav {
