@@ -1,0 +1,33 @@
+/* Header: flex layout, fixed min-height, left/right alignment */
+.header {
+  padding: 0 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Logo: remove old float/margin-top, set fixed height */
+.nav-logo {
+  float: none;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  display: block;
+  width: auto;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Nav links: reset text-align since flex handles layout */
+.nav-links {
+  text-align: left;
+}
