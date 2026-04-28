@@ -4,7 +4,7 @@ subtitle: "Asphalte (2015)"
 date: 2026-04-27
 slug: sample-entry
 draft: false
-categories: ["css-reading"]
+categories: ["阅读和观影笔记"]
 letter: "X"
 medium: "电影"
 stars: "★★★★☆"
