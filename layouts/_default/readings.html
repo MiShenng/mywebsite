@@ -214,24 +214,18 @@
   <aside class="readings-sidebar">
     {{ if $entries }}
     <div class="readings-stats">
-      {{ if gt $bookCount 0 }}
       <div>
         <div class="readings-stat-num">{{ $bookCount }}</div>
         <div class="readings-stat-label">书目</div>
       </div>
-      {{ end }}
-      {{ if gt $movieCount 0 }}
       <div>
         <div class="readings-stat-num">{{ $movieCount }}</div>
         <div class="readings-stat-label">电影</div>
       </div>
-      {{ end }}
-      {{ if gt $articleCount 0 }}
       <div>
         <div class="readings-stat-num">{{ $articleCount }}</div>
         <div class="readings-stat-label">文章</div>
       </div>
-      {{ end }}
       <div>
         <div class="readings-stat-num">{{ $totalWords }}</div>
         <div class="readings-stat-label">总字数</div>
@@ -286,7 +280,8 @@
           </details>
           {{ end }}
           {{ if .Content }}
-          <a href="{{ .RelPermalink }}" class="readings-fullnote-link">▶ 查看完整笔记</a>
+          <div class="readings-summary">{{ .Summary }}</div>
+          <a href="{{ .RelPermalink }}" class="readings-fullnote-link">▶ 阅读完整笔记</a>
           {{ end }}
         </article>
         {{ end }}
