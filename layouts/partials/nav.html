@@ -5,11 +5,13 @@
   </a>
 
   <ul class="nav-links">
-    {{ $section := .Section }}
-    {{ $menus := .Site.Menus }}
-    {{ $sectionMenu := index $menus $section }}
-    {{ $defaultMenu := index $menus (.Site.Params.defaultLang | default "en") }}
-    {{ $activeMenu := cond (and $sectionMenu (gt (len $sectionMenu) 0)) $sectionMenu $defaultMenu }}
+    {{ $defaultLang := .Site.Params.defaultLang | default "en" }}
+    {{ $defaultMenu := index .Site.Menus $defaultLang }}
+    {{ $sectionMenu := index .Site.Menus .Section }}
+    {{ $activeMenu := $defaultMenu }}
+    {{ if and $sectionMenu (gt (len $sectionMenu) 0) }}
+      {{ $activeMenu = $sectionMenu }}
+    {{ end }}
     {{ range $activeMenu }}
       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
     {{ end }}
