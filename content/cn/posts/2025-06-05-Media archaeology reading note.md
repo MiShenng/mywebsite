@@ -5,6 +5,8 @@ author: "黎凿"
 slug: media-archaeology
 draft: false
 toc: false
+letter: "M"
+medium: "书目"
 categories:
   - 阅读和观影笔记
 tags:
