@@ -1,3 +1,10 @@
+{{ if .IsHome }}
+{{ partial "header.html" . }}
+<main class="content">
+{{ .Content }}
+</main>
+{{ partial "footer.html" . }}
+{{ else }}
 {{ partial "header.html" . }}
 
 <style>
@@ -207,3 +214,4 @@
 </div>
 
 {{ partial "footer.html" . }}
+{{ end }}
