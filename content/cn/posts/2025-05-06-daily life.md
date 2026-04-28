@@ -6,9 +6,9 @@ slug: round-about-street
 draft: false
 toc: false
 categories:
-  - Lizao Diary
+  - Lizao' Diary
 tags:
-  - Lizao Diary
+  - Lizao' Diary
 ---
   ## 四月、春天、重庆鸡公煲与榆中幻象
 

@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>关于 on Lizao&#39;s blog</title>
-    <link>https://www.chiselli.com/cn/about/</link>
-    <description>Recent content in 关于 on Lizao&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <atom:link href="https://www.chiselli.com/cn/about/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>黎子豪简历</title>
-      <link>https://www.chiselli.com/cn/about/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.chiselli.com/cn/about/cv/</guid>
-      <description> 语言： English 中文 下载简历 </description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>关于 on Lizao's blog</title><link>https://www.chiselli.com/cn/about/</link><description>Recent content in 关于 on Lizao's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://www.chiselli.com/cn/about/index.xml" rel="self" type="application/rss+xml"/><item><title>简历</title><link>https://www.chiselli.com/cn/about/cv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/cn/about/cv/</guid><description/></item></channel></rss>

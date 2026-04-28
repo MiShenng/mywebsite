@@ -1,6 +1,8 @@
 ---
-title: 文献阅读
-type: nolisting
+title: 读书与观影笔记
+layout: readings
 ---
 
-阅读条目按分类聚合呈现。请前往 [/categories/css-reading/](/categories/css-reading/) 查看完整列表。
+这是我的「读书和观影笔记」，包括读后感、观后感、长影评与阅读笔记。
+
+> 灵感来自周雪光老师所出阅读笔记，受益匪浅，尝试效仿。

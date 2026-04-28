@@ -1,0 +1,87 @@
+/* Header: flex layout, fixed min-height, left/right alignment */
+.header {
+  padding: 0 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Logo: remove old float/margin-top, set fixed height */
+.nav-logo {
+  float: none;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  display: block;
+  width: auto;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Nav links: reset text-align since flex handles layout */
+.nav-links {
+  text-align: left;
+}
+
+/* csslit: force small font for note points, override theme li styles */
+.csslit-notes-content,
+.csslit-notes-content ul,
+.csslit-notes-content li,
+.csslit-notes-content p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #555 !important;
+}
+
+.csslit-notes summary {
+  font-size: 14px !important;
+}
+
+.csslit-notes-content ul {
+  margin-top: 4px;
+}
+
+/* Mobile: stack logo above nav links, center both */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding: 12px 15px;
+    gap: 8px;
+  }
+
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    gap: 0 10px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .content {
+    padding: 0 20px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
