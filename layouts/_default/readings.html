@@ -277,16 +277,16 @@
           {{ with .Params.subtitle }}
           <div class="readings-entry-subtitle">{{ . }}</div>
           {{ end }}
-          {{ if or .Params.points .Content }}
+          {{ with .Params.points }}
           <details class="readings-notes">
-            <summary>查看笔记</summary>
+            <summary>查看笔记要点</summary>
             <div class="readings-notes-content">
-              {{ with .Params.points }}
               <ul>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
-              {{ end }}
-              {{ with .Content }}<div>{{ . }}</div>{{ end }}
             </div>
           </details>
+          {{ end }}
+          {{ if .Content }}
+          <a href="{{ .RelPermalink }}" class="readings-fullnote-link">▶ 查看完整笔记</a>
           {{ end }}
         </article>
         {{ end }}

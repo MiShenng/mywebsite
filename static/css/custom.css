@@ -50,6 +50,35 @@
   margin-top: 4px;
 }
 
+/* readings: small font for note points */
+.readings-notes-content,
+.readings-notes-content ul,
+.readings-notes-content li,
+.readings-notes-content p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #555 !important;
+}
+
+.readings-notes summary {
+  font-size: 14px !important;
+}
+
+.readings-fullnote-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #999;
+  text-decoration: none;
+  border-top: 1px dashed #eee;
+  padding-top: 8px;
+  width: 100%;
+}
+
+.readings-fullnote-link:hover {
+  color: #4a7fa5;
+}
+
 /* Mobile: stack logo above nav links, center both */
 @media screen and (max-width: 768px) {
   .nav {
