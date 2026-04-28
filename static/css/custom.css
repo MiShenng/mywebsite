@@ -31,3 +31,38 @@
 .nav-links {
   text-align: left;
 }
+
+/* Mobile: stack logo above nav links, center both */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding: 12px 15px;
+    gap: 8px;
+  }
+
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    gap: 0 10px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .content {
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
