@@ -1,0 +1,17 @@
+<nav class="nav">
+  <a href="{{ "/" | relURL }}" class="nav-logo">
+    <img src="{{ print "" .Site.Params.logo.url | relURL }}"
+         alt="{{ .Site.Params.logo.alt }}">
+  </a>
+
+  <ul class="nav-links">
+    {{ $section := .Section }}
+    {{ $menus := .Site.Menus }}
+    {{ $sectionMenu := index $menus $section }}
+    {{ $defaultMenu := index $menus (.Site.Params.defaultLang | default "en") }}
+    {{ $activeMenu := cond (and $sectionMenu (gt (len $sectionMenu) 0)) $sectionMenu $defaultMenu }}
+    {{ range $activeMenu }}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
