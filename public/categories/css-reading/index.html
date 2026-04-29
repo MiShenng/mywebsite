@@ -1,10 +1,527 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>计算社会科学文献阅读 | Lizao's blog</title>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><meta name=description content="Personal website of Lizao"><meta name=author content="Lizao"><link rel=canonical href=https://www.chiselli.com/categories/css-reading/><link rel=alternate hreflang=x-default href=https://www.chiselli.com/><meta property="og:type" content="website"><meta property="og:title" content="计算社会科学文献阅读 | Lizao's blog"><meta property="og:description" content="Personal website of Lizao"><meta property="og:url" content="https://www.chiselli.com/categories/css-reading/"><meta property="og:image" content="https://www.chiselli.com/images/1.jpg"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="Lizao's blog"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="计算社会科学文献阅读 | Lizao's blog"><meta name=twitter:description content="Personal website of Lizao"><meta name=twitter:image content="https://www.chiselli.com/images/1.jpg"><link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script><script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script><script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script><script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script><script>hljs.initHighlightingOnLoad()</script><link rel=icon href=https://www.chiselli.com/media/symbol.png><link rel=stylesheet href=/css/custom.css><script data-goatcounter=https://chiselli.goatcounter.com/count async src=//gc.zgo.at/count.js></script></head><body><div class=wrapper><header class=header><nav class=nav><a href=/ class=nav-logo><img src=/media/symbol.svg alt=Lizao></a><ul class=nav-links><li><a href=/>Home</a></li><li><a href=/en/about/>About</a></li><li><a href=/en/posts/>Posts</a></li><li><a href=/categories/>Categories</a></li><li><a href=/en/about/cv/>CV</a></li></ul></nav></header><style>.csslit-container{display:grid;grid-template-columns:180px 1fr;gap:48px;max-width:1000px;margin:48px auto;padding:0 15px;align-items:start}.csslit-sidebar{position:sticky;top:24px}.csslit-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px 8px;margin-bottom:24px}.csslit-stat-num{font-size:1.5em;font-weight:700;color:#222;line-height:1.1}.csslit-stat-label{font-size:.72em;color:#999;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}.csslit-sidebar hr{border:none;border-top:1px solid #eee;margin:20px 0}.csslit-date-index h4{font-size:.75em;color:#aaa;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px}.csslit-year-label{font-weight:700;font-size:.92em;margin-bottom:8px;color:#444}.csslit-date-list{list-style:none;padding:0;margin:0 0 16px;font-size:.88em}.csslit-date-list li{margin-bottom:6px}.csslit-date-list a{color:#888;text-decoration:none}.csslit-date-list a:hover{color:#111}.csslit-main{min-width:0}.csslit-title{font-size:1.5em;font-weight:700;margin:0 0 8px}.csslit-intro{color:#666;font-size:.95em;margin-bottom:32px;line-height:1.6}.csslit-date-group{margin-bottom:40px}.csslit-date-header{font-size:.85em;color:#aaa;border-bottom:1px solid #eee;padding-bottom:8px;margin-bottom:20px;font-weight:400}.csslit-entry{border-left:3px solid #b0c4b0;padding:4px 0 4px 20px;margin-bottom:32px}.csslit-entry-type-book{border-left-color:#7aab7a}.csslit-entry-type-paper{border-left-color:#7a99c8}.csslit-entry-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:6px;font-size:.83em;color:#999}.csslit-badge{padding:2px 7px;border-radius:3px;font-size:.85em;font-weight:600;letter-spacing:.03em}.csslit-badge-book{background:#e8f0e8;color:#2a6b2a}.csslit-badge-paper{background:#e8eaf5;color:#2a3a7a}.csslit-rating{color:#f5a623;letter-spacing:1px;font-size:.9em}.csslit-entry h3{margin:4px 0;font-size:1.08em;line-height:1.4}.csslit-entry h3 a{color:#1a1a1a;text-decoration:none}.csslit-entry h3 a:hover{text-decoration:underline}.csslit-entry-citation{font-style:italic;color:#777;font-size:.88em;margin:4px 0 10px}.csslit-entry-tags{margin-bottom:12px}.csslit-entry-tags a{display:inline-block;margin-right:8px;font-size:.8em;color:#999;text-decoration:none}.csslit-entry-tags a:hover{color:#333}.csslit-notes{background:#fafafa;border:1px solid #efefef;border-radius:5px;padding:8px 14px;margin-top:8px}.csslit-notes summary{font-size:.85em;color:#888;cursor:pointer;font-weight:500;list-style:none;outline:none;user-select:none}.csslit-notes summary::-webkit-details-marker{display:none}.csslit-notes summary::before{content:"▶  ";font-size:.7em}.csslit-notes[open] summary::before{content:"▼  "}.csslit-notes-content{margin-top:12px;padding-top:12px;border-top:1px dashed #e8e8e8;font-size:.92em;line-height:1.65;color:#444}.csslit-notes-content ul{margin:0;padding-left:1.3em}.csslit-notes-content li{margin-bottom:5px}.csslit-empty{color:#aaa;text-align:center;padding:60px 0;font-size:.95em}@media screen and (max-width:768px){.csslit-container{grid-template-columns:1fr;gap:24px;margin:24px auto}.csslit-sidebar{position:static;border-bottom:1px solid #eee;padding-bottom:20px}.csslit-date-index{display:none}.csslit-stats{grid-template-columns:repeat(4,auto);gap:12px 20px}}</style><div class=csslit-container><aside class=csslit-sidebar><div class=csslit-stats><div><div class=csslit-stat-num>1</div><div class=csslit-stat-label>条目</div></div><div><div class=csslit-stat-num>1</div><div class=csslit-stat-label>论文</div></div></div><hr><div class=csslit-date-index><h4>日期索引</h4><div class=csslit-year-label>2024</div><ul class=csslit-date-list><li><a href=#entry-20240315-placeholder-csslit>Mar 15</a></li></ul></div></aside><main class=csslit-main><h1 class=csslit-title>计算社会科学文献阅读</h1><div class=csslit-intro><p>这是我的「每日文献阅读」项目，记录与计算社会科学相关的论文与书籍——包括阅读笔记、要点摘录与个人评分。</p><blockquote><p>灵感来自 <a href=https://hongtaoh.com/ target=_blank rel="noreferrer noopener">Hongtao Huang 的 A Paper A Day</a>
-与 <a href=https://junyuj.com/ target=_blank rel="noreferrer noopener">Junyu Jiang 的同主题项目</a>
-。</p></blockquote></div><div class=csslit-date-group><div class=csslit-date-header>2024-03</div><article class="csslit-entry csslit-entry-type-paper" id=entry-20240315-placeholder-csslit><div class=csslit-entry-meta><span class="csslit-badge csslit-badge-paper">论文
-</span><span class=csslit-rating>★★★★☆</span>
-<span>⏱ 40 分钟</span>
-<a href=https://example.com target=_blank rel=noopener>原文 ↗</a></div><h3><a href=https://example.com target=_blank rel=noopener>Social Media and Political Polarization: A Computational Analysis of Echo Chambers</a></h3><div class=csslit-entry-citation>Sunstein, C. R., & Pariser, E. (2024). <em>Social Media and Political Polarization: A Computational Analysis of Echo Chambers</em>. Journal of Computational Social Science, 7(2), 45–78.</div><div class=csslit-entry-tags><a href=/tags/computational-social-science/>#Computational Social Science</a><a href=/tags/political-polarization/>#Political Polarization</a><a href=/tags/social-media/>#Social Media</a></div><details class=csslit-notes><summary>查看笔记要点</summary><div class=csslit-notes-content><ul><li>研究基于 Twitter/X 平台 2020–2023 年超过 1.2 亿条推文，构建了大规模用户交互网络</li><li>提出「回声室强度指数」(Echo Chamber Intensity Index, ECII)，量化用户信息茧房程度</li><li>主要发现：政治极化并非由算法单方面驱动，用户的主动选择行为贡献了约 62% 的同质化效应</li><li>方法论亮点：结合网络分析与自然语言处理，识别出跨党派桥接节点（bridge nodes）的稀缺性</li><li>对政策启示：单纯调整推荐算法的干预效果有限，需配合媒介素养教育才能有效缓解极化</li></ul></div></details></article></div></main></div><style>.custom-footer{text-align:center;padding:20px 0 40px}.footer-social-line{display:flex;justify-content:center;align-items:center;margin-bottom:8px}.footer-text-prefix{color:#666;font-size:15px;font-weight:500;letter-spacing:.5px;margin-right:12px}.footer-social-icons{display:flex;align-items:center;gap:12px}.footer-social-icons a{color:#666;text-decoration:none;font-size:18px;transition:color .3s ease,transform .3s ease;display:flex;align-items:center}.footer-social-icons a:hover{transform:translateY(-2px)}.social-github:hover{color:#333!important}.social-douban:hover{color:#072!important}.social-facebook:hover{color:#1877f2!important}.social-email:hover{color:#d44638!important}.footer-copyright{color:#666;font-size:15px;font-weight:500;letter-spacing:.5px}</style><footer class=custom-footer><script type=text/javascript src=/js/math-code.js></script><script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type=text/javascript src=/js/center-img.js></script><div class=footer-social-line><span class=footer-text-prefix>More information in</span><div class=footer-social-icons><a href=https://github.com/MiShenng class=social-github target=_blank title=GitHub><i class="fa fa-github"></i>
-</a><a href=https://www.douban.com/people/MiShenng/ class=social-douban target=_blank title=Douban><svg viewBox="0 0 24 24" fill="currentcolor" style="width:1em;height:1em"><path d="M.51 3.06h22.98V.755H.51V3.06zm20.976 2.537v9.608h-2.137l-1.669 5.76H24v2.28H0v-2.28h6.32l-1.67-5.76H2.515V5.597h18.972zm-5.066 9.608H7.58l1.67 5.76h5.501l1.67-5.76zM18.367 7.9H5.634v5.025h12.733V7.9z"/></svg>
-</a><a href=https://www.facebook.com/share/1CRZUWhnFp/ class=social-facebook target=_blank title=Facebook><i class="fa fa-facebook-square"></i>
-</a><a href=mailto:lizihao2023@lzu.edu.cn class=social-email title=Email><i class="fa fa-envelope"></i></a></div></div><div class=footer-copyright>&copy; Lizao 2024-2026</div></footer>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>计算社会科学文献阅读 | Lizao&#39;s blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+
+  
+
+
+
+
+
+
+
+<meta name="description" content="Personal website of Lizao">
+<meta name="author" content="Lizao">
+
+<link rel="canonical" href="https://www.chiselli.com/categories/css-reading/">
+
+<link rel="alternate" hreflang="x-default" href="https://www.chiselli.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="计算社会科学文献阅读 | Lizao&#39;s blog">
+<meta property="og:description" content="Personal website of Lizao">
+<meta property="og:url" content="https://www.chiselli.com/categories/css-reading/">
+<meta property="og:image" content="https://www.chiselli.com/images/1.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Lizao&#39;s blog">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="计算社会科学文献阅读 | Lizao&#39;s blog">
+<meta name="twitter:description" content="Personal website of Lizao">
+<meta name="twitter:image" content="https://www.chiselli.com/images/1.jpg">
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<link rel="icon" href="https://www.chiselli.com/media/symbol.png">
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+<script data-goatcounter="https://chiselli.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/media/symbol.svg"
+         alt="Lizao">
+  </a>
+
+  <ul class="nav-links">
+    
+    
+    
+    
+    
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/en/about/">About</a></li>
+    
+      <li><a href="/en/posts/">Posts</a></li>
+    
+      <li><a href="/categories/">Categories</a></li>
+    
+      <li><a href="/en/about/cv/">CV</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<style>
+ 
+.csslit-container {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 48px auto;
+  padding: 0 15px;
+  align-items: start;
+}
+
+ 
+.csslit-sidebar {
+  position: sticky;
+  top: 24px;
+}
+
+.csslit-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 8px;
+  margin-bottom: 24px;
+}
+.csslit-stat-num {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.1;
+}
+.csslit-stat-label {
+  font-size: 0.72em;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.csslit-sidebar hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.csslit-date-index h4 {
+  font-size: 0.75em;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+.csslit-year-label {
+  font-weight: 700;
+  font-size: 0.92em;
+  margin-bottom: 8px;
+  color: #444;
+}
+.csslit-date-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 0.88em;
+}
+.csslit-date-list li { margin-bottom: 6px; }
+.csslit-date-list a { color: #888; text-decoration: none; }
+.csslit-date-list a:hover { color: #111; }
+
+ 
+.csslit-main { min-width: 0; }
+
+.csslit-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.csslit-intro {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.csslit-date-group { margin-bottom: 40px; }
+.csslit-date-header {
+  font-size: 0.85em;
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+ 
+.csslit-entry {
+  border-left: 3px solid #b0c4b0;
+  padding: 4px 0 4px 20px;
+  margin-bottom: 32px;
+}
+.csslit-entry-type-book { border-left-color: #7aab7a; }
+.csslit-entry-type-paper { border-left-color: #7a99c8; }
+
+.csslit-entry-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+  font-size: 0.83em;
+  color: #999;
+}
+.csslit-badge {
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.csslit-badge-book  { background: #e8f0e8; color: #2a6b2a; }
+.csslit-badge-paper { background: #e8eaf5; color: #2a3a7a; }
+
+.csslit-rating { color: #f5a623; letter-spacing: 1px; font-size: 0.9em; }
+
+.csslit-entry h3 {
+  margin: 4px 0 4px;
+  font-size: 1.08em;
+  line-height: 1.4;
+}
+.csslit-entry h3 a { color: #1a1a1a; text-decoration: none; }
+.csslit-entry h3 a:hover { text-decoration: underline; }
+
+.csslit-entry-citation {
+  font-style: italic;
+  color: #777;
+  font-size: 0.88em;
+  margin: 4px 0 10px;
+}
+
+.csslit-entry-tags {
+  margin-bottom: 12px;
+}
+.csslit-entry-tags a {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 0.8em;
+  color: #999;
+  text-decoration: none;
+}
+.csslit-entry-tags a:hover { color: #333; }
+
+ 
+.csslit-notes {
+  background: #fafafa;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 8px 14px;
+  margin-top: 8px;
+}
+.csslit-notes summary {
+  font-size: 0.85em;
+  color: #888;
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  outline: none;
+  user-select: none;
+}
+.csslit-notes summary::-webkit-details-marker { display: none; }
+.csslit-notes summary::before { content: "▶  "; font-size: 0.7em; }
+.csslit-notes[open] summary::before { content: "▼  "; }
+.csslit-notes-content {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e8e8e8;
+  font-size: 0.92em;
+  line-height: 1.65;
+  color: #444;
+}
+.csslit-notes-content ul { margin: 0; padding-left: 1.3em; }
+.csslit-notes-content li { margin-bottom: 5px; }
+
+.csslit-empty {
+  color: #aaa;
+  text-align: center;
+  padding: 60px 0;
+  font-size: 0.95em;
+}
+
+ 
+@media screen and (max-width: 768px) {
+  .csslit-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 24px auto;
+  }
+  .csslit-sidebar {
+    position: static;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+  }
+  .csslit-date-index { display: none; }
+  .csslit-stats { grid-template-columns: repeat(4, auto); gap: 12px 20px; }
+}
+</style>
+
+
+
+
+
+<div class="csslit-container">
+
+  
+  <aside class="csslit-sidebar">
+    
+    <div class="csslit-stats">
+      <div>
+        <div class="csslit-stat-num">1</div>
+        <div class="csslit-stat-label">条目</div>
+      </div>
+      
+      <div>
+        <div class="csslit-stat-num">1</div>
+        <div class="csslit-stat-label">论文</div>
+      </div>
+      
+      
+    </div>
+    <hr>
+    <div class="csslit-date-index">
+      <h4>日期索引</h4>
+      
+      <div class="csslit-year-label">2024</div>
+      <ul class="csslit-date-list">
+        
+        <li><a href="#entry-20240315-placeholder-csslit">Mar 15</a></li>
+        
+      </ul>
+      
+    </div>
+    
+  </aside>
+
+  
+  <main class="csslit-main">
+    <h1 class="csslit-title">计算社会科学文献阅读</h1>
+    <div class="csslit-intro"><p>这是我的「每日文献阅读」项目，记录与计算社会科学相关的论文与书籍——包括阅读笔记、要点摘录与个人评分。</p>
+<blockquote>
+<p>灵感来自 <a href="https://hongtaoh.com/" target="_blank" rel="noreferrer noopener">Hongtao Huang 的 A Paper A Day</a>
+
+ 与 <a href="https://junyuj.com/" target="_blank" rel="noreferrer noopener">Junyu Jiang 的同主题项目</a>
+
+。</p>
+</blockquote>
+</div>
+
+    
+      
+      <div class="csslit-date-group">
+        <div class="csslit-date-header">2024-03</div>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20240315-placeholder-csslit">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              论文
+            </span>
+            
+            <span class="csslit-rating">★★★★☆</span>
+            
+            <span>⏱ 40 分钟</span>
+            <a href="https://example.com" target="_blank" rel="noopener">原文 ↗</a>
+          </div>
+
+          <h3>
+            
+              <a href="https://example.com" target="_blank" rel="noopener">Social Media and Political Polarization: A Computational Analysis of Echo Chambers</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Sunstein, C. R., &amp; Pariser, E. (2024). <em>Social Media and Political Polarization: A Computational Analysis of Echo Chambers</em>. Journal of Computational Social Science, 7(2), 45–78.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/computational-social-science/">#Computational Social Science</a><a href="/tags/political-polarization/">#Political Polarization</a><a href="/tags/social-media/">#Social Media</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>查看笔记要点</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li>研究基于 Twitter/X 平台 2020–2023 年超过 1.2 亿条推文，构建了大规模用户交互网络</li><li>提出「回声室强度指数」(Echo Chamber Intensity Index, ECII)，量化用户信息茧房程度</li><li>主要发现：政治极化并非由算法单方面驱动，用户的主动选择行为贡献了约 62% 的同质化效应</li><li>方法论亮点：结合网络分析与自然语言处理，识别出跨党派桥接节点（bridge nodes）的稀缺性</li><li>对政策启示：单纯调整推荐算法的干预效果有限，需配合媒介素养教育才能有效缓解极化</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+      </div>
+      
+    
+  </main>
+
+</div>
+
+<style>
+   
+  .custom-footer {
+    text-align: center;
+    padding: 20px 0 40px;
+  }
+
+  .footer-social-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+     
+  }
+
+  .footer-text-prefix {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-right: 12px;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+     
+  }
+
+  .footer-social-icons a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 18px;
+     
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+   
+  .footer-social-icons a:hover {
+    transform: translateY(-2px);
+  }
+
+  .social-github:hover {
+    color: #333333 !important;
+  }
+
+  .social-douban:hover {
+    color: #007722 !important;
+  }
+
+   
+  .social-facebook:hover {
+    color: #1877F2 !important;
+  }
+
+   
+  .social-email:hover {
+    color: #D44638 !important;
+  }
+
+   
+
+  .footer-copyright {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<footer class="custom-footer">
+   
+
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+
+  
+  <div class="footer-social-line">
+    <span class="footer-text-prefix">More information in</span>
+
+    <div class="footer-social-icons">
+      
+      
+      <a href="https://github.com/MiShenng" class="social-github" target="_blank" title="GitHub">
+        <i class="fa fa-github"></i>
+      </a>
+      
+
+      
+      <a href="https://www.douban.com/people/MiShenng/" class="social-douban" target="_blank" title="Douban">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1em; height: 1em;">
+          <path d="M.51 3.06h22.98V.755H.51V3.06Zm20.976 2.537v9.608h-2.137l-1.669 5.76H24v2.28H0v-2.28h6.32l-1.67-5.76H2.515V5.597h18.972Zm-5.066 9.608H7.58l1.67 5.76h5.501l1.67-5.76ZM18.367 7.9H5.634v5.025h12.733V7.9Z"/>
+        </svg>
+      </a>
+      
+
+      
+      <a href="https://www.facebook.com/share/1CRZUWhnFp/" class="social-facebook" target="_blank" title="Facebook">
+        <i class="fa fa-facebook-square"></i>
+      </a>
+      
+
+      
+      <a href="mailto:lizihao2023@lzu.edu.cn" class="social-email" title="Email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+      
+    </div>
+  </div>
+
+  
+  <div class="footer-copyright">
+    &copy; Lizao 2024-2026
+  </div>
+
+</footer>

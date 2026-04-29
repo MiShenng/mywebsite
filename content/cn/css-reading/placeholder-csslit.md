@@ -4,11 +4,10 @@ date: 2024-03-15
 draft: false
 categories: ["css-reading"]
 type: "paper"
-citation: "Sunstein, C. R., & Pariser, E. (2024). *Social Media and Political Polarization: A Computational Analysis of Echo Chambers*. Journal of Computational Social Science, 7(2), 45–78."
-link: "https://example.com"
-source: "课程推荐"
+citation: "Tonglet, J., Moens, M. F., & Gurevych, I. (2024, November). “Image, Tell me your story!” Predicting the original meta-context of visual misinformation. In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (pp. 7845-7864)."
+link: "https://aclanthology.org/2024.emnlp-main.448.pdf"
+source: ""
 rating: 4
-reading_time: 40
 tags: ["Computational Social Science", "Political Polarization", "Social Media"]
 points:
   - "研究基于 Twitter/X 平台 2020–2023 年超过 1.2 亿条推文，构建了大规模用户交互网络"
