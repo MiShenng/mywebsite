@@ -1,1 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Lizao's blog</title><link>https://www.chiselli.com/tags/</link><description>Recent content in Tags on Lizao's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.chiselli.com/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>阅读和观影笔记</title><link>https://www.chiselli.com/tags/%E9%98%85%E8%AF%BB%E5%92%8C%E8%A7%82%E5%BD%B1%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/tags/%E9%98%85%E8%AF%BB%E5%92%8C%E8%A7%82%E5%BD%B1%E7%AC%94%E8%AE%B0/</guid><description/></item><item><title>Lizao' Diary</title><link>https://www.chiselli.com/tags/lizao-diary/</link><pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/tags/lizao-diary/</guid><description/></item><item><title>Project records</title><link>https://www.chiselli.com/tags/project-records/</link><pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/tags/project-records/</guid><description/></item><item><title>poem</title><link>https://www.chiselli.com/tags/poem/</link><pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/tags/poem/</guid><description/></item><item><title>Computational Social Science</title><link>https://www.chiselli.com/tags/computational-social-science/</link><pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/tags/computational-social-science/</guid><description/></item><item><title>Political Polarization</title><link>https://www.chiselli.com/tags/political-polarization/</link><pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/tags/political-polarization/</guid><description/></item><item><title>Social Media</title><link>https://www.chiselli.com/tags/social-media/</link><pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/tags/social-media/</guid><description/></item><item><title>article</title><link>https://www.chiselli.com/tags/article/</link><pubDate>Thu, 07 Jan 2021 13:37:57 -0500</pubDate><guid>https://www.chiselli.com/tags/article/</guid><description/></item><item><title>English</title><link>https://www.chiselli.com/tags/english/</link><pubDate>Thu, 07 Jan 2021 13:37:57 -0500</pubDate><guid>https://www.chiselli.com/tags/english/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Lizao&#39;s blog</title>
+    <link>https://www.chiselli.com/tags/</link>
+    <description>Recent content in Tags on Lizao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.chiselli.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>阅读和观影笔记</title>
+      <link>https://www.chiselli.com/tags/%E9%98%85%E8%AF%BB%E5%92%8C%E8%A7%82%E5%BD%B1%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/tags/%E9%98%85%E8%AF%BB%E5%92%8C%E8%A7%82%E5%BD%B1%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lizao&#39; Diary</title>
+      <link>https://www.chiselli.com/tags/lizao-diary/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/tags/lizao-diary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project records</title>
+      <link>https://www.chiselli.com/tags/project-records/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/tags/project-records/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>poem</title>
+      <link>https://www.chiselli.com/tags/poem/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/tags/poem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computational Social Science</title>
+      <link>https://www.chiselli.com/tags/computational-social-science/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/tags/computational-social-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Political Polarization</title>
+      <link>https://www.chiselli.com/tags/political-polarization/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/tags/political-polarization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Social Media</title>
+      <link>https://www.chiselli.com/tags/social-media/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/tags/social-media/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>article</title>
+      <link>https://www.chiselli.com/tags/article/</link>
+      <pubDate>Thu, 07 Jan 2021 13:37:57 -0500</pubDate>
+      <guid>https://www.chiselli.com/tags/article/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>English</title>
+      <link>https://www.chiselli.com/tags/english/</link>
+      <pubDate>Thu, 07 Jan 2021 13:37:57 -0500</pubDate>
+      <guid>https://www.chiselli.com/tags/english/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

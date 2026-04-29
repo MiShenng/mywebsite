@@ -266,8 +266,7 @@
             {{ with .Params.rating }}
             <span class="csslit-rating">{{ range seq . }}★{{ end }}{{ range seq (sub 5 .) }}☆{{ end }}</span>
             {{ end }}
-            {{ with .Params.reading_time }}<span>⏱ {{ . }} 分钟</span>{{ end }}
-            {{ with .Params.link }}<a href="{{ . }}" target="_blank" rel="noopener">原文 ↗</a>{{ end }}
+{{ with .Params.link }}<a href="{{ . }}" target="_blank" rel="noopener">原文 ↗</a>{{ end }}
           </div>
 
           <h3>
