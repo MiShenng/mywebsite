@@ -6,6 +6,7 @@ cd ~/Desktop/quickstart
 git add .
 git commit -m "update site"
 git push
+
 ```
 
 
@@ -14,4 +15,6 @@ git push
 
 ```
 bash deploy.sh
+
+
 ```
