@@ -208,6 +208,16 @@
 {{ $books   := where $entries "Params.type" "book" }}
 {{ $papers  := where $entries "Params.type" "paper" }}
 
+{{ $tags := slice }}
+{{ range $entries }}
+  {{ with .Params.tags }}
+    {{ range . }}
+      {{ $tags = $tags | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $uniqueTags := $tags | uniq }}
+
 <div class="csslit-container">
 
   <!-- 左侧边栏 -->
@@ -215,21 +225,13 @@
     {{ if $entries }}
     <div class="csslit-stats">
       <div>
-        <div class="csslit-stat-num">{{ len $entries }}</div>
-        <div class="csslit-stat-label">条目</div>
-      </div>
-      {{ if $papers }}
-      <div>
         <div class="csslit-stat-num">{{ len $papers }}</div>
         <div class="csslit-stat-label">论文</div>
       </div>
-      {{ end }}
-      {{ if $books }}
       <div>
-        <div class="csslit-stat-num">{{ len $books }}</div>
-        <div class="csslit-stat-label">书籍</div>
+        <div class="csslit-stat-num">{{ len $uniqueTags }}</div>
+        <div class="csslit-stat-label">标签</div>
       </div>
-      {{ end }}
     </div>
     <hr>
     <div class="csslit-date-index">
