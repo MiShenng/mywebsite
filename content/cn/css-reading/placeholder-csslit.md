@@ -1,5 +1,5 @@
 ---
-title: "Social Media and Political Polarization: A Computational Analysis of Echo Chambers"
+title: "“Image, Tell me your story!”Predicting the original meta-context of visual misinformation"
 date: 2024-03-15
 draft: false
 categories: ["css-reading"]
@@ -8,7 +8,7 @@ citation: "Tonglet, J., Moens, M. F., & Gurevych, I. (2024, November). “Image,
 link: "https://aclanthology.org/2024.emnlp-main.448.pdf"
 source: ""
 rating: 4
-tags: ["Computational Social Science", "Political Polarization", "Social Media"]
+tags: ["Visual Misinformation", "Multimodal Analysis", "Fact Check"]
 points:
   - "研究基于 Twitter/X 平台 2020–2023 年超过 1.2 亿条推文，构建了大规模用户交互网络"
   - "提出「回声室强度指数」(Echo Chamber Intensity Index, ECII)，量化用户信息茧房程度"
