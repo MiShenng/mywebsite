@@ -1,5 +1,5 @@
 ---
-title: "“Image, Tell me your story!”Predicting the original meta-context of visual misinformation"
+title: "“图片，告诉我你的故事！”：预测视觉错误信息的原始元语境"
 date: 2024-03-15
 draft: false
 categories: ["css-reading"]

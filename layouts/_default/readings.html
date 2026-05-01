@@ -102,6 +102,7 @@
 .readings-entry-medium-电影 { border-left-color: #a2b8c8; }
 .readings-entry-medium-书目 { border-left-color: #a2c8a8; }
 .readings-entry-medium-文章 { border-left-color: #c8a2a2; }
+.readings-entry-medium-播客 { border-left-color: #b8a2c8; }
 
 .readings-entry-meta {
   display: flex;
@@ -122,6 +123,7 @@
 .readings-badge-电影 { background: #e8eef5; color: #2a4a7a; }
 .readings-badge-书目 { background: #e8f0e8; color: #2a6b2a; }
 .readings-badge-文章 { background: #f5e8e8; color: #7a2a2a; }
+.readings-badge-播客 { background: #eee8f5; color: #4a2a7a; }
 .readings-badge-default { background: #f0f0f0; color: #555; }
 
 .readings-stars { color: #f5a623; letter-spacing: 1px; font-size: 0.9em; }
@@ -171,13 +173,13 @@
 {{ $bookCount    := 0 }}
 {{ $movieCount   := 0 }}
 {{ $articleCount := 0 }}
-{{ $totalWords   := 0 }}
+{{ $podcastCount := 0 }}
 {{ range $entries }}
-  {{ $totalWords = add $totalWords .WordCount }}
   {{ $m := .Params.medium | default "" }}
   {{ if eq $m "书目"  }}{{ $bookCount    = add $bookCount    1 }}{{ end }}
   {{ if eq $m "电影"  }}{{ $movieCount   = add $movieCount   1 }}{{ end }}
   {{ if eq $m "文章"  }}{{ $articleCount = add $articleCount 1 }}{{ end }}
+  {{ if eq $m "播客"  }}{{ $podcastCount = add $podcastCount 1 }}{{ end }}
 {{ end }}
 
 <div class="readings-container">
@@ -199,8 +201,8 @@
         <div class="readings-stat-label">文章</div>
       </div>
       <div>
-        <div class="readings-stat-num">{{ $totalWords }}</div>
-        <div class="readings-stat-label">总字数</div>
+        <div class="readings-stat-num">{{ $podcastCount }}</div>
+        <div class="readings-stat-label">播客</div>
       </div>
     </div>
     <hr>
