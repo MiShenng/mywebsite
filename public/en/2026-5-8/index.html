@@ -1,0 +1,592 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>中国数据新闻大赛获奖作品分析 | Lizao&#39;s blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+
+  
+
+
+
+
+
+
+
+<meta name="description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现">
+<meta name="author" content="Lizao">
+
+<link rel="canonical" href="https://www.chiselli.com/en/2026-5-8/">
+
+<link rel="alternate" hreflang="x-default" href="https://www.chiselli.com/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="中国数据新闻大赛获奖作品分析 | Lizao&#39;s blog">
+<meta property="og:description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现">
+<meta property="og:url" content="https://www.chiselli.com/en/2026-5-8/">
+<meta property="og:image" content="https://www.chiselli.com/images/1.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Lizao&#39;s blog">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="中国数据新闻大赛获奖作品分析 | Lizao&#39;s blog">
+<meta name="twitter:description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现">
+<meta name="twitter:image" content="https://www.chiselli.com/images/1.jpg">
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<link rel="icon" href="https://www.chiselli.com/media/symbol.png">
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+<script data-goatcounter="https://chiselli.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/media/symbol.svg"
+         alt="Lizao">
+  </a>
+
+  <ul class="nav-links">
+    
+    
+    
+    
+    
+      
+    
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/en/about/">About</a></li>
+    
+      <li><a href="/en/posts/">Posts</a></li>
+    
+      <li><a href="/categories/">Categories</a></li>
+    
+      <li><a href="/en/about/cv/">CV</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>中国数据新闻大赛获奖作品分析</h1>
+
+<p>
+ / 2026-05-08 
+
+  
+    · 1 min read
+  
+
+</p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/MiShenng/mywebsite/edit/main/contenten/2026-5-8/index.html'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>中国数据新闻大赛获奖作品分析</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+	<style>
+		body {
+			background-color: #f3f4f6;
+			font-family: sans-serif;
+		}
+		.chart-container {
+			height: 400px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body class="p-6">
+
+	<div class="max-w-7xl mx-auto">
+		<header class="mb-8 text-center">
+			<h1 class="text-3xl font-bold text-gray-800 mb-2">中国数据新闻大赛获奖作品深度剖析</h1>
+			<p class="text-gray-500">基于近四届精简数据的文本与叙事特征可视化呈现</p>
+		</header>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+			<!-- 图表一 核心议题演变趋势 -->
+			<div class="bg-white rounded-xl shadow-sm p-4">
+				<div id="chart1" class="chart-container"></div>
+			</div>
+
+			<!-- 图表二 情感色彩占比分布 -->
+			<div class="bg-white rounded-xl shadow-sm p-4">
+				<div id="chart2" class="chart-container"></div>
+			</div>
+
+			<!-- 图表三 标题叙事结构剖析 -->
+			<div class="bg-white rounded-xl shadow-sm p-4">
+				<div id="chart3" class="chart-container"></div>
+			</div>
+
+			<!-- 图表四 核心热点高频词汇 -->
+			<div class="bg-white rounded-xl shadow-sm p-4">
+				<div id="chart4" class="chart-container"></div>
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		// 定义通用调色盘
+		const colorPalette = ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4', '#ea7ccc'];
+
+		// 图表一 核心议题演变趋势图 河流图堆叠面积
+		const chart1 = echarts.init(document.getElementById('chart1'));
+		const option1 = {
+			title: {
+				text: '核心议题演变趋势',
+				left: 'center',
+				textStyle: { color: '#333', fontSize: 16 }
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: { type: 'cross', label: { backgroundColor: '#6a7985' } }
+			},
+			legend: {
+				data: ['宏观突发', '社会结构', '基层精神', '微观权益'],
+				bottom: 0
+			},
+			grid: {
+				left: '3%', right: '4%', bottom: '10%', containLabel: true
+			},
+			xAxis: [
+				{
+					type: 'category',
+					boundaryGap: false,
+					data: ['第七届', '第八届', '第九届', '第十届']
+				}
+			],
+			yAxis: [
+				{ type: 'value' }
+			],
+			color: ['#ee6666', '#fac858', '#91cc75', '#5470c6'],
+			series: [
+				{
+					name: '宏观突发',
+					type: 'line',
+					stack: 'Total',
+					areaStyle: {},
+					emphasis: { focus: 'series' },
+					data: [30, 15, 10, 5]
+				},
+				{
+					name: '社会结构',
+					type: 'line',
+					stack: 'Total',
+					areaStyle: {},
+					emphasis: { focus: 'series' },
+					data: [10, 35, 20, 15]
+				},
+				{
+					name: '基层精神',
+					type: 'line',
+					stack: 'Total',
+					areaStyle: {},
+					emphasis: { focus: 'series' },
+					data: [5, 15, 40, 20]
+				},
+				{
+					name: '微观权益',
+					type: 'line',
+					stack: 'Total',
+					areaStyle: {},
+					emphasis: { focus: 'series' },
+					data: [5, 10, 15, 45]
+				}
+			]
+		};
+		chart1.setOption(option1);
+
+		// 图表二 情感色彩占比分布图 南丁格尔玫瑰图
+		const chart2 = echarts.init(document.getElementById('chart2'));
+		const option2 = {
+			title: {
+				text: '情感色彩占比分布',
+				left: 'center',
+				textStyle: { color: '#333', fontSize: 16 }
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: '{a} <br/>{b} {c}%'
+			},
+			legend: {
+				bottom: 0
+			},
+			color: ['#5c7bd9', '#91cc75', '#fac858'],
+			series: [
+				{
+					name: '情感倾向',
+					type: 'pie',
+					radius: [30, 120],
+					center: ['50%', '50%'],
+					roseType: 'area',
+					itemStyle: {
+						borderRadius: 8
+					},
+					data: [
+						{ value: 45, name: '焦虑沉重痛点类' },
+						{ value: 30, name: '积极希望守护类' },
+						{ value: 25, name: '中立客观叙事类' }
+					]
+				}
+			]
+		};
+		chart2.setOption(option2);
+
+		// 图表三 标题叙事结构剖析图 矩形树状图
+		const chart3 = echarts.init(document.getElementById('chart3'));
+		const option3 = {
+			title: {
+				text: '标题叙事结构剖析',
+				left: 'center',
+				textStyle: { color: '#333', fontSize: 16 }
+			},
+			tooltip: {
+				formatter: '{b} 数量 {c}篇'
+			},
+			series: [{
+				type: 'treemap',
+				width: '90%',
+				height: '80%',
+				roam: false,
+				nodeClick: false,
+				breadcrumb: { show: false },
+				itemStyle: {
+					borderColor: '#fff',
+					borderWidth: 2,
+					gapWidth: 2
+				},
+				color: ['#5470c6', '#73c0de', '#91cc75'],
+				data: [
+					{
+						name: '复合主副标题结构',
+						value: 444,
+						label: { show: true, formatter: '{b}\n\n{c}篇' }
+					},
+					{
+						name: '悬念疑问句式结构',
+						value: 118,
+						label: { show: true, formatter: '{b}\n\n{c}篇' }
+					},
+					{
+						name: '常规平铺直叙结构',
+						value: 106,
+						label: { show: true, formatter: '{b}\n\n{c}篇' }
+					}
+				]
+			}]
+		};
+		chart3.setOption(option3);
+
+		// 图表四 核心热点高频词汇图 词云图
+		const chart4 = echarts.init(document.getElementById('chart4'));
+		const option4 = {
+			title: {
+				text: '核心热点高频词汇',
+				left: 'center',
+				textStyle: { color: '#333', fontSize: 16 }
+			},
+			tooltip: {
+				show: true
+			},
+			series: [{
+				type: 'wordCloud',
+				shape: 'circle',
+				keepAspect: true,
+				left: 'center',
+				top: 'center',
+				width: '90%',
+				height: '90%',
+				sizeRange: [14, 50],
+				rotationRange: [-45, 45],
+				rotationStep: 45,
+				gridSize: 8,
+				drawOutOfBound: false,
+				textStyle: {
+					fontFamily: 'sans-serif',
+					fontWeight: 'bold',
+					color: function () {
+						return 'rgb(' + [
+							Math.round(Math.random() * 160),
+							Math.round(Math.random() * 160),
+							Math.round(Math.random() * 160)
+						].join(',') + ')';
+					}
+				},
+				emphasis: {
+					focus: 'self',
+					textStyle: {
+						shadowBlur: 10,
+						shadowColor: '#333'
+					}
+				},
+				data: [
+					{ name: '困境', value: 24 },
+					{ name: '城市', value: 22 },
+					{ name: '生态', value: 17 },
+					{ name: '经济', value: 17 },
+					{ name: '女性', value: 16 },
+					{ name: '突围', value: 16 },
+					{ name: '教育', value: 15 },
+					{ name: '生存', value: 15 },
+					{ name: '乡村', value: 14 },
+					{ name: '文物', value: 12 },
+					{ name: '非遗', value: 11 },
+					{ name: '健康', value: 10 },
+					{ name: '外卖', value: 10 },
+					{ name: '年轻人', value: 10 },
+					{ name: '生育', value: 9 },
+					{ name: '养老', value: 9 },
+					{ name: '医疗', value: 8 },
+					{ name: '算法', value: 7 },
+					{ name: '网暴', value: 3 }
+				]
+			}]
+		};
+		chart4.setOption(option4);
+
+		// 响应式自适应
+		window.addEventListener('resize', function() {
+			chart1.resize();
+			chart2.resize();
+			chart3.resize();
+			chart4.resize();
+		});
+	</script>
+</body>
+</html>
+
+
+<p style="color:#777;">Last modified on 2026-05-08</p>
+</div>
+
+
+<style>
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 32px 0 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    font-size: 0.95em;
+  }
+  .post-nav a {
+    flex: 1;
+    text-decoration: none;
+    color: #555;
+    padding: 8px 0;
+  }
+  .post-nav .post-nav-prev { text-align: left; }
+  .post-nav .post-nav-next { text-align: right; }
+  .post-nav a:hover { color: #000; }
+  .post-nav-label {
+    display: block;
+    color: #999;
+    font-size: 0.85em;
+    margin-bottom: 4px;
+  }
+</style>
+<nav class="post-nav">
+  
+  
+</nav>
+
+
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<style>
+   
+  .custom-footer {
+    text-align: center;
+    padding: 20px 0 40px;
+  }
+
+  .footer-social-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+     
+  }
+
+  .footer-text-prefix {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-right: 12px;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+     
+  }
+
+  .footer-social-icons a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 18px;
+     
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+   
+  .footer-social-icons a:hover {
+    transform: translateY(-2px);
+  }
+
+  .social-github:hover {
+    color: #333333 !important;
+  }
+
+  .social-douban:hover {
+    color: #007722 !important;
+  }
+
+   
+  .social-facebook:hover {
+    color: #1877F2 !important;
+  }
+
+   
+  .social-email:hover {
+    color: #D44638 !important;
+  }
+
+   
+
+  .footer-copyright {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<footer class="custom-footer">
+  
+<div class="content">
+
+<script src="https://utteranc.es/client.js"
+        repo="MiShenng/mywebsite"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+<br>
+</div>
+ 
+
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+
+  
+  <div class="footer-social-line">
+    <span class="footer-text-prefix">More information in</span>
+
+    <div class="footer-social-icons">
+      
+      
+      <a href="https://github.com/MiShenng" class="social-github" target="_blank" title="GitHub">
+        <i class="fa fa-github"></i>
+      </a>
+      
+
+      
+      <a href="https://www.douban.com/people/MiShenng/" class="social-douban" target="_blank" title="Douban">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1em; height: 1em;">
+          <path d="M.51 3.06h22.98V.755H.51V3.06Zm20.976 2.537v9.608h-2.137l-1.669 5.76H24v2.28H0v-2.28h6.32l-1.67-5.76H2.515V5.597h18.972Zm-5.066 9.608H7.58l1.67 5.76h5.501l1.67-5.76ZM18.367 7.9H5.634v5.025h12.733V7.9Z"/>
+        </svg>
+      </a>
+      
+
+      
+      <a href="https://www.facebook.com/share/1CRZUWhnFp/" class="social-facebook" target="_blank" title="Facebook">
+        <i class="fa fa-facebook-square"></i>
+      </a>
+      
+
+      
+      <a href="mailto:lizihao2023@lzu.edu.cn" class="social-email" title="Email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+      
+    </div>
+  </div>
+
+  
+  <div class="footer-copyright">
+    &copy; Lizao 2024-2026
+  </div>
+
+</footer>
