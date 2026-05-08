@@ -318,7 +318,7 @@ url: "/en/2026-5-8/"
 				<!-- 图表八 关系网络图 -->
 				<div class="bg-white rounded-xl shadow-sm p-6 lg:col-span-2">
 					<h2 class="text-xl font-semibold text-slate-700 mb-2">社会病理与技术的语义共现网络</h2>
-					<p class="text-sm text-slate-500 mb-4">中心节点辐射出的高频关联词，选题意图</p>
+					<p class="text-sm text-slate-500 mb-4">基于全量标题文本计算，节点大小反映独立词频，连线粗细代表词语在同一标题中的共现强度，揭示创作者的底层选题意图。</p>
 					<div id="chart8" class="chart-container" style="height: 600px;"></div>
 				</div>
 			</div>
@@ -449,53 +449,122 @@ url: "/en/2026-5-8/"
 		const chart8 = echarts.init(document.getElementById('chart8'));
 		const graphData = {
 			nodes: [
-				{ name: '算法', symbolSize: 40, category: 0 },
-				{ name: '外卖', symbolSize: 35, category: 0 },
-				{ name: '困境', symbolSize: 30, category: 0 },
-				{ name: '压榨', symbolSize: 25, category: 0 },
-				{ name: '时间', symbolSize: 20, category: 0 },
-				{ name: '女性', symbolSize: 40, category: 1 },
-				{ name: '青年', symbolSize: 35, category: 1 },
-				{ name: '焦虑', symbolSize: 30, category: 1 },
-				{ name: '生育', symbolSize: 25, category: 1 },
-				{ name: '隐痛', symbolSize: 20, category: 1 },
-				{ name: '城市', symbolSize: 45, category: 2 },
-				{ name: '经济', symbolSize: 40, category: 2 },
-				{ name: '新能源', symbolSize: 30, category: 2 },
-				{ name: '轨道', symbolSize: 25, category: 2 },
-				{ name: '破局', symbolSize: 25, category: 2 }
+				{ name: '数字', symbolSize: 35, category: 0, value: 25 },
+				{ name: '文化', symbolSize: 25, category: 0, value: 15 },
+				{ name: '文物', symbolSize: 20, category: 0, value: 10 },
+				{ name: '非遗', symbolSize: 20, category: 0, value: 10 },
+				{ name: '出海', symbolSize: 15, category: 0, value: 7 },
+				{ name: '博物馆', symbolSize: 14, category: 0, value: 6 },
+				{ name: '消费', symbolSize: 14, category: 0, value: 6 },
+				{ name: '困境', symbolSize: 34, category: 1, value: 24 },
+				{ name: '突围', symbolSize: 26, category: 1, value: 16 },
+				{ name: '生存', symbolSize: 25, category: 1, value: 15 },
+				{ name: '女性', symbolSize: 25, category: 1, value: 15 },
+				{ name: '外卖', symbolSize: 19, category: 1, value: 9 },
+				{ name: '就业', symbolSize: 18, category: 1, value: 8 },
+				{ name: '技术', symbolSize: 18, category: 1, value: 8 },
+				{ name: '算法', symbolSize: 17, category: 1, value: 7 },
+				{ name: '城市', symbolSize: 32, category: 2, value: 22 },
+				{ name: '经济', symbolSize: 26, category: 2, value: 16 },
+				{ name: '生态', symbolSize: 25, category: 2, value: 15 },
+				{ name: '教育', symbolSize: 23, category: 2, value: 13 },
+				{ name: '乡村', symbolSize: 23, category: 2, value: 13 },
+				{ name: '年轻', symbolSize: 20, category: 2, value: 10 },
+				{ name: '医疗', symbolSize: 18, category: 2, value: 8 }
 			],
 			links: [
-				{ source: '算法', target: '外卖' }, { source: '算法', target: '困境' },
-				{ source: '外卖', target: '压榨' }, { source: '外卖', target: '时间' },
-				{ source: '算法', target: '时间' },
-				{ source: '女性', target: '生育' }, { source: '女性', target: '隐痛' },
-				{ source: '青年', target: '焦虑' }, { source: '青年', target: '困境' },
-				{ source: '城市', target: '经济' }, { source: '经济', target: '破局' },
-				{ source: '城市', target: '轨道' }, { source: '城市', target: '新能源' },
-				{ source: '外卖', target: '城市' }, { source: '青年', target: '外卖' },
-				{ source: '困境', target: '破局' }, { source: '女性', target: '困境' }
+				{ source: '文化', target: '非遗', value: 4 },
+				{ source: '博物馆', target: '文物', value: 3 },
+				{ source: '出海', target: '文化', value: 3 },
+				{ source: '数字', target: '文化', value: 2 },
+				{ source: '文化', target: '文物', value: 1 },
+				{ source: '出海', target: '消费', value: 1 },
+				{ source: '困境', target: '女性', value: 2 },
+				{ source: '困境', target: '突围', value: 2 },
+				{ source: '就业', target: '突围', value: 2 },
+				{ source: '突围', target: '算法', value: 2 },
+				{ source: '生存', target: '突围', value: 2 },
+				{ source: '技术', target: '突围', value: 2 },
+				{ source: '困境', target: '生存', value: 2 },
+				{ source: '外卖', target: '突围', value: 1 },
+				{ source: '外卖', target: '生存', value: 1 },
+				{ source: '年轻', target: '消费', value: 2 },
+				{ source: '生态', target: '经济', value: 2 },
+				{ source: '乡村', target: '医疗', value: 2 },
+				{ source: '城市', target: '年轻', value: 2 },
+				{ source: '乡村', target: '教育', value: 1 },
+				{ source: '城市', target: '教育', value: 1 },
+				{ source: '城市', target: '突围', value: 2 }
 			],
-			categories: [{ name: '系统与异化' }, { name: '微观个体' }, { name: '宏观发展' }]
+			categories: [
+				{ name: '文化复兴与数字出海' },
+				{ name: '生存突围与系统异化' },
+				{ name: '宏观城乡与青年折叠' }
+			]
 		};
 		const option8 = {
-			tooltip: {},
-			legend: { data: ['系统与异化', '微观个体', '宏观发展'], bottom: 0 },
-			color: ['#ee6666', '#73c0de', '#5470c6'],
+			backgroundColor: 'transparent',
+			tooltip: {
+				formatter: function (params) {
+					if (params.dataType === 'node') {
+						return params.name + ' 独立出现频次 ' + params.value;
+					}
+					if (params.dataType === 'edge') {
+						return params.data.source + ' 与 ' + params.data.target + ' 共同出现频次 ' + params.value;
+					}
+					return params.name;
+				}
+			},
+			legend: {
+				data: ['文化复兴与数字出海', '生存突围与系统异化', '宏观城乡与青年折叠'],
+				bottom: '2%',
+				textStyle: { color: '#64748b', fontSize: 14 }
+			},
+			color: ['#14b8a6', '#ef4444', '#3b82f6'],
+			animationDurationUpdate: 1500,
+			animationEasingUpdate: 'quinticInOut',
 			series: [
 				{
+					name: '语义共现网络',
 					type: 'graph',
 					layout: 'force',
 					data: graphData.nodes,
 					links: graphData.links,
 					categories: graphData.categories,
 					roam: true,
-					label: { show: true, position: 'right' },
-					force: { repulsion: 300, edgeLength: [50, 100] },
-					lineStyle: { color: 'source', curveness: 0.3 }
+					label: {
+						show: true,
+						position: 'right',
+						formatter: '{b}',
+						fontSize: 13,
+						color: '#334155'
+					},
+					force: {
+						repulsion: 800,
+						edgeLength: [80, 150],
+						gravity: 0.1
+					},
+					itemStyle: {
+						borderColor: '#fff',
+						borderWidth: 2,
+						shadowBlur: 10,
+						shadowColor: 'rgba(0, 0, 0, 0.15)'
+					},
+					lineStyle: {
+						color: 'source',
+						curveness: 0.2,
+						width: 2
+					},
+					emphasis: {
+						focus: 'adjacency',
+						lineStyle: { width: 6 }
+					}
 				}
 			]
 		};
+		option8.series[0].links.forEach(function (link) {
+			link.lineStyle = { width: link.value * 2 };
+		});
 		chart8.setOption(option8);
 
 		window.addEventListener('resize', function() {
