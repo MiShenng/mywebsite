@@ -18,7 +18,7 @@
 
 
 
-<meta name="description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现">
+<meta name="description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现 评委偏好与叙事演进 进阶数据洞察 多维度交叉分析 揭示数据新闻背后的创作密码 议题内卷与获奖天花板 宏观城市议题易获大奖 弱势群体议题陷入红海内卷 标题形态学的字数膨胀 第十届标 …">
 <meta name="author" content="Lizao">
 
 <link rel="canonical" href="https://www.chiselli.com/en/2026-5-8/">
@@ -27,7 +27,7 @@
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="中国数据新闻大赛获奖作品分析 | Lizao&#39;s blog">
-<meta property="og:description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现">
+<meta property="og:description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现 评委偏好与叙事演进 进阶数据洞察 多维度交叉分析 揭示数据新闻背后的创作密码 议题内卷与获奖天花板 宏观城市议题易获大奖 弱势群体议题陷入红海内卷 标题形态学的字数膨胀 第十届标 …">
 <meta property="og:url" content="https://www.chiselli.com/en/2026-5-8/">
 <meta property="og:image" content="https://www.chiselli.com/images/1.jpg">
 <meta property="og:locale" content="en_US">
@@ -35,7 +35,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="中国数据新闻大赛获奖作品分析 | Lizao&#39;s blog">
-<meta name="twitter:description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现">
+<meta name="twitter:description" content="&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品深度剖析 基于近四届精简数据的文本与叙事特征可视化呈现 评委偏好与叙事演进 进阶数据洞察 多维度交叉分析 揭示数据新闻背后的创作密码 议题内卷与获奖天花板 宏观城市议题易获大奖 弱势群体议题陷入红海内卷 标题形态学的字数膨胀 第十届标 …">
 <meta name="twitter:image" content="https://www.chiselli.com/images/1.jpg">
 
 
@@ -410,9 +410,217 @@
 			chart4.resize();
 		});
 	</script>
+
+	<section class="mt-14">
+		<div class="max-w-7xl mx-auto">
+			<header class="mb-10 text-center">
+				<h1 class="text-3xl font-bold text-slate-800 mb-3">评委偏好与叙事演进 进阶数据洞察</h1>
+				<p class="text-slate-500 text-lg">多维度交叉分析 揭示数据新闻背后的创作密码</p>
+			</header>
+
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<!-- 图表五 矩阵热力图 -->
+				<div class="bg-white rounded-xl shadow-sm p-6">
+					<h2 class="text-xl font-semibold text-slate-700 mb-2">议题内卷与获奖天花板</h2>
+					<p class="text-sm text-slate-500 mb-4">宏观城市议题易获大奖 弱势群体议题陷入红海内卷</p>
+					<div id="chart5" class="chart-container" style="height: 450px;"></div>
+				</div>
+
+				<!-- 图表六 箱线图 -->
+				<div class="bg-white rounded-xl shadow-sm p-6">
+					<h2 class="text-xl font-semibold text-slate-700 mb-2">标题形态学的字数膨胀</h2>
+					<p class="text-sm text-slate-500 mb-4">第十届标题长度骤增 复杂逻辑催生更长的主副结构</p>
+					<div id="chart6" class="chart-container" style="height: 450px;"></div>
+				</div>
+
+				<!-- 图表七 双向条形图 -->
+				<div class="bg-white rounded-xl shadow-sm p-6">
+					<h2 class="text-xl font-semibold text-slate-700 mb-2">冲突结构对获奖率的加成</h2>
+					<p class="text-sm text-slate-500 mb-4">展现矛盾对立的句式在高级别奖项中占据绝对主导</p>
+					<div id="chart7" class="chart-container" style="height: 450px;"></div>
+				</div>
+
+				<!-- 图表八 关系网络图 -->
+				<div class="bg-white rounded-xl shadow-sm p-6">
+					<h2 class="text-xl font-semibold text-slate-700 mb-2">社会病理与技术的语义共现网络</h2>
+					<p class="text-sm text-slate-500 mb-4">中心节点辐射出的高频关联词 勾勒创作者的思维导图</p>
+					<div id="chart8" class="chart-container" style="height: 450px;"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		// 图表五 议题内卷与获奖天花板 矩阵热力图
+		const chart5 = echarts.init(document.getElementById('chart5'));
+		const xAwards = ['一等奖', '二等奖', '三等奖', '优秀奖'];
+		const yThemes = ['时代青年与焦虑', '边缘与弱势群体', '文化复兴与寻根', '技术伦理与反思', '宏观经济与城市'];
+		const heatData = [
+			[0, 0, 2], [1, 0, 11], [2, 0, 12], [3, 0, 17],
+			[0, 1, 3], [1, 1, 9], [2, 1, 16], [3, 1, 19],
+			[0, 2, 4], [1, 2, 9], [2, 2, 6], [3, 2, 17],
+			[0, 3, 5], [1, 3, 12], [2, 3, 16], [3, 3, 12],
+			[0, 4, 8], [1, 4, 12], [2, 4, 20], [3, 4, 15]
+		];
+		const option5 = {
+			tooltip: { position: 'top' },
+			grid: { left: '25%', right: '5%', top: '5%', bottom: '15%' },
+			xAxis: { type: 'category', data: xAwards, splitArea: { show: true } },
+			yAxis: { type: 'category', data: yThemes, splitArea: { show: true } },
+			visualMap: {
+				min: 0,
+				max: 20,
+				calculable: true,
+				orient: 'horizontal',
+				left: 'center',
+				bottom: '0%',
+				inRange: { color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'] }
+			},
+			series: [{
+				name: '作品数量',
+				type: 'heatmap',
+				data: heatData,
+				label: { show: true, color: '#000' },
+				emphasis: {
+					itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0, 0, 0, 0.5)' }
+				}
+			}]
+		};
+		chart5.setOption(option5);
+
+		// 图表六 标题形态学的字数膨胀 箱线图
+		const chart6 = echarts.init(document.getElementById('chart6'));
+		const boxData = [
+			[8, 14, 18, 22, 30],
+			[9, 15, 18, 23, 32],
+			[8, 14, 18, 22, 31],
+			[10, 17, 21, 26, 38]
+		];
+		const option6 = {
+			tooltip: { trigger: 'item', axisPointer: { type: 'shadow' } },
+			grid: { left: '10%', right: '5%', bottom: '10%' },
+			xAxis: { type: 'category', data: ['第七届', '第八届', '第九届', '第十届'] },
+			yAxis: { type: 'value', name: '标题字数', min: 0, max: 45 },
+			series: [
+				{
+					name: '字数分布',
+					type: 'boxplot',
+					data: boxData,
+					itemStyle: {
+						color: '#5470c6',
+						borderColor: '#5470c6',
+						borderWidth: 2
+					}
+				},
+				{
+					name: '平均值连线',
+					type: 'line',
+					data: [18.1, 18.4, 18.3, 21.3],
+					lineStyle: { type: 'dashed', color: '#ee6666', width: 2 },
+					symbolSize: 8,
+					itemStyle: { color: '#ee6666' }
+				}
+			]
+		};
+		chart6.setOption(option6);
+
+		// 图表七 冲突结构对获奖率的加成 双向条形图
+		const chart7 = echarts.init(document.getElementById('chart7'));
+		const option7 = {
+			tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+			legend: { data: ['冲突对比结构', '平铺直叙结构'], bottom: 0 },
+			grid: { left: '3%', right: '4%', bottom: '10%', containLabel: true },
+			xAxis: [{ type: 'value', axisLabel: { formatter: '{value}%' } }],
+			yAxis: [{
+				type: 'category',
+				axisTick: { show: false },
+				data: ['优秀奖', '二等奖', '三等奖', '一等奖']
+			}],
+			series: [
+				{
+					name: '冲突对比结构',
+					type: 'bar',
+					stack: 'Total',
+					label: { show: true, formatter: '{c}%' },
+					emphasis: { focus: 'series' },
+					itemStyle: { color: '#fac858' },
+					data: [49.1, 56.5, 64.0, 62.5]
+				},
+				{
+					name: '平铺直叙结构',
+					type: 'bar',
+					stack: 'Total',
+					label: { show: true, position: 'left', formatter: '{c}%' },
+					emphasis: { focus: 'series' },
+					itemStyle: { color: '#91cc75' },
+					data: [-50.9, -43.5, -36.0, -37.5]
+				}
+			]
+		};
+		chart7.setOption(option7);
+
+		// 图表八 社会病理与技术的语义共现网络 力导向图
+		const chart8 = echarts.init(document.getElementById('chart8'));
+		const graphData = {
+			nodes: [
+				{ name: '算法', symbolSize: 40, category: 0 },
+				{ name: '外卖', symbolSize: 35, category: 0 },
+				{ name: '困境', symbolSize: 30, category: 0 },
+				{ name: '压榨', symbolSize: 25, category: 0 },
+				{ name: '时间', symbolSize: 20, category: 0 },
+				{ name: '女性', symbolSize: 40, category: 1 },
+				{ name: '青年', symbolSize: 35, category: 1 },
+				{ name: '焦虑', symbolSize: 30, category: 1 },
+				{ name: '生育', symbolSize: 25, category: 1 },
+				{ name: '隐痛', symbolSize: 20, category: 1 },
+				{ name: '城市', symbolSize: 45, category: 2 },
+				{ name: '经济', symbolSize: 40, category: 2 },
+				{ name: '新能源', symbolSize: 30, category: 2 },
+				{ name: '轨道', symbolSize: 25, category: 2 },
+				{ name: '破局', symbolSize: 25, category: 2 }
+			],
+			links: [
+				{ source: '算法', target: '外卖' }, { source: '算法', target: '困境' },
+				{ source: '外卖', target: '压榨' }, { source: '外卖', target: '时间' },
+				{ source: '算法', target: '时间' },
+				{ source: '女性', target: '生育' }, { source: '女性', target: '隐痛' },
+				{ source: '青年', target: '焦虑' }, { source: '青年', target: '困境' },
+				{ source: '城市', target: '经济' }, { source: '经济', target: '破局' },
+				{ source: '城市', target: '轨道' }, { source: '城市', target: '新能源' },
+				{ source: '外卖', target: '城市' }, { source: '青年', target: '外卖' },
+				{ source: '困境', target: '破局' }, { source: '女性', target: '困境' }
+			],
+			categories: [{ name: '系统与异化' }, { name: '微观个体' }, { name: '宏观发展' }]
+		};
+		const option8 = {
+			tooltip: {},
+			legend: { data: ['系统与异化', '微观个体', '宏观发展'], bottom: 0 },
+			color: ['#ee6666', '#73c0de', '#5470c6'],
+			series: [
+				{
+					type: 'graph',
+					layout: 'force',
+					data: graphData.nodes,
+					links: graphData.links,
+					categories: graphData.categories,
+					roam: true,
+					label: { show: true, position: 'right' },
+					force: { repulsion: 300, edgeLength: [50, 100] },
+					lineStyle: { color: 'source', curveness: 0.3 }
+				}
+			]
+		};
+		chart8.setOption(option8);
+
+		window.addEventListener('resize', function() {
+			chart5.resize();
+			chart6.resize();
+			chart7.resize();
+			chart8.resize();
+		});
+	</script>
 </body>
 </html>
-
 
 <p style="color:#777;">Last modified on 2026-05-08</p>
 </div>
