@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Course on Lizao&#39;s blog</title>
+    <link>https://www.chiselli.com/categories/course/</link>
+    <description>Recent content in Course on Lizao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.chiselli.com/categories/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GOV2001课程笔记</title>
+      <link>https://www.chiselli.com/en/2026/03/01/road-not-taken/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.chiselli.com/en/2026/03/01/road-not-taken/</guid>
+      <description>于26年初开始看Gary King的量化社会科学方法，即哈佛大学所开GOV2001。看课的时候发现所有资源几乎都是单声道，包括gary自己在Youtube上发布的资源，不堪其忧，于是自己下载到本地把声道配平后加了字幕上传到B站 。&#xA;下列为课程笔记，希望对于你有所帮助&#xA;一、概论 二、统计模型 三、概率 查看可视化页面：/en/2026-5-8/ </description>
+    </item>
+  </channel>
+</rss>
