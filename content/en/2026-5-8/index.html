@@ -295,10 +295,10 @@ url: "/en/2026-5-8/"
 
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 				<!-- 图表五 矩阵热力图 -->
-				<div class="bg-white rounded-xl shadow-sm p-6">
+				<div class="bg-white rounded-xl shadow-sm p-6 lg:col-span-2">
 					<h2 class="text-xl font-semibold text-slate-700 mb-2">议题内卷与获奖天花板</h2>
 					<p class="text-sm text-slate-500 mb-4">宏观城市议题易获大奖 弱势群体议题陷入红海内卷</p>
-					<div id="chart5" class="chart-container"></div>
+					<div id="chart5" class="chart-container" style="height: 600px;"></div>
 				</div>
 
 				<!-- 图表六 箱线图 -->
@@ -340,8 +340,8 @@ url: "/en/2026-5-8/"
 		const option5 = {
 			tooltip: { position: 'top' },
 			grid: {
-				left: '22%',
-				right: '6%',
+				left: '16%',
+				right: '4%',
 				top: '8%',
 				bottom: '12%',
 				containLabel: true
@@ -351,7 +351,7 @@ url: "/en/2026-5-8/"
 				type: 'category',
 				data: yThemes,
 				splitArea: { show: true },
-				axisLabel: { width: 140, overflow: 'break', lineHeight: 16, margin: 12 }
+				axisLabel: { width: 120, overflow: 'break', lineHeight: 16, margin: 10 }
 			},
 			visualMap: {
 				min: 0,
