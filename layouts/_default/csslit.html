@@ -239,7 +239,7 @@
       {{ range $entries.GroupByDate "2006" }}
       <div class="csslit-year-label">{{ .Key }}</div>
       <ul class="csslit-date-list">
-        {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
         <li><a href="#entry-{{ .Date.Format "20060102" }}-{{ .File.BaseFileName | urlize }}">{{ .Date.Format "Jan 02" }}</a></li>
         {{ end }}
       </ul>
@@ -257,7 +257,7 @@
       {{ range $entries.GroupByDate "2006-01" }}
       <div class="csslit-date-group">
         <div class="csslit-date-header">{{ .Key }}</div>
-        {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
         {{ $entryType := .Params.type | default "paper" }}
         <article class="csslit-entry csslit-entry-type-{{ $entryType }}"
                  id="entry-{{ .Date.Format "20060102" }}-{{ .File.BaseFileName | urlize }}">
