@@ -54,7 +54,7 @@
   <div class="liuxue-intro">{{ .Content }}</div>
 
   <ul class="liuxue-list">
-    {{ range .Sections }}
+    {{ range .Pages.ByDate.Reverse }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
   </ul>
