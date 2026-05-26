@@ -1,19 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Home on Lizao&#39;s blog</title>
-    <link>https://www.chiselli.com/en/</link>
-    <description>Recent content in Home on Lizao&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 08 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.chiselli.com/en/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>中国数据新闻大赛获奖作品分析</title>
-      <link>https://www.chiselli.com/en/2026-5-8/</link>
-      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.chiselli.com/en/2026-5-8/</guid>
-      <description>&lt;!DOCTYPE html&gt; 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品浅度剖析 基于近四届得奖选题&#xA;评委偏好与叙事演进 进阶数据洞察 多维度交叉分析 揭示数据新闻背后的创作密码&#xA;议题内卷与获奖天花板 宏观城市议题易获大奖 弱势群体议题陷入红海内卷&#xA;标题字数 第十届标题长度骤增 复杂逻辑催生更长的主副结构&#xA;冲突结构对获奖率的加成 展现矛盾对立的句式在高级别奖项中占据绝对主导&#xA;语义共现网络 基于全量标题文本计算，节点大小反映独立词频，连线粗细代表词语在同一标题中的共现强度，揭示创作者的底层选题意图。</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Lizao's blog</title><link>https://www.chiselli.com/en/</link><description>Recent content in Home on Lizao's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 08 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.chiselli.com/en/index.xml" rel="self" type="application/rss+xml"/><item><title>中国数据新闻大赛获奖作品分析</title><link>https://www.chiselli.com/en/2026-5-8/</link><pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate><guid>https://www.chiselli.com/en/2026-5-8/</guid><description>&lt;!DOCTYPE html> 中国数据新闻大赛获奖作品分析 中国数据新闻大赛获奖作品浅度剖析 基于近四届得奖选题
+评委偏好与叙事演进 进阶数据洞察 多维度交叉分析 揭示数据新闻背后的创作密码
+议题内卷与获奖天花板 宏观城市议题易获大奖 弱势群体议题陷入红海内卷
+标题字数 第十届标题长度骤增 复杂逻辑催生更长的主副结构
+冲突结构对获奖率的加成 展现矛盾对立的句式在高级别奖项中占据绝对主导
+语义共现网络 基于全量标题文本计算，节点大小反映独立词频，连线粗细代表词语在同一标题中的共现强度，揭示创作者的底层选题意图。</description></item></channel></rss>
