@@ -1,71 +1,11 @@
 {{ partial "header.html" . }}
 
 <style>
-.liuxue-container {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 48px;
-  max-width: 1000px;
+.liuxue-main {
+  max-width: 780px;
   margin: 48px auto;
   padding: 0 15px;
-  align-items: start;
 }
-
-.liuxue-sidebar {
-  position: sticky;
-  top: 24px;
-  font-size: 0.88em;
-}
-
-.liuxue-sidebar-title {
-  font-size: 1.1em;
-  font-weight: 700;
-  color: #222;
-  margin: 0 0 16px;
-}
-
-.liuxue-sidebar hr {
-  border: none;
-  border-top: 1px solid #eee;
-  margin: 16px 0;
-}
-
-.liuxue-cat-heading {
-  font-size: 0.72em;
-  color: #aaa;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin: 0 0 10px;
-}
-
-.liuxue-cat-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.liuxue-cat-list li {
-  margin-bottom: 8px;
-}
-
-.liuxue-cat-list a {
-  color: #666;
-  text-decoration: none;
-  font-size: 0.95em;
-  transition: color 0.15s;
-}
-
-.liuxue-cat-list a:hover {
-  color: #111;
-}
-
-.liuxue-cat-list .active {
-  color: #111;
-  font-weight: 600;
-}
-
-/* 右侧主内容 */
-.liuxue-main { min-width: 0; }
 
 .liuxue-main-title {
   font-size: 1.5em;
@@ -76,118 +16,48 @@
 .liuxue-intro {
   color: #666;
   font-size: 0.95em;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   line-height: 1.6;
 }
 
-.liuxue-section {
-  margin-bottom: 40px;
+.liuxue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.liuxue-section-header {
-  font-size: 1.1em;
-  font-weight: 600;
-  color: #333;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-}
-
-.liuxue-section-header a {
-  color: #333;
-  text-decoration: none;
-}
-.liuxue-section-header a:hover {
-  color: #4a7fa5;
-}
-
-.liuxue-item {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+.liuxue-list li {
   border-bottom: 1px dashed #f0f0f0;
-}
-.liuxue-item:last-child { border-bottom: none; }
-
-.liuxue-item-date {
-  color: #bbb;
-  font-size: 0.85em;
-  font-family: 'Courier New', Courier, monospace;
-  flex-shrink: 0;
-  width: 5em;
+  padding: 20px 0;
 }
 
-.liuxue-item-title {
+.liuxue-list li:last-child {
+  border-bottom: none;
+}
+
+.liuxue-list a {
   color: #1a1a1a;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: 500;
   text-decoration: none;
   line-height: 1.4;
   transition: color 0.15s;
 }
-.liuxue-item-title:hover { color: #4a7fa5; }
 
-.liuxue-empty {
-  color: #aaa;
-  font-size: 0.9em;
-  padding: 12px 0;
-}
-
-@media screen and (max-width: 768px) {
-  .liuxue-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin: 24px auto;
-  }
-  .liuxue-sidebar {
-    position: static;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 16px;
-  }
+.liuxue-list a:hover {
+  color: #4a7fa5;
 }
 </style>
 
-<div class="liuxue-container">
+<main class="liuxue-main">
+  <h1 class="liuxue-main-title">{{ .Title }}</h1>
+  <div class="liuxue-intro">{{ .Content }}</div>
 
-  <!-- 左侧边栏：分类导航 -->
-  <aside class="liuxue-sidebar">
-    <div class="liuxue-sidebar-title">留学记录</div>
-    <hr>
-    <div class="liuxue-cat-heading">分类</div>
-    <ul class="liuxue-cat-list">
-      {{ range .Sections }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
-  </aside>
-
-  <!-- 右侧主内容 -->
-  <main class="liuxue-main">
-    <h1 class="liuxue-main-title">{{ .Title }}</h1>
-    <div class="liuxue-intro">{{ .Content }}</div>
-
+  <ul class="liuxue-list">
     {{ range .Sections }}
-    <div class="liuxue-section">
-      <div class="liuxue-section-header">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </div>
-      {{ $pages := .Pages }}
-      {{ if $pages }}
-        {{ range $pages.ByDate.Reverse }}
-        <div class="liuxue-item">
-          <span class="liuxue-item-date">{{ .Date.Format "01-02" }}</span>
-          <a class="liuxue-item-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </div>
-        {{ end }}
-      {{ else }}
-      <div class="liuxue-empty">暂无内容，敬请期待。</div>
-      {{ end }}
-    </div>
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
-  </main>
-
-</div>
+  </ul>
+</main>
 
 {{ partial "footer.html" . }}
