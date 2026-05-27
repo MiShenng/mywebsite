@@ -1,4 +1,5 @@
 ---
-title: "27fall传播学混申攻略"
+title: "27fall传播学混申记录"
 layout: liuxue
 ---
+
