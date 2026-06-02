@@ -11,7 +11,7 @@ git push
 
 
 
-## 觸發 Hugo build + 部署
+## 觸發 Hugo build + 部 署
 
 ```
 bash deploy.sh
