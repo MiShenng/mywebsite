@@ -49,5 +49,6 @@
       "tools": ["pdflatex"]
     }
   ],
-  "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+  "editor.wordWrap": "on"
 }
