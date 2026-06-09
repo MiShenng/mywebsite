@@ -3,23 +3,28 @@ title: "About"
 type: list-single
 date: "2026-04-29"
 ---
-## 简历里面没有的事情
-“黎凿”是我高中时代好友赠予的别称，其为将我的真名快读后压缩谐音得到。或许是因为这名字简单而干净，又或许其蕴含人如其字的祝福——即仿佛凿子般向任何晦涩而坚硬的知识精进，我非常喜欢这名字，以至于多将其作为互联网代名使用，或许你也可以以此称呼我
+## Things Not on My CV
 
-我是一个重庆人，高中毕业于西南大学附属中学，目前在兰州大学就读于新闻与传播学院，受[李昕昕](https://xwxy.lzu.edu.cn/shiziduiwu/jianzhidaoshi/2023/0221/208620.html)老师指导和帮助颇多。
+"Lizao" is a nickname given to me by a close friend in high school. It comes from a fast pronunciation of my real name, compressed into a similar sound. Maybe because the name is simple and clean, or maybe because it carries a small blessing: to move toward difficult and hard knowledge like a chisel. I like this name very much, so I often use it as my online name. If you like, you can also call me Lizao.
 
-我热爱旅行，特别是长途自行车旅行。我于2020年八月骑行过中国318国道、2023年八月从青岛到兰州，2025年八月新疆独库环线，若补足兰州至乌鲁木段落，那么我将完成横穿中国的骑行路线。除此之外我也喜欢电子游戏，最爱Dota2和黑暗之魂系列，有时闲下来会用NS玩动森。
+Under this name, I have written some modern poems and travel notes. To practice English and front-end coding, I translated them and put them on my blog.
 
+I come from Zhong County, Chongqing. It is near the city described by Peter Hessler in *River Town*. If you go about one hundred li downstream along the river, you will reach my hometown. I graduated from the High School Affiliated to Southwest University, and I am now studying in the School of Journalism and Communication at Lanzhou University, under the guidance of Professor [Li Xinxin](https://xwxy.lzu.edu.cn/shiziduiwu/jianzhidaoshi/2023/0221/208620.html). Before the fall semester of 2026, I also went to National Taiwan University's Graduate Institute of Journalism and National Taiwan Normal University's Department of Adult and Continuing Education as an exchange student.
 
-## 我常看的博客
-- [李永刚](https://lyg2005.cn/)
-- [蒋竣羽](https://junyuj.com/)
-- [郝鸿涛](https://hongtaoh.com/en/)
+When I was a sophomore, I minored in philosophy. My reading interests leaned toward intellectual history and STS, and I loved long-form journalism. But through the practice of data journalism, I gradually became fascinated by a way of thinking based on collecting data, analyzing data, and making inferences from it. Like the hero of Italo Calvino's *The Baron in the Trees*, who lives his whole life in the trees, I hope to keep a close yet distant relationship with the world I live in, so that I can "truly live with them."
 
+Through Kosuke Imai's *Quantitative Social Science: An Introduction*, I learned some basic quantitative research methods and the R language. From there, I began to study quantitative and computational methods, and also learned some necessary mathematics and computer science. Later, I continued to learn from courses and books by scholars such as Xie Yu and Gary King. These experiences helped me develop the ability to ask questions and solve them. Of course, I also have to thank GPT and Claude. To be honest, my research sense and ability are still at an early stage. They still need more time to grow.
 
-## 关于本站
-本站架构采用Hugo，主题来源于郝洪涛设计的Hugo-ht(不过有些微调)，有些板块的设计来源于JunyuJ。
+I love traveling, especially long-distance cycling. In August 2020, I cycled along China National Highway 318. In August 2023, I rode from Qingdao to Lanzhou. In August 2025, I cycled the Duku Highway loop in Xinjiang. If I complete the section from Lanzhou to Urumqi, I will finish a cycling route across China. Besides traveling, I also like video games. My favorites are Dota 2 and the Dark Souls series. When I have free time, I sometimes play Animal Crossing on my Nintendo Switch.
 
 
+## Blogs I Often Read
+
+- [Li Yonggang](https://lyg2005.cn/)
+- [Jiang Junyu](https://junyuj.com/)
+- [Hao Hongtao](https://hongtaoh.com/en/)
 
 
+## About This Site
+
+This site is built with Hugo. The theme is based on [Hugo-ht](https://github.com/hongtaoh/hugo-ht), designed by Hao Hongtao, with some small changes. Some parts of the site design are inspired by [JunyuJ](https://junyuj.com/).

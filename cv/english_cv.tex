@@ -99,18 +99,18 @@
 
 \newcommand{\resumeSubheading}[4]{
 \vspace{0.5mm}\item
-    \begin{tabularx}{0.98\textwidth}{@{}L r@{}}
+    \begin{tabularx}{0.98\textwidth}[t]{@{}L r@{}}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
-        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+        \textbf{#3} &  \footnotesize{#2}\\
     \end{tabularx}
     \vspace{-2.4mm}
 }
 
 \newcommand{\resumeProject}[4]{
 \vspace{0.5mm}\item
-    \begin{tabularx}{0.98\textwidth}{@{}L r@{}}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \begin{tabularx}{0.98\textwidth}[t]{@{}L r@{}}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\[1mm]
+        \textbf{#2} & \footnotesize{#4}
     \end{tabularx}
     \vspace{-2.4mm}
 }
@@ -120,11 +120,15 @@
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+% Fixed left margins so every bullet sits at a deterministic column.
+% Using leftmargin=* made the bullet x-position depend on each item's content
+% (the tabularx body), so entry bullets drifted between sections and did not
+% line up. Explicit margins pin the entry bullets and the nested item bullets.
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=3.4mm,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=3.4mm,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,itemsep=0.5mm]}
 
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3mm}}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\cvsection}[1]{%
@@ -156,6 +160,21 @@
 \newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
 
 \begin{document}
+% Allow page breaks anywhere: fill page 1 completely and let sections
+% continue onto the next page (no widow/orphan/heading-break protection).
+\raggedbottom
+\widowpenalty=0
+\clubpenalty=0
+\interlinepenalty=0
+\brokenpenalty=0
+\predisplaypenalty=0
+\postdisplaypenalty=0
+\interfootnotelinepenalty=0
+% Forbid breaking right before a section heading, so a heading is never
+% pushed to the next page on its own; the page fills and breaks mid-section.
+\makeatletter
+\@secpenalty=10000
+\makeatother
 \headerfontiii
 
 % Header
@@ -181,11 +200,6 @@
 \end{center}
 \vspace{-6mm}
 
-\begin{center}
-    \small{Lanzhou, China}
-\end{center}
-\vspace{-4mm}
-
 %----------------------------------------------------------------------------------------
 %   EDUCATION
 %----------------------------------------------------------------------------------------
@@ -210,7 +224,6 @@
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-6mm}
 
 %----------------------------------------------------------------------------------------
 %   PUBLICATIONS
@@ -231,8 +244,7 @@
 
 \resumeSubHeadingListEnd
 
-%----------------------------------------------------------------------------------------
-%   WORKING PAPERS
+
 %----------------------------------------------------------------------------------------
 \section{\textbf{Working Papers}}
 \vspace{-0.4mm}
@@ -240,7 +252,7 @@
 
 \resumeProject
   {See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos on China's Bilibili}
-  {Li, Zihao.}
+  {Li, Zihao.*}
   {Working Paper}
   {{}[\href{https://github.com/MiShenng/Bilibili-Health-Visual-Clickbait}{\textcolor{darkblue}{\faGlobe}}]}
 \resumeItemListStart
@@ -249,7 +261,6 @@
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-6mm}
 
 %----------------------------------------------------------------------------------------
 %   RESEARCH EXPERIENCE
@@ -292,7 +303,6 @@
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-6mm}
 
 
 %----------------------------------------------------------------------------------------
@@ -302,25 +312,24 @@
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
 \resumePOR{China Data Journalism Competition}
-    {, \textit{Second Prize (National Level)} [\href{https://github.com/your-username/repo1}{\textcolor{darkblue}{\faGlobe}}]}
+    {, \textit{Second Prize} [\href{https://github.com/your-username/repo1}{\textcolor{darkblue}{\faGlobe}}]}
     {Nov. 2025}
 \resumePOR{China Statistical Modeling Competition}
-    {, \textit{First Prize (Provincial Level)} [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_China_Statistical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
+    {, \textit{First Prize} [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_China_Statistical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
     {May. 2026}
 \resumePOR{Central China Mathematical Modeling Competition}
-    {, \textit{Second Prize (Provincial Level)} [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_Huazhong_Cup_Mathematical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
+    {, \textit{Second Prize} [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_Huazhong_Cup_Mathematical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
     {May. 2026}
 \resumePOR{China University Campus Media Competition}
-    {, \textit{Public Service Communication Award (Provincial Level)}}
+    {, \textit{Public Service Communication Award}}
     {Nov. 2025}
 \resumePOR{14th China Tower Journalists' Day}
-    {, \textit{Grand Prize in the Communications Category (Provincial Level)}}
+    {, \textit{Grand Prize in the Communications Category}}
     {Dec. 2025}
 \resumePOR{Lanzhou University Outstanding Student Scholarship}
-    {, \textit{University Level}}
+    {}
     {Sep. 2023 - Sep. 2024}
 \resumeSubHeadingListEnd
-\vspace{-6mm}
 
 %----------------------------------------------------------------------------------------
 %   SKILLS

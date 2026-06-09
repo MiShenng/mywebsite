@@ -7,7 +7,7 @@ set -euo pipefail
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 synced=()
 
-for name in english_cv chinese_cv; do
+for name in english_cv; do
   src="$repo/cv/$name.pdf"
   dst="$repo/static/media/$name.pdf"
   [ -f "$src" ] || continue
