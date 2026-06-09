@@ -12,6 +12,8 @@
 .Rapp.history
 
 # LaTeX build artifacts
+# CV now compiles into cv/build/ (kept out of Git); the final PDFs (cv/*.pdf) are tracked.
+cv/build/
 *.aux
 *.fdb_latexmk
 *.fls
