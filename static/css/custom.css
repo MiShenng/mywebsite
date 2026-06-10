@@ -85,11 +85,20 @@
   color: #4a7fa5;
 }
 
-/* Figure caption: smaller and centered */
-figcaption p {
+/* Figure: center the whole block */
+figure {
+  display: table;
+  margin: 0 auto;
+}
+
+/* Figure caption: smaller, align with image */
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
   font-size: 0.85em;
   text-align: center;
   color: gray;
+  margin-top: 6px;
 }
 
 /* Justify body text globally */
