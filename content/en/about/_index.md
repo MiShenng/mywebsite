@@ -5,9 +5,7 @@ date: "2026-04-29"
 ---
 ## Things Not on My CV
 
-"Lizao" is a nickname given to me by a close friend in high school. It comes from a fast pronunciation of my real name, compressed into a similar sound. Maybe because the name is simple and clean, or maybe because it carries a small blessing: to move toward difficult and hard knowledge like a chisel. I like this name very much, so I often use it as my online name. If you like, you can also call me Lizao.
-
-Under this name, I have written some modern poems and travel notes. To practice English and front-end coding, I translated them and put them on my blog.
+"Lizao" is a nickname given to me by a close friend in high school. It comes from a fast pronunciation of my real name, compressed into a similar sound. Maybe because the name is simple and clean, or maybe because it carries a small blessing: to move toward difficult and hard knowledge like a chisel. I like this name very much, so I often use it as my online name. If you like, you can also call me Lizao.Under this name, I have written some modern poems and travel notes. To practice English and front-end coding, I translated them and put them on my blog.
 
 I come from Zhong County, Chongqing. It is near the city described by Peter Hessler in *River Town*. If you go about one hundred li downstream along the river, you will reach my hometown. I graduated from the High School Affiliated to Southwest University, and I am now studying in the School of Journalism and Communication at Lanzhou University, under the guidance of Professor [Li Xinxin](https://xwxy.lzu.edu.cn/shiziduiwu/jianzhidaoshi/2023/0221/208620.html). Before the fall semester of 2026, I also went to National Taiwan University's Graduate Institute of Journalism and National Taiwan Normal University's Department of Adult and Continuing Education as an exchange student.
 
