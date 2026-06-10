@@ -85,6 +85,12 @@
   color: #4a7fa5;
 }
 
+/* Justify body text globally */
+.content p {
+  text-align: justify;
+  hyphens: auto;
+}
+
 /* Mobile: stack logo above nav links, center both */
 @media screen and (max-width: 768px) {
   .nav {
