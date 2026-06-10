@@ -91,10 +91,11 @@ figure {
   margin: 1em auto;
 }
 
-/* Figure caption: one line, centered, smaller */
-figcaption,
-figcaption p {
-  text-align: center;
+/* Figure caption: one line, centered, smaller.
+   Use .content prefix so it beats `.content p { text-align: justify }` below. */
+.content figcaption,
+.content figcaption p {
+  text-align: center !important;
   color: gray;
   font-size: 0.85em;
   margin-top: 6px;
