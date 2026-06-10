@@ -17,7 +17,7 @@ Through Kosuke Imai's *Quantitative Social Science: An Introduction*, I learned 
 
 When I was in middle school, I was diagnosed with leukemia. After a stem cell transplant, I was fortunate enough to recover. This experience changed my attitude toward life and made me want to do as many interesting things as possible within the limited time I have. Three years after my recovery, I fell in love with long-distance cycling. In August 2020, I cycled along China National Highway 318. In August 2023, I rode from Qingdao to Lanzhou. In August 2025, I cycled the Duku Highway loop in Xinjiang. If I complete the section from Lanzhou to Urumqi, I will finish a cycling route across China. 
 
-![A little too excited in front of the Potala Palace, with an accidental underwear cameo](/images/taibei.jpg)
+![A little too excited in front of the Potala Palace, with an accidental underwear cameo](/images/xizang.jpg)
 
 Besides traveling, I also like video games. My favorites are *Dota 2* and *the Dark Souls series*. When I have free time, I sometimes play Animal Crossing on my Nintendo Switch.
 
