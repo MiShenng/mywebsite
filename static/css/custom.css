@@ -85,6 +85,13 @@
   color: #4a7fa5;
 }
 
+/* Figure caption: smaller and centered */
+figcaption p {
+  font-size: 0.85em;
+  text-align: center;
+  color: gray;
+}
+
 /* Justify body text globally */
 .content p {
   text-align: justify;
