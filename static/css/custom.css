@@ -85,20 +85,20 @@
   color: #4a7fa5;
 }
 
-/* Figure: shrink to image width, center the block */
+/* Figure: center the block */
 figure {
-  display: table;
+  text-align: center;
   margin: 1em auto;
 }
 
-/* Figure caption: same width as image, centered, smaller */
-figcaption {
-  display: table-caption;
-  caption-side: bottom;
+/* Figure caption: one line, centered, smaller */
+figcaption,
+figcaption p {
   text-align: center;
   color: gray;
   font-size: 0.85em;
   margin-top: 6px;
+  white-space: nowrap;
 }
 
 /* Justify body text globally */
