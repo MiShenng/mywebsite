@@ -9,7 +9,7 @@ date: "2026-04-29"
 
 I come from Zhong County, Chongqing, not far from the city described by Peter Hessler in *River Town*. About one hundred kilometres downstream along the Yangtze River lies my hometown. I graduated from the High School Affiliated to Southwest University, and I am now a third-year undergraduate student in the School of Journalism and Communication at Lanzhou University, where I am advised by [Li Xinxin](https://xwxy.lzu.edu.cn/shiziduiwu/jianzhidaoshi/2023/0221/208620.html). During the fall semester of 2026, I also studied as an exchange student at National Taiwan University’s Graduate Institute of Journalism and National Taiwan Normal University’s Department of Social Education.
 
-{{<figure src="/images/taibei.jpg" title="A photo taken in front of Taipei 101 that actually looks like a person" width="300">}}
+{{<figure src="/images/taibei.jpg" caption="A photo taken in front of Taipei 101 that actually looks like a person" width="700">}}
 
 When I was a sophomore, I minored in philosophy. At that time, my reading interests leaned toward intellectual history and STS, and I was deeply drawn to long-form nonfiction writing. Through the practice of data journalism, however, I gradually became fascinated by another way of thinking: collecting data, analyzing it, and drawing careful inferences from it. In this way, I felt that, like the protagonist of Italo Calvino’s *The Baron in the Trees*, who spends his life among the branches, I could maintain a relationship with the world I live in that is both close and slightly distant, and thus, in Calvino’s words, “truly live with others.”
 
@@ -17,7 +17,7 @@ Through Kosuke Imai's *Quantitative Social Science: An Introduction*, I learned 
 
 When I was in middle school, I was diagnosed with leukemia. After a stem cell transplant, I was fortunate enough to recover. This experience changed my attitude toward life and made me want to do as many interesting things as possible within the limited time I have. Three years after my recovery, I fell in love with long-distance cycling. In August 2020, I cycled along China National Highway 318. In August 2023, I rode from Qingdao to Lanzhou. In August 2025, I cycled the Duku Highway loop in Xinjiang. If I complete the section from Lanzhou to Urumqi, I will finish a cycling route across China. 
 
-{{<figure src="/images/xizang.jpg" title="A little too excited in front of the Potala Palace, with an accidental underwear cameo" width="300">}}
+{{<figure src="/images/xizang.jpg" caption="A little too excited in front of the Potala Palace, with an accidental underwear cameo" width="700">}}
 
 Besides traveling, I also like video games. My favorites are *Dota 2* and *the Dark Souls series*. When I have free time, I sometimes play Animal Crossing on my Nintendo Switch.
 
