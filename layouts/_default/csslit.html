@@ -51,21 +51,28 @@
   text-transform: uppercase;
   margin: 0 0 12px;
 }
-.csslit-year-label {
-  font-weight: 700;
-  font-size: 0.92em;
-  margin-bottom: 8px;
-  color: #444;
-}
-.csslit-date-list {
-  list-style: none;
+.csslit-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   padding: 0;
-  margin: 0 0 16px;
-  font-size: 0.88em;
+  margin: 0;
+  list-style: none;
 }
-.csslit-date-list li { margin-bottom: 6px; }
-.csslit-date-list a { color: #888; text-decoration: none; }
-.csslit-date-list a:hover { color: #111; }
+.csslit-tag-list a {
+  display: inline-block;
+  padding: 3px 7px;
+  border: 1px solid #eee;
+  border-radius: 999px;
+  color: #777;
+  font-size: 0.78em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.csslit-tag-list a:hover {
+  border-color: #ccc;
+  color: #222;
+}
 
 /* ── 右侧主内容 ── */
 .csslit-main { min-width: 0; }
@@ -216,7 +223,7 @@
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $uniqueTags := $tags | uniq }}
+{{ $uniqueTags := sort ($tags | uniq) }}
 
 <div class="csslit-container">
 
@@ -235,8 +242,8 @@
     </div>
     <hr>
     <div class="csslit-date-index">
-      <h4>标签索引</h4>
-      <ul class="csslit-date-list">
+      <h4>研究标签</h4>
+      <ul class="csslit-tag-list">
         {{ range $uniqueTags }}
         <li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a></li>
         {{ end }}
