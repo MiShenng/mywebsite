@@ -85,6 +85,29 @@
   color: #4a7fa5;
 }
 
+/* Figure: center the block */
+figure {
+  text-align: center;
+  margin: 1em auto;
+}
+
+/* Figure caption: one line, centered, smaller.
+   Use .content prefix so it beats `.content p { text-align: justify }` below. */
+.content figcaption,
+.content figcaption p {
+  text-align: center !important;
+  color: gray;
+  font-size: 0.85em;
+  margin-top: 6px;
+  white-space: nowrap;
+}
+
+/* Justify body text globally */
+.content p {
+  text-align: justify;
+  hyphens: auto;
+}
+
 /* Mobile: stack logo above nav links, center both */
 @media screen and (max-width: 768px) {
   .nav {
