@@ -150,6 +150,7 @@
 </style>
 
 {{ $name := .Data.Plural }}
+{{ $pageTitle := .Title }}
 
 <div class="list-container">
 
@@ -176,6 +177,7 @@
     </div>
 
     {{ if and (not .IsHome) .Pages }}
+    {{ if ne $pageTitle "Data Journalism" }}
     <hr>
     {{ range .Pages.GroupByDate "2006" }}
     <div class="list-year-label">{{ .Key }}</div>
@@ -190,6 +192,7 @@
     </ul>
     {{ end }}
     {{ end }}
+    {{ end }}
   </aside>
 
   <!-- 右侧文章列表 -->
@@ -199,10 +202,14 @@
     {{ if not .IsHome }}
     {{ range .Pages.GroupByDate "2006" }}
     <div class="list-year-group">
+      {{ if ne $pageTitle "Data Journalism" }}
       <div class="list-year-heading">{{ .Key }}</div>
+      {{ end }}
       {{ range .Pages }}
       <div class="list-item" id="p-{{ .Date.Format "20060102" }}-{{ .File.BaseFileName | urlize }}">
+        {{ if ne $pageTitle "Data Journalism" }}
         <span class="list-item-date">{{ .Date.Format "01-02" }}</span>
+        {{ end }}
         {{ if .Params.link }}
         <a class="list-item-title" href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
         {{ else }}
