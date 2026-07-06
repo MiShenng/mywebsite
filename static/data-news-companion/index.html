@@ -7,6 +7,8 @@
     <title>在平台上下单一个家属｜数说陪诊师行业的兴起与忧虑</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
+    <script src="js/charts.js" defer></script>
+    <script src="js/charts-more.js" defer></script>
   </head>
 
   <body>
@@ -46,87 +48,101 @@
 
     <main id="story">
       <section class="story-section story-section--lead" id="opening">
-        <header class="chapter-cover fade-up">
-          <figure class="chapter-cover__media">
-            <img src="assets/images/chapter-01.png" alt="老人独自站在医院自助服务机前">
-          </figure>
-          <div class="chapter-cover__text">
-            <h2>一个人看病，<br>所有人的共同困境</h2>
-            <span class="chapter-cover__cue">向下滑动查看</span>
-          </div>
-        </header>
-
-        <figure class="visual-slot visual-slot--cinema layout-wide fade-up" aria-label="开场场景图片占位">
-          <span class="visual-slot__type">场景图片</span>
-          <strong>独居老人医院无助实拍 / 孕妇独自奔波插画</strong>
-          <small>建议比例 16:9</small>
-        </figure>
-
-        <div class="prose text-column fade-up">
-          <p>三甲医院光亮冷白的大厅里，李奶奶扶着自助挂号机屏幕，眯着眼一遍遍地滑动手机屏幕。</p>
-          <p>交错分布的门诊楼长廊挤满往来就诊的人群，她攥着病历单来回张望，想找个人问问检验科在哪，来往行人步履匆匆，没人停下脚步搭话，背影里藏着化不开的无力与茫然。</p>
+        <div class="prose text-column fade-up" style="margin-top: 64px;">
+          <p>三甲医院光亮冷白的大厅里，李奶奶扶着自助挂号机屏幕，眯着眼，一遍遍地滑动手机屏幕。</p>
+          <p>挂号、签到、缴费、取号、候诊，步入医院仿佛不如繁忙的流水线，交错分布的门诊楼长廊挤满往来就诊的人群，她攥着病历单来回张望，想找个人问问检验科在哪，来往行人步履匆匆，背影里藏着化不开的无力与茫然。</p>
           <p>老伴去世后，李奶奶便独自过日子，如今常年往返医院复诊，早已习惯凡事自己硬扛。</p>
           <p>“没办法，子女都在外地工作，老伴也分开多年，看病这点小事，总不能次次麻烦小辈。”她语气平淡，并不怨怼孤身一人的处境。</p>
-        </div>
-
-        <blockquote class="pull-quote text-column fade-up">
-          <p>“字看不清，楼找不到，拍片、取药散在好几栋楼，一趟跑下来腿都抬不起来，自己实在撑不住。”</p>
-        </blockquote>
-
-        <div class="prose text-column fade-up">
-          <p>说这话时她望着远处穿梭的陪诊人群，布满皱纹的脸上没有太多波澜，只是眼底藏着难以掩饰的孤单。</p>
-          <p>正如李奶奶一样，独居青年、待产孕妇等不同群体，都在繁琐冰冷的就医流程面前手足无措，一个人去看病已经成为一种普遍的社会现象与困境。</p>
-          <p class="key-sentence">陪伴缺位、医院流程繁复叠加，催生了一门全新的职业——陪诊师。当身边无人相伴，人们开始转向平台下单，花钱买下一份医院里的陪同与照料。</p>
+          <p>可所谓小事，落实到医院现场却并不轻松</p>
+          <p>字看不清，楼找不到，拍片、取药散在好几栋楼，一趟跑下来腿都抬不起来，自己实在撑不住。</p>
+          <p>她望着远处穿梭的陪诊人群，布满皱纹的脸上没有太多波澜，只是眼底藏着难以掩饰的孤单。</p>
+          <p>李奶奶并不是个例。独居老人、异地就医患者、待产孕妇、术后复查者、独自生活的年轻人，都可能在繁琐而高压的就医流程面前感到手足无措。一个人去看病，正在从偶然的生活不便，变成一种越来越普遍的社会困境。</p>
+          <p class="key-sentence">陪伴缺位、医院流程繁复、数字化门槛升高，三者叠加，催生了一门新兴职业——陪诊师。当身边无人相伴，人们开始转向平台下单，用金钱购买一份医院里的陪同、照料与临时支撑。</p>
         </div>
       </section>
 
       <section class="story-section" id="service">
-        <header class="chapter-cover chapter-cover--reverse fade-up">
+        <header class="chapter-cover chapter-cover--reverse chapter-cover--standalone fade-up">
           <figure class="chapter-cover__media">
             <img src="assets/images/chapter-02.png" alt="陪诊人员协助老人办理医院自助服务" loading="lazy">
           </figure>
           <div class="chapter-cover__text">
-            <h2>什么是陪诊师？<br>一份低门槛陪护生意的全貌</h2>
+            <h2>什么是陪诊师？</h2>
             <span class="chapter-cover__cue">向下滑动查看</span>
           </div>
         </header>
 
         <section class="subsection">
-          <header class="subsection-heading text-column fade-up">
-            <h3>标准化服务：花钱买下医院全流程代办</h3>
-          </header>
-
           <article class="story-pair layout-wide fade-up">
             <div class="story-pair__text prose">
-              <p>陪诊师，是为就医人群提供全程陪同、医疗手续代办的服务从业者。完整服务链条覆盖线上挂号、院区楼层导航、排队候诊、缴费打印单据、陪同检查、代取药品、病历整理等全流程，市场拆分出半日简陪、全天全程陪诊、单项专项代办三类服务。</p>
-              <p>从服务需求数据来看，院内排队、挂号缴费代办是订单占比最高的基础服务；针对老年群体的搀扶陪同、检查报告解读需求紧随其后；麻醉陪护、产后复诊陪同属于小众细分订单。</p>
+      <p>
+        陪诊师，是为就医人群提供全程陪同、医疗手续代办的服务从业者。
+      </p>
+
+      <p>
+       他们的工作并不只是“陪人去医院”。从线上预约挂号、院区楼层导航，到排队候诊、缴费打印单据、陪同检查、代取药品、整理病历，再到记录医嘱、提醒复诊，陪诊服务，其内容涵盖进入医院后行动的每一种可能。
+      </p>
+
+      <p>
+       在现实市场中，陪诊服务通常被拆分为三类：半日简陪、全天全程陪诊，以及挂号、排队、取药、取报告等单项专项代办。不同服务之间价格差异明显，服务边界也并不清晰
+      </p>
+
+      <p>
+      从服务需求来看，院内排队、挂号缴费代办，是最基础也最常见的需求。对于患者而言，这些环节看似琐碎，却往往最耗时间、最消耗体力，也最容易出错。尤其是老年患者和外地患者，一旦不熟悉医院布局，或错过叫号、漏做检查，就可能导致整次就医被迫延后。
+      </p>
+
+      <p>
+       查阅社群媒体，面对老人的搀扶陪同、检查报告解读、医嘱记录需求也不在少数——陪诊服务并不只是临场的跑腿代办，麻醉陪护、产后复诊陪同等小众服务，则指向另一类更加刚性的需求，有些医疗环节并不适宜于患者完全独自完成。在家庭陪护、医院导诊和患者理解能力之间存在的缝隙，被陪诊师的出现所填充。
+      </p>
             </div>
-            <figure class="visual-slot visual-slot--chart" aria-label="陪诊服务内容占比图表占位">
-              <span class="visual-slot__type">图表位置 二①</span>
-              <strong>陪诊服务内容占比</strong>
-              <small>分组横条图 · 建议比例 4:3</small>
+
+            <figure class="data-chart data-chart--bubble" data-service-chart>
+      <header class="data-chart__header">
+        <h3 id="service-chart-title">陪诊服务内容占比</h3>
+      </header>
+      <div class="data-chart__controls" aria-label="筛选服务项目">
+        <button type="button" data-service-filter="all" aria-pressed="true">全部服务</button>
+        <button type="button" data-service-filter="core" aria-pressed="false">核心三项</button>
+      </div>
+      <div class="data-chart__canvas" data-chart-canvas></div>
+      <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+      <figcaption>数据来源：闲鱼陪诊服务帖自采样本（n=357）；采集时间：2026-06-11</figcaption>
             </figure>
           </article>
+        </section>
 
-          <article class="story-pair story-pair--reverse layout-wide fade-up">
+        <section class="subsection">
+          <article class="story-pair story-pair--reverse story-pair--chart-wide layout-wide fade-up">
             <div class="story-pair__text prose">
               <p>陪诊服务价格随城市层级拉开明显差距，一二线三甲聚集城市单价远高于三四线。数据显示，三级医院自主预约单次陪诊均价387元，平台机构标准化陪诊均价300元，仅仅是院内导诊、排队跑腿的服务费，几乎等同于普通人一次门诊就诊开销。</p>
+              <p>陪诊服务虽然回应了真实需求，却并非所有人都能轻松承担。其一方面解决了“无人陪同”的燃眉之急，另一方面也把原本应由家庭、社区或公共服务共同分担的照护责任，转化成了一项按次付费的消费服务。</p>
             </div>
-            <figure class="visual-slot visual-slot--chart" aria-label="各城市陪诊价格中位数图表占位">
-              <span class="visual-slot__type">图表位置 二②</span>
-              <strong>各城市陪诊价格中位数</strong>
-              <small>竖条图 · 建议比例 4:3</small>
+            <figure class="data-chart data-chart--price" data-price-chart>
+              <header class="data-chart__header">
+                <h3 id="price-chart-title">各城市陪诊价格中位数</h3>
+              </header>
+              <div class="data-chart__legend" aria-hidden="true">
+                <span><i class="data-chart__legend-range"></i>最低—最高</span>
+                <span><i class="data-chart__legend-dot"></i>中位数</span>
+              </div>
+              <div class="data-chart__canvas" data-chart-canvas></div>
+              <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+              <figcaption>数据来源：闲鱼/58同城平台服务帖自采样本（A表）；采集时间：2026-06-11至2026-06-17；口径：单次计价起价，平台标价非成交价，样本量≥3城市</figcaption>
             </figure>
           </article>
 
           <article class="story-pair layout-wide fade-up">
             <div class="story-pair__text prose">
+              <p>从从业端看，陪诊师的收入同样呈现明显分化。一线城市全职陪诊订单更多、收入上限更高，部分成熟从业者可以依靠稳定客源获得较高收入；但在三四线城市，陪诊更多仍是兼职副业，订单波动大，淡旺季差异明显，收入并不稳定。</p>
               <p>薪资层面，一线城市全职陪诊收入上限更高，订单稳定；三四线城市多以兼职副业为主，收入波动极大，淡旺季收入差距明显。</p>
             </div>
-            <figure class="visual-slot visual-slot--chart" aria-label="招聘薪资区间分布图表占位">
-              <span class="visual-slot__type">图表位置 二③</span>
-              <strong>招聘薪资区间分布</strong>
-              <small>竖条图 · 建议比例 4:3</small>
+            <figure class="data-chart data-chart--salary" data-salary-chart>
+              <header class="data-chart__header">
+                <h3 id="salary-chart-title">招聘薪资区间分布</h3>
+              </header>
+              <div class="data-chart__canvas" data-chart-canvas></div>
+              <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+              <figcaption>数据来源：58同城/智联招聘自采样本（B表，n=154，含薪资 90 条）；采集时间：2026-06-13至2026-06-17；口径：招聘标示月薪，全职/兼职混合，非实际到手收入</figcaption>
             </figure>
           </article>
         </section>
@@ -134,9 +150,10 @@
         <section class="subsection">
           <div class="profile-layout layout-wide fade-up">
             <div class="prose">
-              <p>结合智联36份行业招聘样本与商业调研报告，清晰勾勒出陪诊从业者的统一轮廓：行业95%岗位不要求本科学历，六成岗位无相关从业经验限制，入行门槛极低；从业者女性占比高达83%，但持有医护专业背景的从业者仅17%，绝大多数人没有系统医疗知识储备。</p>
-              <p>低门槛的准入规则吸引大量兼职人群涌入市场，也直接埋下行业隐患：多数从业者仅能完成跑腿代办，无法为老人、慢病患者提供专业医疗建议，服务质量参差不齐。</p>
-              <p>而这项陪护服务的定价却并不亲民：三级医院门诊次均387元，机构陪诊均价300元，单是院内导诊跑腿的费用，几乎追上看病本身的花销。</p>
+              <p>结合我们得到的招聘信息与商业调研报告，则清晰勾勒出陪诊从业者的统一轮廓。行业95%岗位不要求本科学历，六成岗位无相关从业经验限制，入行门槛极低；从业者女性占比高达83%，但持有医护专业背景的从业者仅17%，绝大多数人没有系统医疗知识储备。大量从业者依靠短期培训、熟悉医院路线和个人经验进入行业。</p>
+              <p>低门槛让陪诊行业迅速扩张，也让更多普通人获得灵活就业机会。然而多数从业者能够完成挂号、排队、取药等流程性事务，却未必具备系统医疗知识、突发情况应对能力和清晰的职业边界意识</p>
+              <p>在实际服务中，不同患者对陪诊师的能力要求并不相同。对于普通门诊患者而言，陪诊师主要承担排队、带路、缴费、取药等流程协助；而对于老人、慢病患者、术后患者和需要麻醉检查的人群来说，陪诊服务往往会进一步延伸到医嘱记录、检查提醒、身体搀扶、术后护送和家属沟通等环节。</p>
+             <p>这使陪诊师的角色上下限复杂。越是复杂的就医场景，越考验从业者对医院流程的熟悉程度和现场应变能力。能不能听清医生交代的注意事项，能不能准确记录复诊时间和用药安排，能不能在患者身体不适时及时联系医护人员，都会影响一次陪诊服务的完成质量。</p>
             </div>
             <figure class="visual-slot visual-slot--portrait" aria-label="从业者采访人像占位">
               <span class="visual-slot__type">人物图片</span>
@@ -162,64 +179,86 @@
           <div class="prose text-column fade-up">
             <p>78岁的独居王大爷患有冠心病，每月都要去三甲医院复诊调药。子女定居外地，一年难得回家一次。他曾试着独自去医院看病，提前两小时抵达门诊，却对着闪烁屏幕的自助挂号机手足无措，反复摸索扫码、签到、取号流程，折腾许久依旧操作失败，最终错过当日叫号，只能空手而归。</p>
             <p>这是无数独居老人就医的真实缩影。如今老龄化加剧、人口持续外流，传统子女贴身照料、家人相伴就医的模式慢慢淡出生活。</p>
-            <p>对于绝大多数独居老人，高龄带来的视力模糊、行动迟缓、接受新事物能力减弱，让现代化就医流程成了难以跨越的门槛。不会线上预约挂号、分不清医院楼栋科室、看不懂密密麻麻的检查单据、多层楼往返检查体力透支。慢性病缠身的老人需要月月复诊，频繁的就医需求，无人搀扶、无人跑腿、无人解读医嘱，让看病变成费力又无助的难事。正因如此，独居银发老人成为陪诊行业最稳定、最刚性的消费群体。</p>
-            <p>除老年群体外，陪诊服务也覆盖着一众弱势就医人群。异地打拼的年轻上班族，孤身无依，麻醉、手术无人签字陪护；孕期女性频繁产检，身体负重奔波劳累；术后康复患者行动受限，无法独立完成缴费、检查、取药全套流程。不同年龄、不同处境的人群，共同催生了庞大的陪诊市场。</p>
           </div>
-          <figure class="visual-slot visual-slot--wide-chart layout-wide fade-up" aria-label="需求侧合成图占位">
-            <span class="visual-slot__type">图表位置 三①</span>
-            <strong>需求侧合成图：场景 × 困难交叉</strong>
-            <small>三合一图表 · 建议比例 16:9</small>
+          <figure class="data-chart data-chart--demand layout-wide fade-up" data-demand-chart>
+            <header class="data-chart__header">
+              <h3 id="demand-chart-title">需求侧合成图：场景 × 困难交叉</h3>
+            </header>
+            <div class="data-chart__canvas" data-chart-canvas></div>
+            <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+            <figcaption>数据来源：B站/小红书/微博公开文本自采编码（C表，n=920）；采集时间：2026-06-13至2026-06-20；口径：公开表达需求，非患者总体，编码待人工复核</figcaption>
           </figure>
-        </section>
-
-        <section class="subsection">
-          <header class="subsection-heading text-column fade-up">
-            <h3>需求爆发的底层根源：医疗资源与家庭照料双重缺位</h3>
-          </header>
-
-          <div class="factor-list layout-wide">
-            <article class="factor fade-up">
-              <div class="factor__content prose">
-                <h4>家庭照料功能持续瓦解</h4>
+          <div class="prose text-column fade-up">
+            <p>对于绝大多数独居老人，高龄带来的视力模糊、行动迟缓、接受新事物能力减弱，让现代化就医流程成了难以跨越的门槛。不会线上预约挂号、分不清医院楼栋科室、看不懂密密麻麻的检查单据、多层楼往返检查体力透支。慢性病缠身的老人需要月月复诊，频繁的就医需求，无人搀扶、无人跑腿、无人解读医嘱，让看病变成费力又无助的难事。正因如此，独居银发老人成为陪诊行业最稳定、最刚性的消费群体。</p>
+            <p>但陪诊服务的需求并不只属于老年人。</p>
+            <p>异地打拼的年轻上班族，可能在需要麻醉检查、手术签字、术后护送时突然发现，自己在城市里没有一个可以临时赶来的“家属”。孕期女性需要频繁产检，身体负重、排队奔波、上下楼检查，每一个环节都可能让独自就医变得艰难。术后康复患者行动受限，无法独立完成缴费、检查、取药等流程，也可能需要陪诊师提供短时照护。</p>
+            <p>不同年龄、不同处境的人群，在医院这个高压空间里，共同遭遇了同一种困境：不是没有医院可去，而是缺少一个能陪自己走完整个流程的人。</p>
                 <p>从前看病，一家人陪同往返，是最寻常的生活画面。但如今城市化流动加剧，大量年轻人奔赴大城市求学、就业，常年异地生活，无法贴身照料留守家乡的老人。</p>
-                <p>大多数空巢老人的就医陪护成为无法自我解决的难题。生病无人陪伴、复诊无人陪同，原本由家庭承接的照料缺口，日复一日持续扩大。</p>
-                <p>当子女陪护缺位成为常态，传统家庭照料体系难以兜底，人们开始转向市场寻求帮助。正是这份普遍的社会空缺，让陪诊服务变成适配大众需求的民生服务行业。</p>
+                <p>大多数空巢老人的就医陪护成为无法自我解决的难题。生病无人陪伴、复诊无人陪同，原本由家庭承接的照料缺口，日复一日持续扩大。当子女陪护缺位成为常态，传统家庭照料体系难以兜底，人们开始转向市场寻求帮助。正是这份普遍的社会空缺，让陪诊服务变成适配大众需求的民生服务行业。</p>
+              </div>
+            <div class="factor-list layout-wide">
+
+            <article class="factor factor--evidence fade-up">
+              <div class="evidence-row evidence-row--international">
+                <div class="prose">
+<p>陪诊行业的增长，并不能简单理解为人们变懒了或花钱买省事。更多时候，它是患者在医疗体系高负荷运转中的一种被动选择。</p>
+<p>
+近年来，中国医疗资源总量持续增长，但优质医疗资源仍然集中在大城市、大医院。大量患者涌向三甲医院，使门诊空间长期处于高密度、高流动状态。医生和护士的主要精力集中在诊断、治疗和护理等核心医疗工作上，很难为每一位患者提供细致的流程陪伴、路线引导和非医疗照护。
+</p>
+                  <p>医疗资源的地域分布不均，也进一步加剧了这种压力。一二线城市三甲医院承担了大量本地与外地患者的就诊需求，门诊量常年维持高位。</p>
+
+                </div>
+                <figure class="data-chart data-chart--international" data-international-chart>
+                  <header class="data-chart__header">
+                    <h3 id="international-chart-title">中国 vs 世界平均指标</h3>
+                  </header>
+                  <div class="data-chart__canvas" data-chart-canvas></div>
+                  <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+                  <figcaption>数据来源：OECD Health at a Glance 2023（practising physicians口径）；中国取世界银行可比口径2.4，与年鉴执业(助理)口径3.61不同<br>数据来源：OECD Health at a Glance 2023；中国取年鉴总诊疗/年末人口，含基层门诊，口径偏宽仅作量级参照</figcaption>
+                </figure>
+              </div>
+              <div class="prose text-column evidence-chart-pair__copy">
+                <p>与此同时，医院全面推进数字化就医，线上挂号、自助缴费、多楼栋分流就诊，大幅提升了医院运转效率，却把复杂的操作压力全部转移给患者。对于不熟悉智能手机、不了解医院布局、跟不上数字化节奏的老年人来说，便捷的智慧医疗，反而成为了现实中存有的数字鸿沟，反而形成阻隔他们顺利就医的无形高墙。</p>
+              </div>
+              <div class="evidence-chart-pair">
+                <figure class="data-chart data-chart--doctors" data-doctors-chart>
+                  <header class="data-chart__header">
+                    <h3 id="doctors-chart-title">各省千人医师数排名</h3>
+                  </header>
+                  <div class="data-chart__canvas" data-chart-canvas></div>
+                  <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+                  <figcaption>数据来源：《中国卫生健康统计年鉴 2025》</figcaption>
+                </figure>
+                <figure class="data-chart data-chart--visits-map" data-visits-map>
+                  <header class="data-chart__header">
+                    <h3 id="visits-map-title">医师日均门诊量各省地图</h3>
+                  </header>
+                  <div class="data-chart__canvas" data-chart-canvas></div>
+                  <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+                  <figcaption>数据来源：《中国卫生健康统计年鉴 2024》表5-7-1；指标：医疗机构执业（助理）医师日均担负诊疗人次</figcaption>
+                </figure>
               </div>
             </article>
 
             <article class="factor fade-up">
               <div class="factor__content prose">
-                <h4>国内人均医疗资源长期短缺</h4>
-                <p>全国千人医师数量从2000年1.68增长至2024年3.61，但对比发达国家仍存在明显差距，人均医疗资源整体偏紧。2024年全国总诊疗人次达101.5亿，执业及助理医师约466万人，平均每位医师年接诊超两千人次，日常门诊工作量趋于饱和。</p>
-                <p>医疗资源地域分布极度不均，一二线城市三甲医院常年人满为患、门诊超负荷运转。医护人员精力全部集中在诊断、治疗等核心医疗工作上，没有多余时间和人力，为患者尤其是老年患者提供引导陪护、流程指导等附加服务。</p>
-                <p>与此同时，医院全面推进数字化就医，线上挂号、自助缴费、多楼栋分流就诊，大幅提升了医院运转效率，却把复杂的操作压力全部转移给患者。对于不熟悉智能手机、不了解医院布局、跟不上数字化节奏的老年人来说，便捷的智慧医疗，反而成了阻隔他们顺利就医的无形高墙。</p>
-              </div>
-              <div class="visual-grid visual-grid--resource">
-                <figure class="visual-slot visual-slot--small-chart">
-                  <span class="visual-slot__type">图表位置 三⑤</span>
-                  <strong>中国 vs 世界平均指标</strong>
-                </figure>
-                <figure class="visual-slot visual-slot--small-chart">
-                  <span class="visual-slot__type">图表位置 三③</span>
-                  <strong>各省千人医师数排名</strong>
-                </figure>
-                <figure class="visual-slot visual-slot--wide-grid">
-                  <span class="visual-slot__type">图表位置 三④</span>
-                  <strong>医师日均门诊量各省地图</strong>
-                </figure>
-              </div>
-            </article>
+               <p>2012至2024年，中国老年人口持续增长，老龄化程度不断加深。随着空巢、独居老人规模扩大，老年人的日常照护与就医陪护问题变得越来越突出。</p>
 
-            <article class="factor fade-up">
-              <div class="factor__content prose">
-                <h4>老龄化扩张放大独居就医难题</h4>
-                <p>2012至2024年，国内老年人口持续增长，空巢、独居老人规模逐年扩大。老年群体慢性病高发，高血压、糖尿病、心脑血管疾病都需要长期监测、定期复诊、持续用药，就医频次远高于其他年龄段人群。</p>
-                <p>高频的就医需求，叠加全程无人陪伴的困境，持续拉升陪诊行业的市场需求。第七次人口普查数据表明，国内绝大多数独居老人可以安稳打理晚年生活，却难以适配繁琐、智能、快节奏的现代就医体系。能独立生活，却难以独立就医，这也是当下陪诊行业持续兴起最真实、最核心的社会底色。</p>
+              <p>老年群体慢性病高发，高血压、糖尿病、心脑血管疾病等都需要定期复诊和持续用药。其就医并不是一次性事件，而在其日常秩序中反复发生。</p>
+
+                <p>高频的就医需求，叠加全程无人陪伴的困境，持续拉升陪诊行业的市场需求。第七次人口普查数据表明，国内绝大多数独居老人可以安稳打理晚年生活，却难以适配繁琐且快节奏的现代就医体系。能独立生活，却难以独立就医，其隐含陪诊行业持续兴起的时代底色。</p>
               </div>
-              <figure class="visual-slot visual-slot--wide-chart">
-                <span class="visual-slot__type">图表位置 三②</span>
-                <strong>老龄化趋势 2012—2024</strong>
-                <small>双轴折线图 · 建议比例 16:9</small>
+              <figure class="data-chart data-chart--aging" data-aging-chart>
+                <header class="data-chart__header">
+                  <h3 id="aging-chart-title">老龄化趋势 2012—2024</h3>
+                </header>
+                <div class="data-chart__legend" aria-hidden="true">
+                  <span><i class="data-chart__legend-line data-chart__legend-line--population"></i>60岁以上人口</span>
+                  <span><i class="data-chart__legend-line data-chart__legend-line--rate"></i>占总人口比例</span>
+                </div>
+                <div class="data-chart__canvas" data-chart-canvas></div>
+                <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+                <figcaption>数据来源：国家统计局历年人口数据，数据区间：2012-2024</figcaption>
               </figure>
             </article>
           </div>
@@ -238,9 +277,6 @@
         </header>
 
         <section class="subsection">
-          <header class="subsection-heading text-column fade-up">
-            <h3>行业演变：个人副业走向平台资本产业</h3>
-          </header>
           <div class="prose text-column fade-up">
             <p>早些年，陪诊只是普通人的零散副业。不少兼职者依靠社群、朋友圈私下接单，没有固定流程、没有统一价格，服务全凭个人经验与责任心。</p>
             <p>家住二线城市的兼职从业者小周回忆，最初接单大多是帮独居老人挂号、取单、跑腿。服务内容简单、客源零散，属于偶然式的便民帮忙，并未形成完整业态。</p>
@@ -248,40 +284,63 @@
             <p>行业发展清晰分为三个阶段：个人零散接单阶段、平台野蛮扩张阶段、监管逐步规范阶段。国内陪诊相关注册企业逐年递增，市场规模持续扩容。</p>
             <p>快速发展之下，区域供需失衡问题愈发明显。一二线城市三甲医院集中、需求旺盛，陪诊从业者扎堆涌入，市场内卷严重；而三四线城市与县域医疗资源分散，专业陪诊人员稀缺，当地患者即便有消费意愿，也难以找到可靠服务。</p>
           </div>
-          <div class="visual-grid visual-grid--three layout-wide fade-up">
-            <figure class="visual-slot visual-slot--small-chart">
-              <span class="visual-slot__type">图表位置 四①</span>
-              <strong>供需城市对比</strong>
+          <div class="industry-chart-stack layout-wide fade-up">
+            <figure class="data-chart data-chart--city-supply" data-city-supply-chart>
+              <header class="data-chart__header">
+                <h3 id="city-supply-chart-title">供需城市对比</h3>
+              </header>
+              <div class="data-chart__legend" aria-hidden="true">
+                <span><i class="data-chart__legend-line data-chart__legend-line--supply"></i>平台服务帖数</span>
+                <span><i class="data-chart__legend-line data-chart__legend-line--jobs"></i>招聘岗位数</span>
+              </div>
+              <div class="data-chart__canvas" data-chart-canvas></div>
+              <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+              <figcaption>数据来源：A表（闲鱼/58同城服务帖，2026-06采集）供给条数 + B表（58同城/智联招聘，2026-06采集）招聘条数；条数≠市场规模</figcaption>
             </figure>
-            <figure class="visual-slot visual-slot--small-chart">
-              <span class="visual-slot__type">图表位置 四②</span>
-              <strong>陪诊相关企业逐年注册量</strong>
+            <figure class="data-chart data-chart--registrations" data-registrations-chart>
+              <header class="data-chart__header">
+                <h3 id="registrations-chart-title">陪诊相关企业逐年注册量</h3>
+              </header>
+              <div class="data-chart__canvas" data-chart-canvas></div>
+              <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+              <figcaption>数据来源：2014-2023 商启咨询</figcaption>
             </figure>
-            <figure class="visual-slot visual-slot--small-chart">
-              <span class="visual-slot__type">图表位置 四③</span>
-              <strong>行业发展与政策双轨时间轴</strong>
+
+
+            <div class="prose text-column industry-policy-copy">
+              <p>2026年1月，民政部等八部门发布文件，明确提出支持培育专业化陪诊助医机构，规范开展老年人陪同诊治等服务。上海也在推进老年助医陪诊服务体系建设，提出到2030年底实现老年助医陪诊服务充分供给和规范化发展。</p>
+              <p>随着政策信号的发出，陪诊已经不只是平台经济中的一种新商品，也开始进入养老服务、公共民生和基层治理的政策视野。</p>
+            </div>
+            <figure class="data-chart data-chart--timeline" data-timeline-chart>
+              <header class="data-chart__header">
+                <h3 id="timeline-chart-title">行业发展与政策双轨时间轴</h3>
+              </header>
+              <div class="data-chart__canvas" data-chart-canvas></div>
+              <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+              <figcaption>数据来源：政策文件及行业报道汇总</figcaption>
             </figure>
           </div>
         </section>
 
         <section class="subsection">
-          <header class="subsection-heading text-column fade-up">
-            <h3>行业现存乱象：标准缺失，培训定价混乱</h3>
-          </header>
           <div class="story-pair layout-wide fade-up">
             <div class="story-pair__text prose">
-              <p>产业快速扩张的背后，行业规范没能同步跟上，不少就医群众都踩过行业乱象的坑。</p>
+              <p>然而，产业快速扩张的背后，行业规范并没有同步成熟。服务边界模糊、价格标准不一、培训资质混乱、从业人员能力参差不齐，仍是陪诊行业绕不开的问题。</p>
               <p>独居老人陈奶奶曾在私单渠道预约低价陪诊，页面标注全程陪同就诊，实际从业者只帮忙排队取号，服务大幅缩水，可线上私下交易没有售后渠道，老人只能自认吃亏。</p>
               <p>刚毕业的小吴也曾踩过培训的陷阱，他花费数千元报名所谓专业陪诊课程，整期培训只教基础跑腿流程，完全没有医疗常识、突发状况应急处理相关内容，课程含金量极低。</p>
             </div>
-            <figure class="visual-slot visual-slot--screenshot" aria-label="平台招聘截图占位">
-              <span class="visual-slot__type">截图位置</span>
-              <strong>平台招聘 / 服务宣传对比</strong>
-              <small>建议两张截图并列</small>
+            <figure class="data-chart data-chart--risk" data-risk-chart>
+              <header class="data-chart__header">
+                <h3 id="risk-chart-title">陪诊乱象案例</h3>
+              </header>
+              <div class="risk-cases" data-chart-canvas></div>
+              <div class="risk-detail" data-risk-detail aria-live="polite"></div>
+              <figcaption>数据来源：媒体报道及黑猫投诉实例</figcaption>
             </figure>
           </div>
           <div class="prose text-column fade-up">
             <p>市场里两类供给的宣传导向截然不同：个人私单主打低价灵活，用挂号、代办跑腿吸引老年客源；线上平台招工时主打时间自由、兼职增收，大批量吸纳没有医疗相关经验的新人。两者收费模式、服务范围没有统一界定，服务好坏全凭从业者个人自觉。</p>
+            <p>新华社“新华视点”的调查也指出，陪诊机构和从业人员数量持续增加的同时，服务纠纷也在出现，行业如何规范发展已成为现实问题。报道中提到，陪诊师主要承担挂号、问诊、缴费、取药、取结果、接送就医等工作，但服务标准和责任边界仍需要进一步明确。</p>
             <p>陪诊培训市场定价也十分混乱，价格断层明显：人社部能建中心收费998元，普通商业培训机构定价2000—3000元，头部机构如橙医达到2980元。国内目前没有统一官方从业资质，各家机构的授课内容、考核标准互不认可，不少新人经过几天速成培训就能上岗，专业水平参差不齐。</p>
             <p class="key-sentence">平台给陪诊服务套上了标准化商品的外壳，完成了商业化包装，却没能搭建起完善的行业约束规则。这份野蛮生长的代价，最终都落到了前来就医的普通人身上。</p>
           </div>
@@ -299,18 +358,21 @@
           </div>
         </header>
 
-        <figure class="visual-slot visual-slot--wide-chart layout-wide fade-up" aria-label="市场与政府定价对比图表占位">
-          <span class="visual-slot__type">图表位置 五①</span>
-          <strong>市场 vs 政府定价对比</strong>
-          <small>对比表格图 · 建议比例 16:9</small>
+        <figure class="data-chart data-chart--price-comparison layout-wide fade-up" data-price-comparison-chart>
+          <header class="data-chart__header">
+            <h3 id="price-comparison-title">市场 vs 政府定价对比</h3>
+          </header>
+          <div class="data-chart__canvas" data-chart-canvas></div>
+          <div class="data-chart__tooltip" data-chart-tooltip role="status" hidden></div>
+          <figcaption>数据来源：闲鱼/58同城平台标价，2026-06采集；头部机构官网价目页；《上海市老年人助医陪诊服务试点方案》；免陪照护服务(医疗服务价格立项)；市场公开报价(非官方试点)；行业普遍计价</figcaption>
         </figure>
 
         <div class="prose text-column fade-up">
-          <p class="lead-copy">陪诊师行业的兴起，表层只是一门新兴职业诞生，往深处看，它照见了三层无法回避的社会现实：医疗数字化升级把弱势个体落在流程身后；城市独居、人口流动重塑社会关系，让贴身陪伴变成明码标价的消费品；当家庭照料、公共兜底双双缺位时，人们只能转向市场购买照护服务。</p>
+          <p class="lead-copy">陪诊师行业的兴起，表层似乎只为一门新兴职业诞生，往深处看，我们不难瞥见更多隐藏之痛。医疗数字化升级把弱势个体落在流程身后，城市独居、人口流动重塑社会关系，让贴身陪伴变成明码标价的消费品，当家庭照料、公共兜底双双缺位时，人们只能转向市场购买照护服务。</p>
           <p>市场总能捕捉民生缝隙催生生意，但人的情感与基础就医保障，不该完全交由市场承担。在市场化服务与公共普惠服务的落差之间，站立着每一个独自就医的普通人。</p>
-          <p>28岁北漂白领小陈深有体会，他预约无痛胃肠镜，医院明确要求麻醉后必须有家属陪同签字护送，父母远在老家、身边无亲友，无奈在平台下单半天陪诊服务。</p>
-          <p>独自居住的孕中期孕妇林女士，每一次产检都要独自往返产科、抽血室，拎着检查单挤人群上下楼梯，体力难以支撑，长期按月购买陪诊。</p>
-          <p>退休独居老人张叔不会操作线上挂号、自助机缴费，每次复诊都要提前预约陪诊师带路。</p>
+          <p>社群媒体上的用户对此深有体会，他预约无痛胃肠镜，医院明确要求麻醉后必须有家属陪同签字护送，父母远在老家、身边无亲友，无奈在平台下单半天陪诊服务。</p>
+          <p>独自居住的孕中期孕妇，每一次产检都要独自往返产科、抽血室，拎着检查单挤人群上下楼梯，体力难以支撑，长期按月购买陪诊。</p>
+          <p>退休独居老人不会操作线上挂号、自助机缴费，每次复诊都要提前预约陪诊师带路。</p>
           <p>年轻人、孕产妇、老年群体，不同年龄层的人，共享着“无人陪同就医”的窘迫。</p>
           <p>医疗系统数字化改造，大幅提升医院运转效率，却没有为适应能力弱的人群留出缓冲空间。不会使用智能设备、行动不便、孤身一人的群体，直接被繁琐流程困住，陪护需求由此爆发。</p>
           <p>人口流动与独居常态化，瓦解了传统家庭照料体系。异地务工、单身独居、少子化成为常态，身边缺少能搭把手的亲人，本该由家庭承接的照护，出现巨大缺口。</p>
@@ -325,16 +387,6 @@
     </main>
 
     <footer class="footer">
-      <div class="layout-wide footer__grid">
-        <div>
-          <h2>数据与方法</h2>
-          <p>待补充采样时间、平台范围、样本量、清洗规则与研究局限。</p>
-        </div>
-        <div>
-          <h2>制作信息</h2>
-          <p>文字：待填写<br>数据：待填写<br>设计与开发：待填写<br>课程与指导：待填写</p>
-        </div>
-      </div>
       <a class="back-to-top" href="#top">返回顶部 ↑</a>
     </footer>
   </body>
