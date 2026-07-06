@@ -19,10 +19,10 @@ posts = "/posts/:year/:month/:day/:slug/"
     name = "About"
     url = "/en/about/"
     weight = 2
-[[menu.en]]
-    name = "Posts"
-    url = "/en/posts/"
-    weight = 3
+# [[menu.en]]
+#     name = "Posts"
+#     url = "/en/posts/"
+#     weight = 3
 [[menu.en]]
     name = "Categories"
     url = "/categories/"
