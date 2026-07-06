@@ -203,7 +203,11 @@
       {{ range .Pages }}
       <div class="list-item" id="p-{{ .Date.Format "20060102" }}-{{ .File.BaseFileName | urlize }}">
         <span class="list-item-date">{{ .Date.Format "01-02" }}</span>
+        {{ if .Params.link }}
+        <a class="list-item-title" href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+        {{ else }}
         <a class="list-item-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
       </div>
       {{ end }}
     </div>
