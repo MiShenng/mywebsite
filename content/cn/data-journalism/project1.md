@@ -1,5 +1,5 @@
 ---
-title: "Data Journalism Project 1"
+title: "这届年轻人在安乐与做乐之间选择了刮刮乐？"
 date: 2026-07-06
 draft: false
 type: "paper"

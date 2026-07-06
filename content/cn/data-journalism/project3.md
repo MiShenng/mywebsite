@@ -1,5 +1,5 @@
 ---
-title: "Data Journalism Project 3 (WeChat)"
+title: "我们去看演唱会吧！如果有票的话"
 date: 2026-07-06
 draft: false
 type: "paper"
