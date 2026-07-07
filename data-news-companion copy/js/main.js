@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initRevealOnScroll();
   initReadingProgress();
   initHeroParallax();
+  initChapterFocus();
 });
 
 function initRevealOnScroll() {
@@ -91,4 +92,27 @@ function initHeroParallax() {
   update();
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", requestUpdate);
+}
+
+function initChapterFocus() {
+  const chapters = document.querySelectorAll(".chapter-cover");
+  if (!chapters.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    chapters.forEach((chapter) => chapter.classList.add("is-chapter-active"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-chapter-active", entry.isIntersecting);
+      });
+    },
+    {
+      threshold: 0.38,
+    },
+  );
+
+  chapters.forEach((chapter) => observer.observe(chapter));
 }
