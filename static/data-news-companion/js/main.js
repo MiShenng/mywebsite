@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initRevealOnScroll();
   initReadingProgress();
   initHeroParallax();
+  initChapterFocus();
 });
 
 function initRevealOnScroll() {
@@ -68,10 +69,10 @@ function initHeroParallax() {
   const update = () => {
     const rect = hero.getBoundingClientRect();
     const progress = Math.min(Math.max(-rect.top / Math.max(rect.height, 1), 0), 1);
-    const travel = progress * 86;
 
     layers.forEach((layer) => {
       const speed = Number.parseFloat(layer.dataset.heroSpeed) || 0;
+      const travel = progress * (Number.parseFloat(layer.dataset.heroTravel) || 86);
       const offset = travel * speed;
       const axis = layer.dataset.heroAxis;
 
@@ -91,4 +92,27 @@ function initHeroParallax() {
   update();
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", requestUpdate);
+}
+
+function initChapterFocus() {
+  const chapters = document.querySelectorAll(".chapter-cover");
+  if (!chapters.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    chapters.forEach((chapter) => chapter.classList.add("is-chapter-active"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-chapter-active", entry.isIntersecting);
+      });
+    },
+    {
+      threshold: 0.38,
+    },
+  );
+
+  chapters.forEach((chapter) => observer.observe(chapter));
 }
