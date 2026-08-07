@@ -3,7 +3,9 @@
 ### git push all
 
 
-git add . && git commit -m "描述" && git push
+git add . 
+git commit -m "描述" 
+git push
 
 
 ### git push one file
