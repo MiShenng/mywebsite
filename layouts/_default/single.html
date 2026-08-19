@@ -5,6 +5,7 @@
 {{ if not .IsHome }}
 <h1>{{ .Title }}</h1>
 {{ with .Params.subtitle }}<h1><span class="subtitle">{{ . }}</span></h1>{{ end }}
+{{ if not .Params.hide_page_meta }}
 <p>{{ with .Params.author }}{{ . }}{{ end }}
 {{ if .Params.date }} / {{ .Date.Format "2006-01-02" }} {{ end }}
 {{ if .IsPage }}
@@ -16,9 +17,13 @@
 {{ end }}
 </p>
 {{ end }}
+{{ end }}
+{{ if not .Params.hide_page_meta }}
 <hr/>
+{{ end }}
 </div>
 
+{{ if not .Params.hide_page_meta }}
 <span class="article-toolbar">
   {{ if .IsPage}}
   {{ if .File.Path}}
@@ -35,6 +40,7 @@
   {{ end }}
   {{ end }}
 </span>
+{{ end }}
 
 {{ if .Params.toc }}
 <aside class="toc">
@@ -54,7 +60,9 @@ Table of Contents:
     <a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>
   {{ end }}
 {{ end }}
+{{ if not .Params.hide_page_meta }}
 <p style="color:#777;">{{ default (index $.Site.Params.lang.lastupdate $.Site.Params.defaultLang) (index $.Site.Params.lang.lastupdate $.Section)}} {{ .Page.Lastmod.Format "2006-01-02" }}</p>
+{{ end }}
 </div>
 
 {{ if .IsPage }}
