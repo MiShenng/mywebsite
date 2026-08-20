@@ -4,27 +4,36 @@
 }
 
 .nav {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  max-width: 1000px;
+  width: calc(100% - 40px);
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Logo: remove old float/margin-top, set fixed height */
 .nav-logo {
   float: none;
+  display: flex;
+  align-items: center;
   margin-top: 0;
   flex-shrink: 0;
+  transition: none;
+}
+
+.nav-logo:hover {
+  transform: none;
 }
 
 .nav-logo img {
   display: block;
   width: auto;
-  height: 40px;
-  border-radius: 50%;
+  height: 50px;
 }
 
 /* Nav links: reset text-align since flex handles layout */
@@ -108,6 +117,197 @@ figure {
   hyphens: auto;
 }
 
+/* Homepage: wide academic profile and publication list */
+.homepage-content {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 1280px;
+  margin-top: 64px;
+  padding: 0 20px;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  column-gap: 60px;
+  align-items: start;
+  color: #222;
+}
+
+.homepage p {
+  text-align: left;
+  hyphens: none;
+}
+
+.home-aside {
+  grid-column: 1;
+  text-align: left;
+}
+
+.home-profile-photo {
+  margin: 0 0 30px;
+}
+
+.home-profile-photo img {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+}
+
+.home-research h2 {
+  margin: 0 0 10px;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.home-research p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.home-contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.home-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #555;
+  font-size: 22px;
+}
+
+.home-primary {
+  grid-column: 2;
+  min-width: 0;
+  text-align: left;
+}
+
+.home-introduction {
+  max-width: none;
+}
+
+.home-introduction p {
+  margin: 0 0 22px;
+  line-height: 1.7;
+}
+
+.home-introduction h2 {
+  color: #191919;
+  text-align: left;
+}
+
+.home-main {
+  max-width: none;
+  margin-top: 64px;
+  text-align: left;
+}
+
+.homepage {
+  --academic-heading: #6771B3;
+  --academic-link: #3478B9;
+  --academic-link-hover: #245C91;
+  --academic-text: #191919;
+  --academic-muted: #686868;
+}
+
+.academic-section {
+  margin: 0 0 56px;
+  text-align: left;
+}
+
+.academic-section-title {
+  color: var(--academic-heading);
+  text-align: left;
+  margin: 0 0 28px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.academic-entry {
+  color: var(--academic-text);
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 0 22px;
+}
+
+.academic-citation {
+  margin: 0;
+}
+
+.academic-citation strong {
+  font-weight: 600;
+}
+
+.academic-citation em {
+  color: var(--academic-muted);
+}
+
+.academic-secondary {
+  margin: 7px 0 0;
+  color: var(--academic-muted);
+  font-size: 15.5px;
+}
+
+.academic-secondary a {
+  color: var(--academic-link);
+  text-decoration: none;
+}
+
+.academic-secondary a:hover {
+  color: var(--academic-link-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-list li {
+  display: block;
+  color: var(--academic-text);
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.news-list time {
+  color: var(--academic-text);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .homepage-content {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+
+  .homepage {
+    grid-template-columns: 260px minmax(0, 1fr);
+    column-gap: 42px;
+  }
+
+  .home-profile-photo img {
+    height: auto;
+  }
+}
+
 /* Mobile: stack logo above nav links, center both */
 @media screen and (max-width: 768px) {
   .nav {
@@ -116,6 +316,10 @@ figure {
     min-height: auto;
     padding: 12px 15px;
     gap: 8px;
+  }
+
+  .nav-logo img {
+    height: 46px;
   }
 
   .nav-links {
@@ -141,5 +345,36 @@ figure {
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  .homepage-content {
+    width: auto;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .homepage {
+    grid-template-columns: 1fr;
+    row-gap: 38px;
+  }
+
+  .home-profile-photo {
+    max-width: 320px;
+  }
+
+  .home-profile-photo img {
+    height: auto;
+  }
+
+  .home-primary {
+    grid-column: 1;
+  }
+
+  .home-main {
+    margin-top: 50px;
+  }
+
+  .news-list li {
+    margin-bottom: 14px;
   }
 }
