@@ -65,8 +65,10 @@
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
-  <a href="/" class="nav-logo">
+  <a href="/" class="nav-logo" aria-label="Home">
     <img src="/media/symbol.svg"
+         width="50"
+         height="50"
          alt="Lizao">
   </a>
 
@@ -80,8 +82,6 @@
       <li><a href="/">Home</a></li>
     
       <li><a href="/en/about/">About</a></li>
-    
-      <li><a href="/en/posts/">Posts</a></li>
     
       <li><a href="/categories/">Categories</a></li>
     
@@ -322,6 +322,74 @@
     
       
     
+      
+    
+  
+
+  
+    
+      
+    
+      
+    
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+    
+      
+    
+  
+
+  
+    
+      
+    
+      
+    
+  
+
+  
+    
+      
+    
+      
+    
+  
+
+  
+    
+      
+    
+      
+    
+  
+
+  
+    
+      
+    
+      
+    
   
 
   
@@ -433,20 +501,22 @@
     
     <div class="csslit-stats">
       <div>
-        <div class="csslit-stat-num">16</div>
-        <div class="csslit-stat-label">论文</div>
+        <div class="csslit-stat-num">24</div>
+        <div class="csslit-stat-label">Papers</div>
       </div>
       <div>
-        <div class="csslit-stat-num">12</div>
-        <div class="csslit-stat-label">标签</div>
+        <div class="csslit-stat-num">16</div>
+        <div class="csslit-stat-label">Tags</div>
       </div>
     </div>
     <hr>
     <div class="csslit-date-index">
-      <h4>研究标签</h4>
+      <h4>Research Tags</h4>
       <ul class="csslit-tag-list">
         
         <li><a href="/tags/ai/">#AI</a></li>
+        
+        <li><a href="/tags/authoritarianism/">#Authoritarianism</a></li>
         
         <li><a href="/tags/clickbait/">#Clickbait</a></li>
         
@@ -454,13 +524,15 @@
         
         <li><a href="/tags/digital-advertising/">#Digital Advertising</a></li>
         
+        <li><a href="/tags/emotional-communication/">#Emotional Communication</a></li>
+        
         <li><a href="/tags/health-communication/">#Health Communication</a></li>
         
         <li><a href="/tags/images-as-data/">#images as data</a></li>
         
-        <li><a href="/tags/misinfomation/">#Misinfomation</a></li>
+        <li><a href="/tags/misinformation/">#Misinformation</a></li>
         
-        <li><a href="/tags/misinformation/">#misinformation</a></li>
+        <li><a href="/tags/moral-variables/">#Moral Variables</a></li>
         
         <li><a href="/tags/multimodal/">#Multimodal</a></li>
         
@@ -468,7 +540,11 @@
         
         <li><a href="/tags/political-communication/">#Political Communication</a></li>
         
+        <li><a href="/tags/propaganda/">#Propaganda</a></li>
+        
         <li><a href="/tags/social-media/">#Social Media</a></li>
+        
+        <li><a href="/tags/text-as-data/">#text as data</a></li>
         
       </ul>
     </div>
@@ -484,6 +560,211 @@
     
       
       <div class="csslit-date-group">
+        <div class="csslit-date-header">2026-07</div>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260711-7_11">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://doi.org/10.1177/00031224231197436" target="_blank" rel="noopener">The Stigma of Diseases: Unequal Burden, Uneven Decline</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Best, R. K., &amp; Arseniev-Koehler, A. (2023). The stigma of diseases: Unequal burden, uneven decline. American Sociological Review, 88(5), 938–969.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/health-communication/">#Health Communication</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> Why some diseases are more stigmatized than others and whether disease stigma has declined over time. It also examines whether behavioral symptoms, preventability, infectiousness, medicalization, and advocacy can explain differences in stigma across diseases. More broadly, the article asks how the public meanings of diseases have changed in American news culture from 1980 to 2018.</li><li><strong>Theoretical Framework:</strong> The article combines stigma theory, norm enforcement theory, contagion avoidance theory, and cultural sociology. Norm enforcement theory suggests that diseases connected to unusual behavior or personal responsibility should attract stronger moral judgment and negative personality stereotypes. Contagion avoidance theory suggests that infectious diseases should be more strongly connected to disgust because people seek to avoid possible sources of infection. The article also examines whether medicalization and disease advocacy can reduce stigma by changing how diseases are understood in public culture. Finally, it treats news media as a form of public culture that can reveal the social meanings and stereotypes attached to different diseases.</li><li><strong>Data Collection:</strong> The authors studied 106 health conditions, including 13 behavioral health conditions, 14 infectious diseases, and 79 chronic conditions. They collected 4,711,524 news articles published between 1980 and 2018 from 27 major American news sources. These sources included newspapers, news agencies, magazines, television networks, and radio programs. The authors divided the full period into 13 periods of three years each so that they could compare changes over time. They cleaned disease names, combined different names for the same disease, and used several methods to separate words with different meanings. The final corpus contained more than 4.5 billion words and allowed the authors to compare the public meanings of many diseases across almost four decades.After that, The authors trained Word2Vec models to represent each disease as a vector based on the words that appeared around it in news texts. They trained 25 bootstrap models for each of the 13 time periods, producing a total of 325 word embedding models. They created semantic dimensions for immorality, negative personality traits, disgust, and danger by comparing groups of words at opposite ends of each meaning. Because the danger measure did not perform well in validation tests, they removed it from the main analysis. Since immorality and negative personality traits were highly related, they combined them into a single measure called judgment, leaving judgment and disgust as the two main dependent variables. The authors validated these measures by testing classification accuracy and comparing the results with expert ratings of disease stigma. They then created independent variables for disease type, preventability, medicalization, advocacy, time, and word frequency. Because the same diseases were observed repeatedly across different time periods, they used linear mixed effects regression models with a random intercept for each disease. They also separated advocacy into differences between diseases and changes within the same disease over time. Finally, they tested time trends and interactions between time and disease type to examine whether stigma declined differently for behavioral health conditions, infectious diseases, and chronic conditions.</li><li><strong>Key Findings:</strong> Behavioral health conditions had the strongest links to judgment, which supports the idea that norm enforcement is an important source of stigma. Diseases that were seen as more preventable also received more judgment, suggesting that perceived personal responsibility increases stigma. Infectious diseases had the strongest links to disgust, which supports contagion avoidance theory. The authors found no evidence that medicalization generally reduced stigma, while the evidence for advocacy was mixed and uncertain. Disease stigma declined strongly over time for many chronic physical illnesses, but judgment toward behavioral health conditions and disgust toward infectious diseases remained much more stable. The findings show that disease stigma has declined unevenly and that the most durable forms of stigma are connected to strong social interests in enforcing norms and avoiding infection.</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260710-7_10">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://academic.oup.com/joc/advance-article/doi/10.1093/joc/jqag010/8724375?searchresult=1" target="_blank" rel="noopener">Recommending the state: How social media algorithms curate state created content in China</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Lu, Y., Liu, X., &amp; Zhou, C. (2026). Recommending the state: How social media algorithms curate state created content in China. Journal of Communication, 1–15.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/propaganda/">#Propaganda</a><a href="/tags/authoritarianism/">#Authoritarianism</a><a href="/tags/social-media/">#Social Media</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> The article asks whether recommendation algorithms on Chinese social media systematically increase the visibility of content made by state accounts. It also asks whether this pattern is stronger for news and politics than for entertainment and other content. When state-created content enters social media, do platform recommendation algorithms continue to amplify it, leading users to continuously encounter more state-created content along the recommendation path? This leads to: RQ1: To what extent do social media recommendation algorithms in China engage in algorithmic promotional curation of state-created content? RQ2: How does the algorithmic promotional curation vary across different content categories?</li><li><strong>Theoretical Framework:</strong> The article combines algorithmic curation theory, platform studies, and research on authoritarian information control. It treats recommendation algorithms as active systems that decide which content becomes visible to users. The authors propose the concept of algorithmic promotional curation, which means that recommendation systems systematically increase the visibility of state created content. In China, platforms need to balance user interests, commercial goals, and political requirements, so they may give more visibility to safe content produced by state accounts. The authors therefore argue that this promotion may be conditional and that state news and political content may receive stronger support because it is more important to the state.</li><li><strong>Data Collection:</strong> The authors used the Bilibili API to collect data for 91 days from July 20 to October 19, 2024. They collected 10,824 trending videos and the top ten recommended videos connected to each trending video, which produced a total of 119,064 videos. They also collected information about engagement, video length, video quality, content topics, follower numbers, total likes, and account status. They built a second dataset from 195 state accounts and similar non state accounts to examine whether videos from one account often recommended more videos from the same account. (I actually didn&rsquo;t know Bilibili had an available API. I&rsquo;ve always used web scrapers, maybe I should give it a try.) The authors first calculated the share of state created videos among the ten recommendations connected to each trending video. They compared this share after state created trending videos with the share after non state trending videos. They also compared this pattern with the recommendation rates of automotive, fashion, and dance videos to see whether the result was stronger than ordinary topic similarity. Next, they calculated an account level self reinforcement rate, which measured how often a video recommended other videos from the same account. To compare state and non state accounts more fairly, they matched accounts with similar follower numbers, video numbers, and total likes. For the main statistical test, they used beta regression because the dependent variable was a proportion between zero and one. Since beta regression cannot directly use exact values of zero or one, they slightly changed these boundary values before estimation. The models tested whether state account status, content category, and the interaction between them predicted the share of state created recommendations. The models also controlled for views, likes, comments, bullet comments, coins, favorites, shares, video length, video sharpness, follower numbers, total account likes, and high viewership status. Finally, they used account clustered standard errors, ordinary least squares models, and a first order Markov chain simulation to check whether the results were stable and to show how recommendation patterns could develop across ten steps.</li><li><strong>Key Findings:</strong> State created trending videos received state created recommendations at a rate of 80.76 percent, while the rate was only 0.86 percent after non state trending videos. State accounts also showed stronger self reinforcement because their videos often recommended more videos from the same account. State account status remained an important predictor after the authors controlled for video popularity, account size, and video quality. State news and political videos received the strongest and most lasting promotion, while state entertainment and other content became less visible more quickly. The results show that Bilibili does not send state content to all users equally, but it tends to keep recommending state content after a user has entered a state content path.</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260709-7_9">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://www.pnas.org/doi/epdf/10.1073/pnas.1618923114?src=getftr&amp;utm_source=clarivate&amp;getft_integrator=clarivate" target="_blank" rel="noopener">Emotion shapes the diffusion of moralized content in social networks</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Brady, W. J., Wills, J. A., Jost, J. T., Tucker, J. A., &amp; Van Bavel, J. J. (2017). Emotion shapes the diffusion of moralized content in social networks. Proceedings of the National Academy of Sciences, 114(28), 7313-7318.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/social-media/">#Social Media</a><a href="/tags/moral-variables/">#Moral Variables</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> We addressed several key questions about the process of moral contagion in social networks and its boundary conditions, including the following: (i) Is moral contagion simply driven by basic emotional contagion, or does it require a mix of moral appraisal and emotional expression? (ii) Is moral contagion driven by a negativity bias, as is the case with other psychological processes, or does it capture a more general process that applies to positive as well as negative emotions? (iii) Are there specific emotions that drive moral contagion? (iv) Does moral contagion contribute to the diffusion of moral content within and between political group networks, or only within them? These questions are central not only to understanding moral contagion but also to understanding phenomena such as political polarization and communication.</li><li><strong>Theoretical Framework:</strong> The article combines moral psychology, emotion theory, and social network diffusion theory. It suggests that moral ideas do not only form within individuals but spread continuously through language, emotion, and group relationships in social networks. Emotion amplifies moral judgment, and moral judgment gives emotional expression a stronger normative meaning. Therefore, combining both creates a stronger driving force for diffusion. The article thus proposes that moral-emotional language drives the diffusion of political content better than purely moral language and purely emotional language. It further argues that this diffusion is not necessarily caused only by negative emotions. It is influenced by the specific issue context and emotional valence. The article also assumes that moral-emotional content spreads more easily within groups that share similar ideologies, rather than easily crossing political camp boundaries.</li><li><strong>Method:</strong> The article collected 563,312 public tweets about three controversial political issues on Twitter: gun control, same-sex marriage, and climate change. Then, it automatically coded each tweet using validated moral and emotional dictionaries and classified the words into three categories: purely moral words, purely emotional words, and moral-emotional words. Each tweet was ultimately transformed into several variables, including the frequency of the three types of words, retweet count, author follower count, whether it included media content, whether it included a link, and whether the author was a verified user. The article used the retweet count of each tweet as the dependent variable and the number of the three types of words as the core independent variable. Because the retweet count is count data and has clear overdispersion, the authors used negative binomial regression for statistical estimation. The model controlled for factors that might affect retweets, such as follower count, media content, links, and verified users. This was done to avoid misjudging account influence or platform mechanisms as text effects. The authors used IRR to explain the results, meaning how much the expected retweet rate would increase or decrease for each unit increase in a certain type of word. When testing group boundaries, the authors estimated user ideology based on the follower network and compared the impact of moral-emotional language on retweets within the same camp and across camps.</li><li><strong>Key Findings:</strong> In all three issues, moral-emotional language significantly increased the tweet retweet rate. On average, for each additional moral-emotional word, the retweet rate increased by about 20%. The effects of purely moral language and purely emotional language were not stable. This shows that what really matters is not morality or emotion alone, but the combination of the two. The role of positive and negative moral emotions depends on the issue context. For example, positive moral emotions spread more easily in same-sex marriage, while negative moral emotions spread more easily in climate change. Specific emotion analysis shows that sadness usually reduces diffusion, while the role of anger changes with the issue environment, and disgust has no stable effect. Moral-emotional content spreads more easily within the same political camp. This shows that it might strengthen echo chambers and political polarization, rather than necessarily promoting cross-camp communication. (PNAS articles are short and nice to read, and also very inspiring. I feel like I can read more in the future.)</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260708-7_08">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://www.pnas.org/doi/epdf/10.1073/pnas.1320040111" target="_blank" rel="noopener">Experimental Evidence of Massive-Scale Emotional Contagion Through Social Networks</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Kramer, A. D., Guillory, J. E., &amp; Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. Proceedings of the National Academy of Sciences, 111(24), 8788-8790.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/emotional-communication/">#Emotional Communication</a><a href="/tags/text-as-data/">#text as data</a><a href="/tags/social-media/">#Social Media</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> How do emotional states transfer to others without in-person interaction? Specifically, can the emotional tone of text content in people&rsquo;s daily information feeds influence their own emotional expression?</li><li><strong>Method:</strong> The experiment manipulated how much emotional content 689,003 Facebook users saw in their News Feed. One group saw fewer positive posts from friends, and the other saw fewer negative posts. (I really envy them for being able to collaborate with the platform to run such a fun experiment.) They then used LIWC 2007 to classify users&rsquo; posts by emotional tone. However, the paper does not clearly explain whether this is a binary classification or a scoring system. It only says that a post is classified as positive or negative if it contains at least one positive or negative word. But what happens when a post contains both positive and negative words? How is it classified then? I did not fully understand this part. Finally, they used weighted regression to compare the two groups.</li><li><strong>Theoretical Framework:</strong> This paper mainly draws on emotional contagion theory, which says that people&rsquo;s emotions can be influenced by exposure to others&rsquo; emotional expressions. The authors test this theory in the context of Facebook, showing that emotional contagion can happen not only through face-to-face interaction but also through online textual content. At the same time, the study also responds to social comparison theory.</li><li><strong>Key Findings:</strong> The data suggest that emotional contagion does not require nonverbal behavior. Textual content alone is a sufficient channel. Users who were exposed to fewer emotional posts (of either type) in their News Feed became less expressive overall in the following days, which addresses the question of how emotional expression affects social engagement online. The most important conclusion is that emotional expression on social networks influences others&rsquo; emotional expression. When friends post more positive content, you are more likely to express positive emotions. When friends post more negative content, you are more likely to express negative emotions. This paper also challenges a common belief: some people think that seeing others&rsquo; happy lives on Facebook makes you feel worse because of social comparison. But this experiment found the opposite — when positive content was reduced, users actually became less positive, and when they saw more positive content, they were more likely to express positive emotions. (Maybe the sadness only stays backstage, while on the front stage people still have to put on a cheerful face!)</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260706-7_6">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/42647" target="_blank" rel="noopener">The Meme Is the Message: Generative Memesis and AI Visuals in the 2024 USA Presidential Elections</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Chang, H.-C. H., Chen, Y.-C., Shaman, B., Zha, M., Noh, S., Wei, C., Weener, T., &amp; Magee, M. (2026). The Meme Is the Message: Generative Memesis and AI Visuals in the 2024 USA Presidential Elections. Proceedings of the Twentieth International AAAI Conference on Web and Social Media.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/ai/">#AI</a><a href="/tags/political-communication/">#Political Communication</a><a href="/tags/images-as-data/">#images as data</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> This study examines how AI-generated images and memes appeared during the 2024 U.S. presidential election on Instagram. It asks whether AI-generated visuals received more engagement, whether meme format mattered more than AI itself, and how different political groups used AI images. The paper also asks who the main visual opinion leaders were during the election.</li><li><strong>Literature Logic:</strong> The paper starts from the growing role of visual content in political communication. Images and memes can attract attention, express emotion, and help ordinary users join political discussion. However, making visual content is harder than writing text. Generative AI may lower this production cost. The authors connect this new situation to older forms of visual politics, including political posters, cartoons, internet memes, and social media campaigning.</li><li><strong>Theoretical Framework:</strong> The main concept of the paper is generative memesis. It means a new form of meme communication in which users do not only copy and edit existing meme templates. Instead, they use generative AI to create customized visual materials. The paper also draws on theories of spreadable media, political memes, visual political communication, and social media engagement. A key idea is that AI changes the production stage of political communication, but humans still select, frame, and circulate the content.</li><li><strong>Method:</strong> The authors collected 239,526 Instagram images related to the 2024 U.S. presidential election. The data came from CrowdTangle and covered posts from April 5 to August 9, 2024. They used a multimodal workflow. GPT-4o-mini was used to label visual elements, such as memes, politicians, protest, religion, immigration, economy, war, and other themes. OpenAI’s Provenance tool was used to detect AI-generated images. The authors also used facial affect analysis with Py-Feat to study emotions in human faces. In addition, they identified top opinion leaders by post volume, likes, and average engagement.</li><li><strong>Key Findings:</strong> The paper finds that meme format is more important than AI generation alone. Pure AI-generated images did not receive higher engagement. In fact, they were less viral than many other election-related images. However, when AI-generated images were combined with meme format, they received a positive engagement boost. The study also finds partisan differences. Democrat-leaning users used AI more for in-group support, while Republican-leaning users used AI more for attacking the other side. AI-generated faces were also slightly happier and less angry than real faces. Finally, opinion leaders used memes much more than ordinary users, especially non-legacy and entertainment-based accounts. This paper is useful because it does not simply ask whether AI images are dangerous or fake. Instead, it shows that the social format of communication still matters. AI itself does not automatically make content popular. Memes work because people understand their humor, emotion, and political frame. For research on visual political communication, this paper shows a good way to combine computer vision, large language models, facial affect analysis, and platform data.</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+      </div>
+      
+      <div class="csslit-date-group">
         <div class="csslit-date-header">2026-06</div>
         
         
@@ -491,12 +772,11 @@
                  id="entry-20260618-6_18">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★☆</span>
             
-<a href="https://academic.oup.com/jcmc/article/31/3/zmag005/8661563" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -511,16 +791,56 @@
 
           
           <div class="csslit-entry-tags">
-            <a href="/tags/misinfomation/">#Misinfomation</a>
+            <a href="/tags/misinformation/">#Misinformation</a>
           </div>
           
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> Although former studies have recorded the social effect which misinformation would contribute to, how the stage structure of reputation influences user&rsquo;s interaction within communities remains unknown. Following the vein of former studies, they raised two RQs. RQ1: How does sharing misinformation relate to subsequent engagement measured through (a) upvote scores and (b) discursive divergence on Reddit? RQ2: Do these consequences differ between high-status and low-status users? Does user status amplify or buffer the outcomes of sharing misinformation?</li><li><strong>Method:</strong> The raw metrics like upvotes, likes, or comments can&rsquo;t capture how communities actually respond to misinformation. So they conceptualized &lsquo;discursive divergence&rsquo; as a form of oppositional engagement, capturing moments when conflict arises. Based on panel data from the Fakeddit dataset, they used a neural network to compute the metric of &lsquo;discursive divergence&rsquo; as an important variable. The latter model is a common regression model.</li><li><strong>Theoretical Framework:</strong> To explain how user status may shape engagement dynamics, they draw on two competing theoretical frameworks. The first one is credibility heuristics, and the other one is attention economy theory. The former framework supposes that OLs will be punished if they spread misinformation, but the latter suggests this won&rsquo;t happen because of the nature of social media platforms.</li><li><strong>Key Findings:</strong> Their results reveal that, overall, misinformation ordinarily suppresses engagement metrics in online communities. Posts containing misinformation were generally associated with a decrease in upvote score and an increase in discursive divergence compared to posts containing accurate information. These patterns suggest that communities respond to misleading content with diminished approval and heightened contestation. Further analyses show an intriguing asymmetry in how users respond to misinformation depending on who shares it. Among low-status users, misinformation is associated with fewer upvotes and substantially higher levels of discursive divergence relative to accurate content. In contrast, high-status users do not exhibit comparable declines in endorsement and, in some cases, even receive relatively higher upvotes and lower divergence when sharing misinformation than when posting accurate information.</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260601-5_13">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://github.com/3lis/misinfo_vlm" target="_blank" rel="noopener">Images Amplify Misinformation Sharing in Vision-Language Models</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Plebe, A., Douglas, T., Riazi, D., &amp; del Rio-Chanona, R. M. (2026). Images Amplify Misinformation Sharing in Vision-Language Models. Proceedings of the Twentieth International AAAI Conference on Web and Social Media (ICWSM 2026).</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/misinformation/">#Misinformation</a><a href="/tags/images-as-data/">#images as data</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> This study investigates whether Vision-Language Models (VLMs) replicate human vulnerabilities by exhibiting an increased propensity to share news content when images are present. It specifically asks how this image-induced effect varies across different VLM architectures, and how persona conditioning and content attributes interact to modulate resharing decisions.</li><li><strong>Literature Logic:</strong> The paper builds upon psychological studies demonstrating the &ldquo;truthiness&rdquo; effect, where images increase humans&rsquo; perceived credibility of false claims. While prior research has explored how Large Language Models (LLMs) propagate misinformation, the specific role of image presence in shaping misinformation spread within VLMs remains unexplored. Assuming VLMs reflect human biases, the authors deduce the necessity of evaluating multimodal misinformation sharing, especially as LLMs become increasingly personalized.</li><li><strong>Theoretical Framework:</strong> The research is grounded in the psychological concept of &ldquo;truthiness,&rdquo; which explains how visual cues inflate perceived accuracy. Additionally, it operationalizes psychological personality constructs using the Big Five and the Dark Triad (narcissism, Machiavellianism, and psychopathy) frameworks to systematically examine how specific maladaptive and normative traits influence the sharing of false information.</li><li><strong>Method:</strong> The authors curated a novel multimodal dataset of 500 fact-checked political news items from PolitiFact, each paired with an image and a ground-truth veracity label. They evaluated four state-of-the-art VLMs (GPT-4o-mini, Claude-3-Haiku, LLaVa-1.6, and Qwen2-VL) under 25 different persona profiles. To circumvent the models&rsquo; default safety refusals regarding controversial topics, the researchers designed a jailbreaking-inspired, third-person chain-of-thought prompting strategy. The models were tasked with rating their likelihood of resharing the news on a 5-point Likert scale, which was then analyzed using linear mixed-effects models and Wilcoxon signed-rank tests.</li><li><strong>Key Findings:</strong> The study reveals that the presence of an image systematically increases a VLM&rsquo;s willingness to reshare content, boosting sharing rates by 14.5% for false news and 5.3% for true news. Persona conditioning heavily modulates this effect: Dark Triad traits consistently amplify the resharing of false news, while Republican-aligned demographic profiles reduce the models&rsquo; sensitivity to ground-truth veracity. Among the tested systems, Claude-3-Haiku demonstrated the greatest robustness against visual misinformation, though findings conclusively indicate that VLMs generally replicate human-like visual biases in information sharing.</li>
               </ul>
             </div>
           </details>
@@ -537,10 +857,9 @@
                  id="entry-20260528-5_28">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
-
           </div>
 
           <h3>
@@ -561,7 +880,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This study also focuses on how images and text work together on social media. It starts from a simple effect-based question: can a standalone image generate higher engagement than text paired with an image? More specifically, the paper asks whether digital sensory appeals work better when they are presented only through images rather than through multimodal image-text posts.</li><li><strong>Literature Logic:</strong> The paper moves from sensory appeals in offline marketing environments to digital sensory appeals in social media content design. It then uses transportation theory and cognitive load theory to question the common assumption that multimodal content is always better for social media marketing.</li><li><strong>Theoretical Framework:</strong> The study is based on transportation theory. The key idea is that sensory appeals do not work by providing more information, but by helping users mentally enter the consumption scene shown in the image. A single visual modality can reduce the cognitive load caused by integrating multiple modalities. As a result, users can more easily imagine the sensory experience suggested by the post.</li><li><strong>Method:</strong> The paper uses both secondary data and experiments. In the secondary-data study, the authors analyze 1,041 Instagram posts from a coffee shop in the Midwestern United States between 2011 and 2024. They use regression models to test how post modality and sensory appeals affect engagement. In the experimental studies, they manipulate content modality and appeal type to compare user engagement with sensory and non-sensory content under different presentation formats.</li><li><strong>Key Findings:</strong> For digital sensory appeals, standalone images increase user engagement more than multimodal image-text posts. In the Instagram data, standalone sensory image posts can generate up to 124% more engagement than image-text posts. This effect works mainly through transportation: standalone images make it easier for users to become immersed in the sensory scene, which increases their willingness to engage. For non-sensory appeals, standalone images do not have the same advantage and may even perform worse than image-text content. The paper argues that social media content is not always better when it contains more modalities. When content depends on users’ sensory imagination, less can be more. This is especially relevant for food, drinks, perfume, fashion, and other products where consumers already have related sensory experience or brand loyalty.</li>
@@ -573,15 +892,94 @@
         
         
         <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260527-5_27">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://sci-hub.jp/10.1126/science.aap9559" target="_blank" rel="noopener">The Spread of True and False News Online</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Vosoughi, S., Roy, D., &amp; Aral, S. (2018). The spread of true and false news online. Science, 359(6380), 1146-1151.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/misinformation/">#Misinformation</a><a href="/tags/social-media/">#Social Media</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> Current studies on misinformation are limited to small, ad hoc samples that ignore two key scientific questions: How do truth and falsity spread differently, and what factors of human judgment explain these differences? In this paper, the specific questions are: How do true and false news spread differently on social media? More specifically, does false news spread farther, faster, deeper, and more broadly than true news? And why does false news spread differently? Is it because of bots, because of influential users, or because false news itself is more novel and more likely to trigger emotions?</li><li><strong>Method:</strong> The authors collected a very large dataset of rumor cascades on Twitter from 2006 to 2017. The dataset includes about 126,000 stories, spread by about 3 million users more than 4.5 million times. The truth or falsity of these stories was classified by six independent fact-checking organizations, such as Snopes, PolitiFact, and FactCheck.org. The authors then measured how each story spread on Twitter using multiple metrics, including cascade depth, size, maximum breadth, structural virality, and speed.</li><li><strong>Theoretical Framework:</strong> This paper mainly draws on information diffusion theory and cascade propagation theory. It treats news spreading on Twitter as a network diffusion process, where a story passes from one user to another through retweets. The paper also uses ideas from information theory and decision theory, especially the concept of &ldquo;novelty.&rdquo; The authors argue that novel information is more attractive because it can update people&rsquo;s understanding of the world, and it may also give sharers a sense of social status, as if they possess some surprising or unusual information. At the same time, this study is also related to emotion and sharing behavior, because false news tends to trigger strong emotions like surprise, fear, and disgust more easily.</li><li><strong>Key Findings:</strong> False news spreads significantly farther, faster, deeper, and more broadly than true news. True news rarely reaches more than 1,000 people, while the top 1% of false news cascades typically reach between 1,000 and 100,000 people. False news reaches 1,500 people in about one-sixth of the time it takes true news, and it reaches deep cascade levels much faster. This pattern is especially strong for political news, where false political news spreads deeper, broader, and more virally than other types of false news. The authors also found that this difference is not mainly caused by more influential users. In fact, users who spread false news typically have fewer followers, follow fewer people, are less active, are less likely to be verified, and have been on Twitter for a shorter time. Even after controlling for these user characteristics, false news is still 70% more likely to be retweeted than true news. This paper also challenges the common belief that bots are the main driver of false news spread. Bots do speed up the spread of both true and false news, but they accelerate both at roughly the same rate. Therefore, the authors argue that false news spreads more widely mainly because human users, not bots, are more inclined to share it. Finally, the paper offers a possible explanation: false news is more novel and more emotionally stimulating. False stories are more likely to trigger surprise, disgust, and fear in replies, while true stories are more likely to trigger anticipation, sadness, joy, and trust. In other words, false news spreads fast not only because it is false, but also because it looks fresh, shocking, and feels worth sharing. (Damn, this article is kind of hard — I barely understood any of it. I used ChatGPT to help me.)</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
+                 id="entry-20260526-5_26">
+          <div class="csslit-entry-meta">
+            <span class="csslit-badge csslit-badge-paper">
+              Paper
+            </span>
+            
+            <span class="csslit-rating">★★★★★</span>
+            
+          </div>
+
+          <h3>
+            
+              <a href="https://arxiv.org/pdf/2504.11473" target="_blank" rel="noopener">Visual moral inference and communication</a>
+            
+          </h3>
+
+          
+          <div class="csslit-entry-citation">Zhu, W., Ramezani, A., &amp; Xu, Y. (2026). Visual moral inference and communication. Topics in Cognitive Science, 18(2), e70031.</div>
+          
+
+          
+          <div class="csslit-entry-tags">
+            <a href="/tags/images-as-data/">#images as data</a><a href="/tags/multimodal/">#Multimodal</a>
+          </div>
+          
+
+          
+          <details class="csslit-notes">
+            <summary>View Notes</summary>
+            <div class="csslit-notes-content">
+              <ul>
+                <li><strong>Research Question:</strong> The dominant approach to moral inference relies on text and considers language as the sole medium for moral communication. The authors develop a framework to address two related problems. Visual moral inference: Can computational models drawn from AI make reliable prediction about fine-grained human moral judgment toward natural images such as photos? Visual moral communication: Can these models of visual moral inference be applied to analyzing how morals are embedded and communicated to the public through images, such as those appearing in news articles?</li><li><strong>Method:</strong> The authors build a two-stage framework. First, they train visual moral inference models using the Socio-Moral Image Database, which contains 2,941 photographic images rated by around 2,000 human participants. These ratings cover general morality and five moral foundations: Care, Fairness, Ingroup, Authority, and Purity. Since SMID does not include captions, the authors generate image captions with Microsoft Azure AI. They then compare several representations: Bag-of-Words captions, SBERT caption embeddings, CLIP caption embeddings, grayscale image embeddings, color image embeddings, and joint image-text embeddings. For each representation, they train ridge regression models to predict human moral ratings, using an 80/20 train-test split and cross-validation. The joint image-text CLIP model performs best, followed closely by the color image model, while text-only models perform much worse. Second, they apply the best model to New York Times images from the GoodNews dataset to analyze moral patterns across regions and news categories.</li><li><strong>Key Findings:</strong> The authors find that text-only models cannot fully capture human moral judgments toward images. Image-based models perform much better, and the best model is the joint image-text CLIP model. Color also matters: color image embeddings outperform grayscale image embeddings, suggesting that color works as a moral cue. When applied to New York Times images, the model reveals implicit moral patterns across regions and news categories. U.S. and New York images are predicted as more morally positive, while Africa and Middle East images are more associated with Care and Purity. Health images score highest in morality and Care, while sports images relate more to Fairness and Ingroup. (This article provides us with a great method and model for measuring ethical variables in images!!!!!!)</li>
+              </ul>
+            </div>
+          </details>
+          
+        </article>
+        
+        
+        <article class="csslit-entry csslit-entry-type-paper"
                  id="entry-20260525-5_25">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★☆</span>
             
-<a href="https://www.aup-online.com/content/journals/10.5117/CCR2026.2.6.LIU" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -602,7 +1000,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> Instead of focusing only on AI’s ability to generate images or users’ ability to detect AI-generated images, this study asks how surrealism appears in photorealistic AI-generated images. It examines what types of surrealism exist, what visual elements express them, and how they reflect the visual logic of the generative AI era.</li><li><strong>Literature Logic:</strong> The paper begins with a gap in current research on AI-generated images. It then introduces surrealism and algorithmic surrealism, treating surrealism as a meaningful content feature in algorithmically mediated visual communication. Based on this logic, the study asks how such content can be described and classified, and how traditional supervised or unsupervised methods can be combined with large language model-based image understanding.</li><li><strong>Theoretical Framework:</strong> The study draws mainly on the artistic theory of surrealism, which emphasizes imagination, dreams, the unconscious, and the breaking of rational order. It may be better to say that the paper uses surrealism as a theoretical lens rather than a full explanatory framework. This lens helps the authors interpret AI-generated images as a new form of algorithmically mediated visual expression.</li><li><strong>Method:</strong> The authors collected 28,290 images from 47 AI image creator accounts on Instagram. After manual cleaning, they retained 26,771 photorealistic AI-generated images. The study uses a large language model-assisted mixed-method framework. First, human annotation and qualitative analysis were used to build a codebook with three types of surrealism: physical surrealism, behavioral surrealism, and contextual surrealism. Then GPT-4o was used to classify the large-scale image sample. After that, GPT-4o generated textual summaries of the images. These summaries were analyzed with LDA topic modeling and topic network analysis to identify recurring visual elements and their co-occurrence patterns in surreal AI images.</li><li><strong>Key Findings:</strong> The study finds that surrealism is a major feature of photorealistic AI-generated images. About 66.9% of the sample contains some form of surrealism, with physical surrealism being the most common type. Further analysis shows that many images present mixed forms of surrealism and repeatedly use certain visual elements. In the discussion, the authors argue that algorithmic surrealism expands visual imagination, but it may also lead to visual homogenization, the reproduction of stereotypes, the aestheticization of technical flaws, and political misinformation.</li>
@@ -617,12 +1015,11 @@
                  id="entry-20260524-5_24">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://journals.sagepub.com/doi/full/10.1177/1940161220964769" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -643,7 +1040,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This study examines how visual features of politicians’ Instagram posts influence audience engagement, such as likes and comments. It focuses on how different visual communication strategies affect public responses on social media. From a methodological perspective, the study is also interested in how computer vision can be used to identify and classify visual themes in political communication.</li><li><strong>Literature Logic:</strong> The paper begins with the personalization of politics and the increasing use of social media by politicians. It then discusses how social media engagement has political implications and asks how personalization is visually expressed online. Drawing on research on self-disclosure and parasocial interaction, the author develops hypotheses about the effects of visual communication strategies on user engagement.</li><li><strong>Method:</strong> The dependent variables are the number of likes and comments received by each Instagram post. The author uses computer vision techniques to identify visual content. Transfer learning and clustering methods are used to classify image types, followed by K-means clustering and manual refinement into four categories. Face++ is used for face detection, facial size measurement, and emotion recognition. The models also control for image aesthetics, posting time, politician characteristics, and account characteristics. Multilevel regression models are employed to test the effects of image categories, the presence of the politician’s face, face size, and emotional expressions on audience engagement.</li><li><strong>Theoretical Framework:</strong> The study is grounded in the theory of political personalization. Personalization is operationalized through visual strategies such as showing private life, displaying the politician’s face, and expressing emotions. The paper also draws on research on social media virality, arguing that emotional arousal, social presence, and perceived intimacy can increase audience engagement.</li><li><strong>Key Findings:</strong> The study finds that most politicians’ Instagram content still reflects traditional “politics as usual,” including meetings, speeches, and government activities. However, posts showing private or non-political situations generally receive more engagement. Posts that include the politician’s face, display a larger facial area, or express emotions also tend to attract more likes and comments. The main implication is that effective political communication on visual social media depends not only on issues and policy positions, but also on how politicians use images to create intimacy, recognizability, and emotional connection with audiences.</li>
@@ -658,12 +1055,11 @@
                  id="entry-20260522-5_22">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://www.sciencedirect.com/science/article/pii/S037872062500134X" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -684,7 +1080,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This study asks whether the effect of clickbait may be overestimated. Previous studies mainly focused on the textual and syntactic features of clickbait and its direct effect on user engagement. Because health information is closely related to personal interests, this paper examines the psychological mechanisms through which clickbait titles influence users’ clicking and sharing behaviors.</li><li><strong>Literature Logic:</strong> The paper first introduces the clickbait phenomenon on social media platforms. It then reviews how previous studies have examined the effects of clickbait on user behaviors, especially clicking and sharing. After that, it introduces the theoretical framework and develops a mixed-method research design. Compared with many communication studies, its literature review is relatively short and more directly connected to the empirical design.</li><li><strong>Theoretical Framework:</strong> The study uses self-awareness theory and separates user responses into two paths: subjective self-awareness and objective self-awareness. Information gaps direct users’ attention to external information and stimulate curiosity and fear of missing out, which can increase clicking. Emotional intensity directs users’ attention back to the self, making them worry about how others may evaluate their sharing behavior. This can produce fear of negative evaluation and reduce sharing.</li><li><strong>Method:</strong> The study has a complex mixed-method design with four studies: two secondary-data studies, one semi-structured interview study, and one online experiment. Study 1 collects 4,500 articles, uses machine learning to identify clickbait, and runs regression models. Study 2 uses interviews to identify two key features of clickbait: information gap and emotional intensity. Study 3 uses an online experiment to test the psychological mechanisms. Study 4 uses secondary data again to validate the direct effects of information gap and emotional intensity on clicking and sharing. The early machine-learning operationalization is relatively broad, defining clickbait as titles that are obviously exaggerated, suggestive, or non-objective. After the interview study, the concept becomes more detailed and theoretically grounded.</li><li><strong>Key Findings:</strong> Clickbait in health communication has a clear double-edged effect. It can increase clicks but reduce sharing. More specifically, information gaps increase clicking by stimulating curiosity and fear of missing out. High emotional intensity reduces sharing by increasing fear of negative evaluation. The paper also finds that digital literacy weakens the effects of information gaps on curiosity and fear of missing out, while source credibility strengthens the positive effect of information gaps on clicking and reduces the negative effect of emotional intensity on sharing.</li>
@@ -699,12 +1095,11 @@
                  id="entry-20260521-5_21">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://journals.sagepub.com/doi/full/10.1177/00222437231169711" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -725,7 +1120,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This study asks whether reviews with photos are more helpful than reviews without photos. More importantly, it examines whether consumers find reviews more helpful when the information in photos and words is similar or different. The core question is how the relationship between textual and visual information affects review helpfulness through processing fluency.</li><li><strong>Literature Logic:</strong> The paper first explains why review helpfulness matters, because helpful reviews can shape consumer attitudes and behavior. It then highlights the growing role of photos in online reviews. Based on theory, it argues that the coordination between images and words can influence how effectively a review is processed and evaluated.</li><li><strong>Theoretical Framework:</strong> The study treats helpfulness as an indicator of review effectiveness. Because online reviews are often multimodal, the authors examine how text and photos work together. The key mechanism is processing fluency: when photos and words provide similar information, readers can process the review more easily. This fluency creates a more positive feeling, which then leads readers to evaluate the review as more helpful.</li><li><strong>Method Design:</strong> The paper uses a multi-method design, combining large-scale secondary data, machine learning, human validation, and experiments. First, the authors analyze 7.4 million Yelp restaurant reviews and 3.5 million photos. They use Google Vision API to extract image labels, Doc2Vec to transform review text and image labels into vectors, and cosine similarity to measure image-text similarity. They also use human coders to validate whether the algorithmic measure matches human perception. Then, they conduct five experiments to test the causal effect of image-text similarity on review helpfulness, the mediating role of processing fluency, and the boundary conditions of text difficulty and photo quality.</li><li><strong>Key Findings:</strong> Adding photos generally increases review helpfulness. More importantly, reviews are perceived as more helpful when photos and words convey similar information. The mechanism is that image-text similarity makes information easier to process, and easier processing leads to higher perceived helpfulness. The paper also finds that this positive effect becomes weaker when the review text is harder to read or when photo quality is lower. In other words, more visual and textual information is not always better. Effective multimodal communication requires clear, consistent, and easy-to-process combinations of images and words.</li>
@@ -740,12 +1135,11 @@
                  id="entry-20260520-5_20">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://www.pnas.org/doi/epub/10.1073/pnas.2512043122" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -766,7 +1160,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> How a TikTok ban would affect the digital advertising market, especially whether advertisers would shift their budgets to other familiar platforms?</li><li><strong>Methodology:</strong> The two-week temporary suspension provided a natural experiment and a great sample for applying Difference-in-Differences (DID), comparing advertising activity in the United States with that in 32 unaffected countries. (This work serves as a perfect example to study and reproduce DID.)</li><li><strong>Theoretical Framework:</strong> There isn&rsquo;t an explicit theoretical framework mentioned. However, based on the logic of platform competition or basic demand-supply theory, the authors aim to test whether TikTok and Meta function as substitutable advertising channels, and whether this substitutability varies by advertiser size.</li><li><strong>Core Findings:</strong> On the day of the TikTok outage, ad volume on Meta increased by 6.3% and ad spending increased by 22.4%, but ad impressions did not increase correspondingly. As a result, CPM ad prices rose by 12.1%. The substitution effect was stronger among large advertisers: their Meta ad spending increased by about 67%, compared with about 22% among smaller advertisers. This suggests that large advertisers were better able to shift their TikTok budgets to Meta. The authors therefore argue that a TikTok ban could further strengthen the market power of platforms such as Meta and impose higher switching costs on resource-constrained small businesses.</li>
@@ -781,12 +1175,11 @@
                  id="entry-20260511-5_11">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://sage.cnpereading.com/doi/10.1177/14614448221105877" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -801,13 +1194,13 @@
 
           
           <div class="csslit-entry-tags">
-            <a href="/tags/misinformation/">#misinformation</a>
+            <a href="/tags/misinformation/">#Misinformation</a>
           </div>
           
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> Broadly, the paper asks how visual debunking messages use emotion, and how much emotion shapes the way audiences engage with social media content; it also asks whether conspiracy theories in different fields (e.g., political vs. scientific) use emotion differently. Formally: RQ1. How are emotional appeals (mainly trust- and fear-related) used in COVID-19 conspiracy messages on YouTube? RQ2. How are emotional appeals (mainly trust- and fear-related) used in COVID-19 debunking videos on YouTube? RQ3. Within the broader scope of COVID-19 conspiracy theories, how does emotional framing differ when conspiracy and debunking messages use different topic narratives (e.g., geopolitics, technology)? RQ4. How does emotional framing moderate the relationship between debunking messages and users&rsquo; attention and engagement on social media?</li><li><strong>Method:</strong> (I feel like most emotion-related studies with a causal flavor are done with experiments — maybe that&rsquo;s psychology&rsquo;s home turf.) Based on prior research, they identified the search keywords for COVID-19 conspiracy theories. After scraping the data, they first extracted the video text and manually did binary coding for (a) whether it was COVID-related and (b) whether it was conspiracy or anti-conspiracy. Then they used machine learning to scale up the coding, and checked emotions with the NRC lexicon. For the analysis, they first ran two-sample t-tests to compare emotion use between conspiracy and debunking videos, then used OLS regression to examine the relationship between emotion use and user engagement metrics.</li><li><strong>Theoretical Framework:</strong> 1. Emotional framing theory, which combines appraisal theory and framing theory: when an emotion is repeatedly paired with a certain event or opinion, that event triggers a distinct appraisal pattern, so emotional words act as a &lsquo;frame&rsquo; in the message. 2. The psychology of conspiracy theories, which says the core emotional mechanism is using fear and distrust to target audiences who already distrust official institutions, and to create panic and paranoia. 3. Attention economy, which argues that in social media emotional content captures user attention more easily, and that different emotions may affect passive viewing and active engagement differently.</li><li><strong>Key Findings:</strong> Their article reveals that in both COVID-19 conspiracy videos and debunking videos on YouTube, fear- and trust-related emotional framing is more prominent than other emotions (such as joy or disgust). Conspiracy videos use fear and distrust to undermine the scientific authority of established institutions and to foster a culture of paranoia, while debunking videos call on citizens to seek COVID-related scientific knowledge and encourage people to ease the fear that conspiracy theories create. They further show that, overall, conspiracy videos carry more emotional cues than debunking videos, and that both types rely more broadly on trust- and fear-related emotions. When they break emotional framing down by COVID-related conspiracy topic, they find that when state actors or modern technology are blamed, conspiracy videos use more fear- and trust-related words than debunking videos; but when social and political elites are blamed, debunking videos use more fear- and trust-related words than conspiracy videos.</li>
@@ -822,12 +1215,11 @@
                  id="entry-20260510-5_10">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://drive.google.com/file/d/1Y7zj5Xrk8ERRxXrDyelBL9Lw5i-0GgvA/view" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -842,13 +1234,13 @@
 
           
           <div class="csslit-entry-tags">
-            <a href="/tags/misinformation/">#misinformation</a><a href="/tags/multimodal/">#Multimodal</a>
+            <a href="/tags/misinformation/">#Misinformation</a><a href="/tags/multimodal/">#Multimodal</a>
           </div>
           
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This paper looks very similar with other one which studies the visual features of conspiracy videos, and their RQs are very close.In this paper, they questioned, what specific audiovisual features of fact-checking content are prevalent and (2) how these features contribute to audience engagement on video-sharing social media platforms?To put it more practically, they set four RQs.Among the audiovisual features relevant to audience engagement, which are prevalent in fact-checking videos on Douyin?RQ2: Considering the persuasive strategies relevant to audience engagement, which are prevalent in fact-checking videos on Douyin?RQ3: What audiovisual features and persuasive strategies tend to be employed together in fact-checking videos?RQ4: Which video features are associated with audience engagement in fact-checking videos on social media?</li><li><strong>Method:</strong>  They focused on five basic visual features: brightness, entropy, warm colors, cool colors, and the presence of faces. Trying to tell  voice features and some categorical variables related to persuasion strategies, putting them all as independent variables, and treat user engagement metrics as the dependent variable.*（The literature review is very valuable, and we can mining lots of relatitive papers from that.）*Then, they developed a video analysis framework that used automated analysis to extract audiovisual features and manual content analysis to annotate persuasive strategies.Their approach to handling clickbait in thumbnails is too crude，how can they detect text in images? This is essentially a method for measuring text-based clickbait.</li><li><strong>Theoretical Framework:</strong> Dual coding theory and realism heuristics together argue that videos are more persuasive than text, which justifies breaking videos down into specific audiovisual features for analysis. Attention economy and curiosity gap theory provide the theoretical basis for using audience engagement as the dependent variable and clickbait as an independent variable, respectively. In the discussion, the authors propose that video features may affect fact-checking outcomes through three pathways — as persuasive arguments, as realism heuristics, and as attention determinants — but this framework is only suggested for future research and is not tested in the paper.</li><li>**Key Findings:**They found that fact-checking videos tend to have higher brightness, less cool color dominance, and faster tempo in comparison, but the trend was much less clear-cut for other features.Second, they identified five persuasive strategies relevant to fact-checking videos: humor, logic, storytelling, authoritative sources, and clickbait thumbnail, and each of them corresponding to different stage of user enageme</li>
@@ -863,12 +1255,11 @@
                  id="entry-20260508-5_8">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
-            <span class="csslit-rating">★★★★★</span>
+            <span class="csslit-rating">★★★★☆</span>
             
-<a href="https://drive.google.com/file/d/1AmybrI7xQGxuTv7fIirHZ4nbIdLRPfGK/view" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -889,7 +1280,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li>Visuals carry ideological and emotional cues that shape attitudes, often in ways that text alone cannot, but former studies didn&rsquo;t pay enough attention to visual media!</li><li>The core claim is that visual media works in two directions for polarization. As a manifestation, visuals can measure polarization: the three strands (ideological, affective, and perceived), plus the elite-vs-mass distinction, can each be read off visual content — e.g., positive vs. negative portrayals of immigrants index a media outlet&rsquo;s ideological slant; counting partisan symbols (guns, the LGBTQ flag, Israel/Palestine flags) with object-detection APIs and multimodal LLMs tracks ideological divides over time; and a rising flow of uncivil memes or crackdown images proxies affective polarization. Elite vs. mass polarization is separated by whose posts you sample (official/pundit accounts vs. ordinary users). As an <em>antecedent</em>, visuals also drive polarization, which the authors explain through persuasion theory (repeated exposure reinforces and intensifies existing attitudes) and backfiring theory (emotionally charged counter-attitudinal images trigger defensive reactions that harden divides). They stress this agenda is now feasible because image-as-data and video-as-data methods, accelerated by multimodal LLMs, let researchers analyze visual content at scale.</li><li>They conclude by proposing a few research questions that leverage visual analysis as 1) measurement and manifestation of political polarization, and 2) an antecedent of political polarization.  ● Which political figures, symbols, and objects are shown more or less by a) media outlets, b) individual social media users, and c) political campaigns with different political leanings, to visually portray various political and social issues and events? For example, are presidential candidates Donald Trump and Kamala Harris&rsquo; faces similarly prevalent in election coverage by left- and right-leaning media? ● How are the same symbols, objects, and political figures portrayed in news reporting and social media posts? Are there systematic differences in their visual representation in terms of color, brightness, complexity, and juxtaposition alongside other objects and figures? ● What are the temporal trends of these visual representations of events, political figures, and issues, and how do they vary across geographic locations and demographic groups? ● What symbols, objects and figures in 1) media coverage and 2) political campaigns could influence individuals&rsquo; political beliefs and behaviors? For example, does exposure to visual symbols such as caravans and border walls influence people&rsquo;s opinion about immigration? ● What visual stylistic and aesthetic features, such as color, brightness, and complexity, could influence individuals&rsquo; political beliefs and behaviors? ● How do different demographic groups based on gender, race, and socioeconomic status engage with visual political content differently? ● What visual content could exacerbate or mitigate political polarization? Can we leverage visuals, including photorealistic images, memes, data visualizations and videos, in designing effective and group-specific interventions to counteract polarization?</li><li>yeah, I copied them all.</li>
@@ -904,12 +1295,11 @@
                  id="entry-20260507-5_7">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★☆</span>
             
-<a href="https://sci-hub.jp/storage/2024/8632/5e01a1dd6a333b8d341aa284bf480844/torres2021.pdf" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -930,7 +1320,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Abstract:</strong> This paper introduces what CNNs are, the stages involved in building them, and how we should set parameters for our studies. In this part, we may be able to find a better visual explanation from 3Blue1Brown.</li><li>After that, the authors explain that if we lack experience in machine learning or coding, we can use many pretrained models or automated machine learning tools, such as Google Cloud AutoML and Amazon AWS Machine Learning tools.</li><li>The amount of training data is important. If we give the model too much irrelevant or noisy data, it may lead to overfitting. If we give it too little data, it may lead to underfitting. However, these problems can be addressed. For overfitting, increasing the size and quality of the training set can be helpful. For underfitting, the situation is more complicated, but we can still deal with it by adding useful features, improving the model, or adjusting the training process.</li><li>There are four concepts that we should remember: active learning, class balance, image cleaning, and data augmentation. Transfer learning is a method that allows us to reuse models trained by others when we have a similar research purpose.</li><li>CNNs are useful for image classification, but researchers must be cautious because they may ignore object orientation, lack reliable uncertainty measures, and struggle to classify abstract or latent meanings in images.</li><li>Finally, this article gives an example of identifying numbers from vote tally images, which looks like a classic task in neural networks.</li>
@@ -945,12 +1335,11 @@
                  id="entry-20260504-5_4">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★☆</span>
             
-<a href="https://journals.sagepub.com/doi/10.1177/17504813231190332" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -971,7 +1360,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This study asks which Arabic YouTube thumbnails make users more likely to click and how these thumbnails create false attraction through verbal and visual cues. It focuses on how visual cues, linguistic cues, and image-text strategies work together in clickbait thumbnails.</li><li><strong>Method:</strong> The authors selected 100 typical clickbait thumbnails from five Arabic YouTube channels. They compared these thumbnails with the actual video content to check whether they were misleading or over-promising. The analysis combines Kress and Van Leeuwen’s multimodal analysis framework with Hyland’s metadiscourse framework. The authors coded visual processes, composition, viewer interaction, and linguistic strategies in thumbnail text. This study is not highly computational, but it is useful for understanding the difference between qualitative multimodal analysis and computational aesthetics.</li><li><strong>Theoretical Framework:</strong> The study mainly uses Kress and Van Leeuwen’s visual grammar to analyze representational meaning, interactive meaning, and compositional meaning in thumbnails. For the textual part, it uses Hyland’s metadiscourse theory to examine how self-mentions, attitude markers, engagement markers, forward references, and connectors guide users to click. This framework is closely related to Reading Images: The Grammar of Visual Design.</li><li><strong>Key Findings:</strong> Clickbait thumbnails often use negative actions, shocked facial expressions, close social distance, direct gaze, exaggerated symbols, repeated exclamation marks, repeated ellipses, emojis, and forward references to create suspense. Clickbait thumbnails are not only textual clickbait. They are multimodal persuasion devices built through the cooperation of images, words, composition, and interactive cues.</li>
@@ -986,12 +1375,11 @@
                  id="entry-20260503-5_3">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★☆</span>
             
-<a href="https://ojs.aaai.org/index.php/AAAI/article/view/9966" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -1012,7 +1400,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This study aims to develop a machine learning model that can automatically identify clickbait articles in online news streams. The authors seek to understand which textual and structural features distinguish clickbait from regular news content.</li><li><strong>Conceptualization of Clickbait:</strong> The authors argue that clickbait is not the same as spam, fake websites, or fake news. Instead, clickbait refers to content with highly attractive, exaggerated, or misleading headlines that encourage users to click, while the article itself often provides limited information or fails to deliver what the headline promises. Because many news recommendation systems rely on click-through rates, clickbait can gain disproportionate visibility and reduce user experience.</li><li><strong>Types of Clickbait:</strong> The paper identifies eight categories of clickbait: exaggeration, teasing, inflammatory content, formatting-based clickbait, curiosity-driven content, bait-and-switch, ambiguous content, and factually incorrect content. Different types rely on different strategies. For example, some create an information gap through phrases such as &lsquo;You won’t believe&hellip;&rsquo; or &lsquo;What happened next&hellip;&rsquo;, while others use excessive punctuation, capitalization, or vague promises to attract clicks.</li><li><strong>Method:</strong> The authors collected Yahoo News data consisting of 1,349 clickbait articles and 2,724 non-clickbait articles. They trained a Gradient Boosted Decision Trees model using several groups of features. These included content features (headline length, exclamation marks, question marks, capitalized words, numbers, sentiment words, and clickbait phrases), headline-body similarity features, language informality features (readability, formality scores, slang, profanity, and repeated characters), forward-reference features (e.g., this, that, he, she), and URL characteristics.</li><li><strong>Model Performance:</strong> The model achieved a weighted F1 score of 0.749 on the test set, suggesting that textual and structural features can effectively distinguish clickbait from regular news. One of the most important findings is that language informality is a strong predictor of clickbait. Features such as formality scores, readability levels, slang usage, headline length, capitalization, question marks, and exclamation marks all contribute substantially to prediction performance. Headline-body similarity is also useful, although it is less effective when used alone.</li><li><strong>Key Findings:</strong> Different types of clickbait vary in detection difficulty. Exaggeration-based and formatting-based clickbait are easier to detect because they contain obvious linguistic and stylistic cues. In contrast, curiosity-driven, bait-and-switch, and factually incorrect clickbait are more difficult to identify because they often depend on images, videos, or factual verification rather than text alone.</li><li><strong>Summary:</strong> This paper is one of the earliest studies to move clickbait research from conceptual discussion to automated detection. It provides a practical typology and feature framework that has influenced later research. A key implication is that clickbait should not be understood only through headlines themselves, but also through the relationship between headlines and content, as well as the use of information gaps, informal language, exaggerated formatting, and forward references. However, the study focuses mainly on English news articles and text-based features. It cannot fully capture visual or multimodal clickbait, making it less suitable for platforms such as YouTube or short-video services where thumbnails and visual cues play a central role.</li>
@@ -1027,12 +1415,11 @@
                  id="entry-20260502-5_2">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://www.sciencedirect.com/science/article/pii/S0148296324003539" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -1053,7 +1440,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> Many content creators use emotional and attention-grabbing thumbnails and titles to attract clicks. However, it remains unclear whether these emotional cues increase video views or whether they are perceived as clickbait and discourage users. This study examines how emotions in thumbnails and titles influence video popularity on YouTube.</li><li><strong>Method:</strong> The authors collected 16,215 YouTube video thumbnails and recorded their view counts one week after publication. They combined OCR, YOLOv3, EmoNet, VADER, CLIP, and negative binomial regression models to extract and test textual features, visual emotions, and image-text congruence as predictors of video views.</li><li><strong>Theoretical Framework:</strong> The study is based on schema theory, image schema theory, the two-stage visual processing framework, and curiosity gap theory. The authors argue that users first process salient visual cues and then interpret emotional meanings and image-text consistency. Based on these theories, they propose that emotional valence influences video views, emotional intensity has a curvilinear (inverted U-shaped) relationship with views, and higher image-text congruence increases popularity.</li><li><strong>Key Findings:</strong> Strong emotions expressed in thumbnails increase video views. Both positive and negative facial expressions can attract user attention. In contrast, highly emotional text, question-style titles, and overly clickbait-like wording tend to reduce video views. In addition, videos with higher image-text congruence receive more views than those with mismatched thumbnails and titles.</li>
@@ -1068,12 +1455,11 @@
                  id="entry-20260501-5_1">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-
           </div>
 
           <h3>
@@ -1094,7 +1480,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li>A brief introduction that discusses some of the challenges in visual communication—particularly those related to computation and quantification—and how to address them</li><li>First, we need to find meaningful benchmarks against which to compare and contrast thesevisual metrics.construct a baseline for compare the visual metrics</li><li>We need to condense and combine low-level visual metrics into meaningful latent clusters and condense these metrics into a suitable dimension and create an appropriate encoding to run the regression.</li><li>I have found it quite challenging to link existing quantitative metrics with traditional, purely theoretical approaches. How can we use these metrics to inform and advance theoretical frameworks? Which visual metrics and features extracted from images and videos can help us understand specific aspects of visual perception and narrative?</li><li>This is very thought-provoking. With so many visual variables, it’s difficult to approach topic selection from a variable-based perspective; instead, we need to start from a theoretical foundation and consider which metrics can be effectively utilized.</li>
@@ -1114,12 +1500,11 @@
                  id="entry-20260428-4_28">
           <div class="csslit-entry-meta">
             <span class="csslit-badge csslit-badge-paper">
-              论文
+              Paper
             </span>
             
             <span class="csslit-rating">★★★★★</span>
             
-<a href="https://www.tandfonline.com/doi/full/10.1080/10410236.2023.2175635" target="_blank" rel="noopener">原文 ↗</a>
           </div>
 
           <h3>
@@ -1140,7 +1525,7 @@
 
           
           <details class="csslit-notes">
-            <summary>查看笔记要点</summary>
+            <summary>View Notes</summary>
             <div class="csslit-notes-content">
               <ul>
                 <li><strong>Research Question:</strong> This study examines why some food photos on Instagram receive more user engagement than others. The main question is whether visual aesthetic features and calorie density affect the popularity of food images. The authors also explore whether low-calorie foods can gain more attention through better visual design.</li><li><strong>Method:</strong> The authors collected 53,894 images posted by 90 popular food-related Instagram accounts over two years. After data cleaning, 43,978 food images were retained. Computer vision techniques were used to measure visual features such as color, brightness, color richness, feature complexity, compositional complexity, color diversity, and repetition. Clarifai and Nutritionix were used to estimate calorie density. Multilevel regression models were applied to predict likes and comments. In addition, a crowdsourcing survey was conducted to validate whether the computer-generated measures matched human perceptions.</li><li><strong>Theoretical Framework:</strong> The study draws on theories of visual aesthetics, emotional arousal, and food perception. Warm colors such as red, orange, and yellow are expected to increase arousal and make images more attractive. Visual complexity may also attract attention and increase engagement. From a health communication perspective, the authors argue that high-calorie foods are naturally appealing, while low-calorie foods may depend more on visual aesthetics to gain attention.</li><li><strong>Key Findings:</strong> Red, orange, and yellow colors, feature complexity, and repetition significantly increased likes and comments. In contrast, brightness, color richness, and compositional complexity were negatively associated with engagement. Images of higher-calorie foods generally received more engagement, although this effect was not unlimited. Extremely high-calorie foods were not always more popular than moderately high-calorie foods. Most importantly, visual aesthetics had a stronger effect on low-calorie food images, suggesting that effective visual design can improve the appeal of healthy foods on social media.</li>
