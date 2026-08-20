@@ -42,7 +42,7 @@
 .nav-logo img {
   display: block;
   width: auto;
-  height: 43px;
+  height: 34px;
   max-height: none;
 }
 
@@ -482,7 +482,7 @@ figure {
   }
 
   .nav-logo img {
-    height: 35px;
+    height: 28px;
   }
 
   .nav-links {
