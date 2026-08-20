@@ -55,7 +55,7 @@ title: Home
 </article>
 </section>
 <section class="academic-section" aria-labelledby="working-papers">
-<h2 id="working-papers" class="academic-section-title">Working Papers</h2>
+<h2 id="working-papers" class="academic-section-title">Undergraduate Thesis</h2>
 <article class="academic-entry">
 <p class="academic-citation"><strong>Li, Zihao.</strong> <a class="academic-title-link" href="https://github.com/MiShenng/Bilibili-Health-Visual-Clickbait">See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos on China's Bilibili.</a></p>
 <p class="academic-conference"><em>Undergraduate Thesis</em></p>
