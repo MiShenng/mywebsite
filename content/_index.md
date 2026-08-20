@@ -43,7 +43,7 @@ title: Home
 <article class="academic-entry">
 <p class="academic-citation">Xiao, M., Zhao, R., &amp; <strong>Li, Zihao.</strong> <span class="academic-title">Generation, Negotiation, and Connection: Participatory Curation and Platformized Production of Urban Digital Memory on Short-Video Platforms.</span></p>
 <p class="academic-conference"><em>The 7th Platform Studies Academic Workshop in China</em></p>
-<p class="academic-location">Lanzhou, China · 2026</p>
+<p class="academic-location">Lanzhou, Gansu, China · 2026</p>
 </article>
 </section>
 <section class="academic-section" aria-labelledby="under-review">
