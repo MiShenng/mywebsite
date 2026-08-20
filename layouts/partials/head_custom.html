@@ -8,7 +8,7 @@
 {{ end }}
 
 {{ $ogTitle := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Title) }}
-{{ $ogImage := "/images/1.jpg" | absURL }}
+{{ $ogImage := "/images/coverphoto2.jpg" | absURL }}
 {{ $ogLocale := cond (eq .Section "cn") "zh_CN" "en_US" }}
 {{ $author := default (index .Site.Params.lang.author .Site.Params.defaultLang) (index .Site.Params.lang.author .Section) }}
 

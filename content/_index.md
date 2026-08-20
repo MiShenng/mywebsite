@@ -5,7 +5,7 @@ title: Home
 <div class="homepage">
 <aside class="home-aside">
 <figure class="home-profile-photo">
-<img src="/images/1.jpg" alt="Li Zao cycling beside Lake Sayram in Xinjiang, China">
+<img src="/images/coverphoto2.jpg" alt="Li Zao wearing a cycling helmet outdoors">
 </figure>
 <section class="home-research" aria-labelledby="research-interests">
 <h2 id="research-interests">Research Interests</h2>
