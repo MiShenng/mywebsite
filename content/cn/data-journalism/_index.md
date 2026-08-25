@@ -1,6 +1,6 @@
 ---
-title: 数据新闻作品
+title: Data Journalism Projects
 layout: csslit
 ---
 
-数据新闻相关作品展示。
+A selection of data journalism projects.

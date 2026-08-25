@@ -82,6 +82,187 @@
 
 /* 右侧主内容 */
 .list-main { min-width: 0; }
+.list-container--projects {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 64px auto 48px;
+  padding: 0;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.project-list {
+  display: grid;
+  max-width: 900px;
+}
+
+.project-introduction {
+  margin: 0;
+}
+
+.project-introduction h1 {
+  margin: 0 0 34px;
+  color: #222;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.project-introduction p {
+  margin: 0;
+}
+
+.project-introduction-meta {
+  margin: 0;
+  color: #222;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.project-toc {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 34px 0 38px;
+  padding: 24px 28px;
+  border: 3px solid #777;
+}
+
+@media screen and (min-width: 1100px) {
+  .project-toc {
+    width: calc(100% + 80px);
+    margin-right: -40px;
+    margin-left: -40px;
+  }
+}
+
+.project-lede {
+  margin: 0 0 44px;
+  text-align: justify;
+}
+
+.project-lede p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.project-toc-title {
+  margin: 0 0 14px;
+  color: #222;
+  font-size: 1.05em;
+  font-weight: 400;
+}
+
+.project-toc ol {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.78em;
+  letter-spacing: -0.012em;
+}
+
+.project-toc li {
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.project-toc a {
+  color: #4a7fa5;
+  text-decoration: none;
+}
+
+.project-toc a:hover { text-decoration: underline; }
+}
+
+.project-card {
+  padding: 0 0 56px;
+}
+
+.project-card + .project-card {
+  border-top: 2px solid #c7c7c7;
+  margin-top: 8px;
+  padding-top: 56px;
+}
+
+.project-card--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  column-gap: 36px;
+  row-gap: 20px;
+}
+
+.project-card-copy {
+  min-width: 0;
+}
+
+.project-card-image {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  width: auto;
+  max-width: 100%;
+  max-height: 260px;
+  height: auto;
+  margin-left: auto;
+  align-self: center;
+}
+
+.project-card-image--portrait {
+  max-height: 380px;
+  justify-self: center;
+  margin-left: 0;
+}
+
+.project-card-title {
+  margin: 0 0 20px;
+  font-size: 1.55em;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.project-card-title a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.project-card-title a:hover { color: #4a7fa5; }
+
+.project-card-description {
+  max-width: 720px;
+  margin: 0 0 24px;
+  color: #666;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.project-card-description p {
+  margin: 0 0 16px;
+}
+
+.project-card-description p:last-child { margin-bottom: 0; }
+
+.project-card-copy .project-card-description { margin-bottom: 16px; }
+
+.project-card-production-date {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 0.9em;
+  text-align: right;
+}
+
+.project-card--with-image .project-card-production-date {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-introduction,
+.project-toc,
+.project-card { text-align: left; }
 
 .list-main-title {
   font-size: 1.5em;
@@ -146,15 +327,38 @@
   }
   .list-anchor-list { display: none; }
   .list-item-date { width: auto; }
+  .project-introduction h1 { font-size: 1.7em; }
+  .project-toc { margin: 28px 0 34px; padding: 20px; }
+  .project-toc ol { font-size: 0.9em; letter-spacing: normal; }
+  .project-toc li { white-space: normal; }
+  .list-container--projects { margin-top: 44px; }
+  .project-card { padding-bottom: 40px; }
+  .project-card + .project-card { padding-top: 40px; }
+  .project-card--with-image { grid-template-columns: 1fr; row-gap: 24px; }
+  .project-card-image {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 220px;
+    max-height: 220px;
+    margin: 0 auto;
+  }
+  .project-card-image--portrait { max-height: 300px; }
+  .project-card--with-image .project-card-production-date {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+  }
 }
 </style>
 
 {{ $name := .Data.Plural }}
 {{ $pageTitle := .Title }}
+{{ $isDataJournalismProjects := eq $pageTitle "Data Journalism Projects" }}
 
-<div class="list-container">
+<div class="list-container{{ if $isDataJournalismProjects }} list-container--projects{{ end }}">
 
   <!-- 左侧边栏 -->
+  {{ if not $isDataJournalismProjects }}
   <aside class="list-sidebar">
     {{ if eq $name "tags" }}
     <div class="list-sidebar-title">#{{ .Title }}</div>
@@ -194,22 +398,66 @@
     {{ end }}
     {{ end }}
   </aside>
+  {{ end }}
 
   <!-- 右侧文章列表 -->
   <main class="list-main">
+    {{ if $isDataJournalismProjects }}
+    <div class="project-introduction">
+      <h1>{{ .Title }}</h1>
+      <p class="project-introduction-meta">{{ .Params.author }} / {{ .Params.updated }}</p>
+    </div>
+    <nav class="project-toc" aria-label="Table of contents">
+      <p class="project-toc-title">Table of Contents:</p>
+      <ol>
+        {{ range .Pages.ByWeight }}
+        <li><a href="#project-{{ .File.BaseFileName | urlize }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ol>
+    </nav>
+    <div class="project-lede">
+      {{ .Content }}
+    </div>
+    {{ else }}
     {{ .Content }}
+    {{ end }}
 
-    {{ if not .IsHome }}
+    {{ if $isDataJournalismProjects }}
+    <section class="project-list">
+      {{ range .Pages.ByWeight }}
+      <article class="project-card{{ with .Params.image }} project-card--with-image{{ end }}">
+        {{ $imageAlt := .Params.image_alt | default .Title }}
+        {{ $imageStyle := .Params.image_style }}
+        <div class="project-card-copy">
+          <h2 class="project-card-title" id="project-{{ .File.BaseFileName | urlize }}">
+            {{ if .Params.link }}
+            <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+            {{ else }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ end }}
+          </h2>
+          {{ with .Params.description }}
+          <div class="project-card-description">{{ . | markdownify }}</div>
+          {{ end }}
+        </div>
+        {{ with .Params.image }}
+        <img class="project-card-image{{ with $imageStyle }} project-card-image--{{ . }}{{ end }}" src="{{ . }}" alt="{{ $imageAlt }}" loading="lazy">
+        {{ end }}
+        {{ with .Params.production_date }}
+        <p class="project-card-production-date">Produced: {{ . }}</p>
+        {{ end }}
+      </article>
+      {{ end }}
+    </section>
+    {{ else if not .IsHome }}
     {{ range .Pages.GroupByDate "2006" }}
     <div class="list-year-group">
-      {{ if ne $pageTitle "Data Journalism" }}
+      {{ if not $isDataJournalismProjects }}
       <div class="list-year-heading">{{ .Key }}</div>
       {{ end }}
       {{ range .Pages }}
       <div class="list-item" id="p-{{ .Date.Format "20060102" }}-{{ .File.BaseFileName | urlize }}">
-        {{ if ne $pageTitle "Data Journalism" }}
         <span class="list-item-date">{{ .Date.Format "01-02" }}</span>
-        {{ end }}
         {{ if .Params.link }}
         <a class="list-item-title" href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
         {{ else }}
