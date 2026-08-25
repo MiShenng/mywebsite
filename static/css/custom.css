@@ -187,6 +187,11 @@ figure {
   column-gap: 5px;
 }
 
+@media screen and (min-width: 1101px) {
+  .research-interests-list { font-size: 14.5px; }
+  .research-interest-item > span:last-child { white-space: nowrap; }
+}
+
 .home-contact-links {
   --contact-color: #555555;
   display: flex;
@@ -493,6 +498,23 @@ figure {
   .home-profile-photo img {
     height: auto;
   }
+
+  .home-research {
+    width: calc(100% + 12px);
+    margin-left: -12px;
+  }
+
+  .research-interests-list {
+    font-size: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .research-interest-item {
+    grid-template-columns: 7px minmax(0, 1fr);
+    column-gap: 2px;
+  }
+
+  .research-interest-item > span:last-child { white-space: nowrap; }
 
   .home-primary {
     grid-column: 1;
