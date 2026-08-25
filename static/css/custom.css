@@ -53,23 +53,6 @@
   text-align: left;
 }
 
-/* Reading and tag-style pages use the same 180px statistics rail as their body. */
-.nav.nav-stats {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  padding-left: 15px;
-  padding-right: 15px;
-  grid-template-columns: 180px 48px minmax(0, 1fr);
-}
-
-.nav.nav-list {
-  width: calc(100% - 30px);
-  max-width: 1000px;
-  padding-left: 15px;
-  padding-right: 15px;
-  grid-template-columns: 160px 48px minmax(0, 1fr);
-}
-
 /* csslit: force small font for note points, override theme li styles */
 .csslit-notes-content,
 .csslit-notes-content ul,
@@ -151,7 +134,7 @@ figure {
   box-sizing: border-box;
   width: calc(100% - (2 * var(--site-side-padding)));
   max-width: var(--site-max-width);
-  margin-top: 64px;
+  margin-top: 32px;
   padding: 0 var(--site-side-padding);
 }
 
@@ -274,7 +257,7 @@ figure {
 }
 
 .home-introduction p {
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   line-height: 1.7;
 }
 
@@ -436,14 +419,6 @@ figure {
     padding-right: var(--site-side-padding);
   }
 
-  .nav.nav-stats {
-    grid-template-columns: 180px 42px minmax(0, 1fr);
-  }
-
-  .nav.nav-list {
-    grid-template-columns: 160px 42px minmax(0, 1fr);
-  }
-
   .homepage-content {
     width: calc(100% - (2 * var(--site-side-padding)));
     padding: 0 var(--site-side-padding);
@@ -467,18 +442,6 @@ figure {
     min-height: auto;
     padding: 12px 15px;
     gap: 8px;
-  }
-
-  .nav.nav-stats {
-    width: calc(100% - 30px);
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .nav.nav-list {
-    width: calc(100% - 30px);
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .nav-logo img {

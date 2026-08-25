@@ -1,12 +1,4 @@
-{{ $navVariant := "site" }}
-{{ if .IsHome }}
-  {{ $navVariant = "home" }}
-{{ else if or (eq .Layout "readings") (eq .Layout "csslit") }}
-  {{ $navVariant = "stats" }}
-{{ else if eq .Kind "term" }}
-  {{ $navVariant = "list" }}
-{{ end }}
-<nav class="nav nav-{{ $navVariant }}">
+<nav class="nav">
   <a href="{{ "/" | relURL }}" class="nav-logo" aria-label="Home">
     <img src="{{ print "" .Site.Params.logo.url | relURL }}"
          width="{{ .Site.Params.logo.width }}"
