@@ -492,7 +492,9 @@ figure {
   }
 
   .home-profile-photo {
-    max-width: 320px;
+    width: min(100%, 320px);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .home-profile-photo img {
@@ -500,8 +502,8 @@ figure {
   }
 
   .home-research {
-    width: calc(100% + 12px);
-    margin-left: -12px;
+    width: 100%;
+    margin-left: 0;
   }
 
   .research-interests-list {
@@ -510,11 +512,26 @@ figure {
   }
 
   .research-interest-item {
-    grid-template-columns: 7px minmax(0, 1fr);
-    column-gap: 2px;
+    grid-template-columns: 12px minmax(0, 1fr);
+    column-gap: 5px;
   }
 
-  .research-interest-item > span:last-child { white-space: nowrap; }
+  .research-interest-item > span:last-child { white-space: normal; }
+
+  .home-contact-links {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+
+  .home-introduction h2,
+  .academic-section-title {
+    font-size: 26px;
+  }
+
+  .academic-entry {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 
   .home-primary {
     grid-column: 1;
