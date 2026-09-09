@@ -2643,6 +2643,11 @@ main > .story-section:last-child {
     overscroll-behavior-inline: contain;
     padding-bottom: 8px;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .data-chart__canvas svg {
+    max-width: none;
   }
 
   .data-chart--bubble .data-chart__canvas::after,
@@ -2718,6 +2723,7 @@ main > .story-section:last-child {
     font-size: 12px;
     line-height: 1.6;
     text-align: left;
+    overflow-wrap: anywhere;
   }
 
   .data-chart__controls,
@@ -2726,6 +2732,17 @@ main > .story-section:last-child {
     gap: 8px 12px;
     font-size: 12px;
     line-height: 1.5;
+  }
+
+  .data-chart__controls button {
+    min-height: 44px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .data-chart__tooltip {
+    max-width: calc(100vw - (2 * var(--gutter)));
+    overflow-wrap: anywhere;
   }
 
 }
