@@ -327,26 +327,56 @@
   }
   .list-anchor-list { display: none; }
   .list-item-date { width: auto; }
-  .project-introduction h1 { font-size: 1.7em; }
-  .project-toc { margin: 28px 0 34px; padding: 20px; }
-  .project-toc ol { font-size: 0.9em; letter-spacing: normal; }
-  .project-toc li { white-space: normal; }
-  .list-container--projects { margin-top: 44px; }
-  .project-card { padding-bottom: 40px; }
-  .project-card + .project-card { padding-top: 40px; }
-  .project-card--with-image { grid-template-columns: 1fr; row-gap: 24px; }
+  .list-container--projects {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    max-width: none;
+    margin: 32px auto 40px;
+    padding: 0;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .list-container--projects .list-main,
+  .project-introduction,
+  .project-toc,
+  .project-lede,
+  .project-list,
+  .project-card { max-width: 100%; min-width: 0; }
+  .project-introduction h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 1.25;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .project-introduction-meta { font-size: 16px; }
+  .project-toc { margin: 28px 0 32px; padding: 18px; overflow: hidden; }
+  .project-toc-title { font-size: 17px; }
+  .project-toc ol { font-size: 16px; letter-spacing: normal; }
+  .project-toc li { margin-bottom: 10px; white-space: normal; }
+  .project-toc a { overflow-wrap: anywhere; }
+  .project-lede { margin-bottom: 32px; }
+  .project-lede p { line-height: 1.7; text-align: left; }
+  .project-card { padding-bottom: 32px; }
+  .project-card + .project-card { margin-top: 0; padding-top: 32px; }
+  .project-card--with-image { grid-template-columns: 1fr; row-gap: 20px; }
   .project-card-image {
     grid-column: 1;
     grid-row: 2;
-    max-width: 220px;
-    max-height: 220px;
+    max-width: 240px;
+    max-height: 240px;
     margin: 0 auto;
   }
-  .project-card-image--portrait { max-height: 300px; }
+  .project-card-image--portrait { max-height: 320px; }
+  .project-card-title { margin-bottom: 14px; font-size: 22px; line-height: 1.35; }
+  .project-card-description { margin-bottom: 16px; line-height: 1.7; text-align: left; }
+  .project-card-description p { margin-bottom: 12px; }
   .project-card--with-image .project-card-production-date {
     grid-column: 1;
     grid-row: 3;
     justify-self: center;
+    font-size: 15px;
   }
 }
 </style>

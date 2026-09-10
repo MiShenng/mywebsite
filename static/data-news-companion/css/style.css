@@ -488,10 +488,6 @@ main > .story-section:last-child {
   margin-top: var(--block-space);
 }
 
-.story-lead-copy {
-  margin-top: 64px;
-}
-
 .prose + .ending {
   margin-top: clamp(14px, 1.8vw, 24px);
 }
@@ -2509,26 +2505,22 @@ main > .story-section:last-child {
 
 @media (max-width: 640px) {
   :root {
-    --gutter: 20px;
-    --section-space: 56px;
-    --block-space: 32px;
-    --item-space: 16px;
+    --gutter: clamp(24px, 7vw, 32px);
+    --section-space: 64px;
+    --block-space: 36px;
+    --item-space: 18px;
   }
 
   body {
     font-size: 17px;
-    line-height: 1.8;
-  }
-
-  .story-lead-copy {
-    margin-top: 32px;
+    line-height: 1.88;
   }
 
   .hero {
     min-height: 100vh;
     min-height: 100svh;
-    padding-top: 64px;
-    padding-bottom: 88px;
+    padding-top: 72px;
+    padding-bottom: 104px;
   }
 
   .hero__content {
@@ -2588,14 +2580,13 @@ main > .story-section:last-child {
   }
 
   .chapter-cover {
-    gap: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 
   .chapter-cover h2 {
     margin-top: 0;
-    font-size: clamp(32px, 9.5vw, 40px);
+    font-size: clamp(38px, 11vw, 52px);
     line-height: 1.2;
   }
 
@@ -2604,23 +2595,11 @@ main > .story-section:last-child {
   }
 
   .chapter-cover__subtitle {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 17px;
   }
 
   .subsection-heading h3 {
-    font-size: clamp(24px, 7vw, 30px);
-  }
-
-  .story-pair,
-  .profile-layout,
-  .evidence-row,
-  .evidence-chart-pair {
-    gap: 28px;
-  }
-
-  .subsection + .subsection {
-    margin-top: 48px;
+    font-size: clamp(25px, 8vw, 34px);
   }
 
   .factor {
@@ -2656,42 +2635,12 @@ main > .story-section:last-child {
   }
 
   .data-chart {
-    padding: 16px 0;
+    padding: 20px 16px;
   }
 
   .data-chart__canvas {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    padding-bottom: 8px;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
-  }
-
-  .data-chart__canvas svg {
-    max-width: none;
-  }
-
-  .data-chart--bubble .data-chart__canvas::after,
-  .data-chart--price .data-chart__canvas::after,
-  .data-chart--salary .data-chart__canvas::after,
-  .data-chart--demand .data-chart__canvas::after,
-  .data-chart--aging .data-chart__canvas::after,
-  .data-chart--international .data-chart__canvas::after,
-  .data-chart--city-supply .data-chart__canvas::after,
-  .data-chart--registrations .data-chart__canvas::after,
-  .data-chart--price-comparison .data-chart__canvas::after,
-  .data-chart--timeline .data-chart__canvas::after,
-  .data-chart--doctors .data-chart__canvas::after,
-  .data-chart--visits-map .data-chart__canvas::after {
-    display: block;
-    margin-top: 8px;
-    color: var(--muted);
-    font-family: var(--font-sans);
-    font-size: 12px;
-    line-height: 1.4;
-    letter-spacing: 0;
-    text-align: right;
-    content: "左右滑动查看完整图表";
   }
 
   .data-chart--bubble .data-chart__canvas svg {
@@ -2736,43 +2685,7 @@ main > .story-section:last-child {
   }
 
   .data-chart__header h3 {
-    font-size: 21px;
-    line-height: 1.35;
-  }
-
-  .data-chart figcaption {
-    font-size: 12px;
-    line-height: 1.6;
-    text-align: left;
-    overflow-wrap: anywhere;
-  }
-
-  .data-chart__controls,
-  .data-chart__legend {
-    flex-wrap: wrap;
-    gap: 8px 12px;
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  .data-chart__controls button {
-    min-height: 44px;
-    padding-right: 14px;
-    padding-left: 14px;
-  }
-
-  .data-chart__tooltip {
-    max-width: calc(100vw - (2 * var(--gutter)));
-    overflow-wrap: anywhere;
-  }
-
-  .visual-slot:not(.visual-slot--image) {
-    padding: 16px;
-  }
-
-  .footer {
-    padding-right: var(--gutter);
-    padding-left: var(--gutter);
+    font-size: 26px;
   }
 
 }

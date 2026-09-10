@@ -483,7 +483,9 @@ figure {
   .homepage-content {
     width: auto;
     margin-top: 28px;
-    padding: 0 16px;
+    padding: 0 24px;
+    font-size: 17px;
+    line-height: 1.65;
   }
 
   .homepage {
