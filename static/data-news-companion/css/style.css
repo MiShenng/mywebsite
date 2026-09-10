@@ -488,6 +488,10 @@ main > .story-section:last-child {
   margin-top: var(--block-space);
 }
 
+.story-lead-copy {
+  margin-top: 64px;
+}
+
 .prose + .ending {
   margin-top: clamp(14px, 1.8vw, 24px);
 }
@@ -2505,22 +2509,26 @@ main > .story-section:last-child {
 
 @media (max-width: 640px) {
   :root {
-    --gutter: clamp(24px, 7vw, 32px);
-    --section-space: 64px;
-    --block-space: 36px;
-    --item-space: 18px;
+    --gutter: 20px;
+    --section-space: 56px;
+    --block-space: 32px;
+    --item-space: 16px;
   }
 
   body {
     font-size: 17px;
-    line-height: 1.88;
+    line-height: 1.8;
+  }
+
+  .story-lead-copy {
+    margin-top: 32px;
   }
 
   .hero {
     min-height: 100vh;
     min-height: 100svh;
-    padding-top: 72px;
-    padding-bottom: 104px;
+    padding-top: 64px;
+    padding-bottom: 88px;
   }
 
   .hero__content {
@@ -2580,13 +2588,14 @@ main > .story-section:last-child {
   }
 
   .chapter-cover {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .chapter-cover h2 {
     margin-top: 0;
-    font-size: clamp(38px, 11vw, 52px);
+    font-size: clamp(32px, 9.5vw, 40px);
     line-height: 1.2;
   }
 
@@ -2595,11 +2604,23 @@ main > .story-section:last-child {
   }
 
   .chapter-cover__subtitle {
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .subsection-heading h3 {
-    font-size: clamp(25px, 8vw, 34px);
+    font-size: clamp(24px, 7vw, 30px);
+  }
+
+  .story-pair,
+  .profile-layout,
+  .evidence-row,
+  .evidence-chart-pair {
+    gap: 28px;
+  }
+
+  .subsection + .subsection {
+    margin-top: 48px;
   }
 
   .factor {
@@ -2635,7 +2656,7 @@ main > .story-section:last-child {
   }
 
   .data-chart {
-    padding: 20px 16px;
+    padding: 16px 0;
   }
 
   .data-chart__canvas {
@@ -2715,7 +2736,7 @@ main > .story-section:last-child {
   }
 
   .data-chart__header h3 {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1.35;
   }
 
@@ -2743,6 +2764,15 @@ main > .story-section:last-child {
   .data-chart__tooltip {
     max-width: calc(100vw - (2 * var(--gutter)));
     overflow-wrap: anywhere;
+  }
+
+  .visual-slot:not(.visual-slot--image) {
+    padding: 16px;
+  }
+
+  .footer {
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
   }
 
 }
