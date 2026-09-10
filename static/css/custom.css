@@ -482,17 +482,17 @@ figure {
 
   .homepage-content {
     width: auto;
-    margin-top: 40px;
-    padding: 0 20px;
+    margin-top: 28px;
+    padding: 0 16px;
   }
 
   .homepage {
     grid-template-columns: 1fr;
-    row-gap: 38px;
+    row-gap: 28px;
   }
 
   .home-profile-photo {
-    width: min(100%, 320px);
+    width: min(100%, 280px);
     margin-right: auto;
     margin-left: auto;
   }
@@ -525,20 +525,38 @@ figure {
 
   .home-introduction h2,
   .academic-section-title {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .home-introduction h2 {
+    margin-bottom: 20px;
+  }
+
+  .home-introduction p {
+    margin-bottom: 14px;
+    line-height: 1.65;
+  }
+
+  .home-main {
+    margin-top: 36px;
+  }
+
+  .academic-section + .academic-section {
+    margin-top: 40px;
+  }
+
+  .academic-section-title {
+    margin-bottom: 20px;
   }
 
   .academic-entry {
     font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 24px;
   }
 
   .home-primary {
     grid-column: 1;
-  }
-
-  .home-main {
-    margin-top: 50px;
   }
 
   .news-list li {
