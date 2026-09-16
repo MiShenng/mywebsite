@@ -36,13 +36,8 @@
 
 % Page layout
 \setlength{\multicolsep}{0pt} 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\pagestyle{empty}
 \geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
-\setlength{\footskip}{5pt} % Addressing fancyhdr warning
 
 % Hyperlink setup (moved after fancyhdr to address warning)
 \usepackage[hidelinks]{hyperref}
@@ -90,11 +85,11 @@
 }
 
 \newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item
-    \begin{tabularx}{0.98\textwidth}{@{}L r@{}}
-        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+\vspace{0.2mm}\item
+    \begin{tabularx}{0.98\textwidth}{@{}X @{}>{\hspace{2mm}}r@{}}
+        \small\textbf{#1}\hspace{0.3mm}#2 & \textit{\footnotesize{#3}}
     \end{tabularx}
-    \vspace{-6.0mm}
+    \vspace{-5.8mm}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -107,12 +102,23 @@
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
-    \begin{tabularx}{0.98\textwidth}[t]{@{}L r@{}}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \small\textbf{#2} & \footnotesize{#4}
+\item
+    \textbf{#1}\par
+    \vspace{0.3mm}
+    \begin{tabularx}{0.98\textwidth}{@{}X r@{}}
+        \small\textbf{#2} & \footnotesize\textit{#3}\hspace{1mm}#4
     \end{tabularx}
-    \vspace{-2.4mm}
+    \vspace{-1mm}
+}
+
+\newcommand{\resumeExperience}[4]{
+\item
+    \textbf{#1}\par
+    \vspace{0.3mm}
+    \begin{tabularx}{0.98\textwidth}{@{}X r@{}}
+        \small\textbf{#3} & \footnotesize\textit{#4}\hspace{1mm}#2
+    \end{tabularx}
+    \vspace{-1mm}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -125,12 +131,20 @@
 % (the tabularx body), so entry bullets drifted between sections and did not
 % line up. Explicit margins pin the entry bullets and the nested item bullets.
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=3.4mm,labelsep=1mm]}
+\newcommand{\resumeEducationListStart}{\begin{itemize}[leftmargin=3.4mm,labelsep=1mm,topsep=0mm,itemsep=1mm,parsep=0mm]}
+\newcommand{\resumeProjectListStart}{\begin{itemize}[leftmargin=0mm,label={},topsep=0mm,itemsep=1.2mm]}
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=3.4mm,itemsep=1.7mm, rightmargin=2ex]}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,itemsep=0.5mm]}
+\newcommand{\resumeEducationItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0.6mm,itemsep=0.3mm,parsep=0mm]}
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=4mm,label=\textbullet,topsep=0.5mm,itemsep=0.4mm]\small}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3mm}}
+\newcommand{\resumeEducationListEnd}{\end{itemize}\vspace{-3mm}}
+\newcommand{\resumeProjectListEnd}{\end{itemize}\vspace{-1mm}}
 \newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeEducationItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{0.3mm}}
 \newcommand{\cvsection}[1]{%
 \vspace{2mm}
 \begin{tcolorbox}
@@ -205,76 +219,101 @@
 %----------------------------------------------------------------------------------------
 \section{\textbf{Education}}
 \vspace{-0.4mm}
-\resumeSubHeadingListStart
+\resumeEducationListStart
 
 \resumeSubheading
 {Lanzhou University}{Lanzhou}
 {B.A. in Journalism}{Sep. 2023 - Present}
-\resumeItemListStart
+\resumeEducationItemListStart
 \item \textbf{Relevant Coursework:} New Media User Analysis, Communication Psychology, Media Criticism, Research Methods in Communication Studies, Data Journalism, Introduction to Communication Studies, Public Opinion
 \item \textbf{GPA:} \href{https://mybolg-lizao.vercel.app/media/pdfs/lanzhou_transcript_en.pdf}{4.06/5.0}
-\resumeItemListEnd
+\resumeEducationItemListEnd
 
 \resumeSubheading
 {National Taiwan Normal University}{Taipei}
 {Exchange Student}{Aug. 2025 - Dec. 2025}
-\resumeItemListStart
+\resumeEducationItemListStart
 \item \textbf{Relevant Coursework:} Visual Culture and Communication, Research Method of Social Science, New Media and Society Seminar
 \item \textbf{GPA:} \href{https://mybolg-lizao.vercel.app/media/pdfs/taiwan_transcript.pdf}{3.9/4.0}
-\resumeItemListEnd
+\resumeEducationItemListEnd
 
-\resumeSubHeadingListEnd
+\resumeEducationListEnd
 
 %----------------------------------------------------------------------------------------
 %   PUBLICATIONS
 %----------------------------------------------------------------------------------------
 \section{\textbf{Peer-reviewed publications \& Conference Papers}}
 \vspace{-0.4mm}
-\resumeSubHeadingListStart
+\resumeProjectListStart
 
 \resumeProject
   {Should I Stay Calm: How Does the Combination of Visual and Textual Frames Influence Expressions of Anger in Short Video Comment Sections?}
   {Li, Zihao.*}
   {AEJMC 2026}
   {{}[\href{https://github.com/MiShenng/visual_textual_frames_anger}{\textcolor{darkblue}{\faGlobe}}]}
-\resumeItemListStart
-  \item This study develops a computational method for identifying visual frames in dynamic short videos, applied to 449 Douyin videos on China's drug record sealing controversy alongside 419,126 user comments. Both visual and textual content are classified into intensifying, informational, and mitigating frames, while a fine-tuned BERT classifier detects anger at the comment level.
-  \item Results show that visual and textual frames within individual videos tend to align rather than diverge, and that different frame combinations correspond to significantly different levels of comment anger. Two-way ANOVA confirms that both modalities independently contribute to anger in an additive fashion without significant interaction, suggesting that emotional responses are jointly organized across modalities rather than driven by a single channel.
-\resumeItemListEnd
+\resumeProjectItemListStart
+  \item This study develops an AI-agent-based approach to dynamic video frame analysis and applies it to Chinese short videos about the controversy over sealing drug-use records. Visual and textual frames are separately classified as intensifying, neutral, or mitigating affective frames. These frames serve as the independent variables, while machine-learning methods detect anger in the corresponding comment sections as the dependent variable.
+  \item Visual and textual frames within the same video tend to align rather than conflict. Different frame combinations are also associated with significantly different levels of anger in the comments. A two-way ANOVA shows that the two modalities independently and additively affect anger, with no significant interaction effect. These results demonstrate the joint contribution of visual and textual frames to audience emotional responses.
+\resumeProjectItemListEnd
 
 \resumeProject
   {Generation, Negotiation, and Connection: Participatory Curation and Platformized Production of Urban Digital Memory on Short-Video Platforms}
-  {Xiao, M., Zhao, R., \& Li, Zihao.}
-  {The 7th Platform Studies Academic Workshop in China}
+  {Xiao, M., Zhao, R., \& Li, Zihao.*}
+  {Chinese Platform Studies Academic Workshop 2026}
+  {}
+\resumeProjectItemListStart
+  \item I designed and conducted the main computational analysis. By developing a local dictionary and applying BERTopic and NMF, I identified the main objects and semantic relationships within the urban memories constructed around Douyin videos.
+  \item Short-video platforms participate in urban memory production through translation, negotiation, and connection. Video creators turn archival images into dynamic memory events, while users transform private memories into public memory through submissions and comments. Platform circulation also connects shared experiences across regions and generations, showing that urban digital memory is jointly produced by creators, users, and platform technologies.
+\resumeProjectItemListEnd
 
-\resumeSubHeadingListEnd
+\resumeProjectListEnd
 
 
 %----------------------------------------------------------------------------------------
 \section{\textbf{Working Papers}}
 \vspace{-0.4mm}
-\resumeSubHeadingListStart
+\resumeProjectListStart
+
+\resumeProject
+  {Moral Cues in Visual Misinformation: Visual Event Schemas and the Moral Reorientation of Authentic Images}
+  {Li, Xinxin, \& Li, Zihao.*}
+  {Under Review, Digital Journalism}
+  {{}[\href{https://github.com/MiShenng}{\textcolor{darkblue}{\faGlobe}}]}
+\resumeProjectItemListStart
+  \item Combining Moral Foundations Theory with visual event schemas, this study examines how false text reconstructs the moral meaning of authentic images in cheap fakes. It provides a framework for studying image--text interaction in multimodal misinformation and understanding how morality is represented through images.
+  \item I contributed to the research design, variable operationalization, and manuscript writing. I paired false claims with the original contexts of the same images and used computer vision, latent class analysis, and linear regression to extract variables and analyze the data.
+\resumeProjectItemListEnd
+
+\resumeProject
+  {Negotiating the Future of Artificial Intelligence in Everyday Talk: Sociotechnical Imaginaries of Chinese Coding Elites in Podcasts}
+  {Li, Zihao.*}
+  {Under Review, ICA 2027}
+  {{}[\href{https://github.com/MiShenng}{\textcolor{darkblue}{\faGlobe}}]}
+\resumeProjectItemListStart
+  \item Using a self-developed crawler, I built a corpus of 432 AI-related podcast episodes from Xiaoyuzhou. BERTopic was used to map major themes and select representative cases for discourse analysis.
+  \item Chinese coding elites construct a cautious but legitimizing form of techno-optimism, framing technological risks as manageable through engineering and long-term development.
+\resumeProjectItemListEnd
 
 \resumeProject
   {See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos on China's Bilibili}
   {Li, Zihao.*}
-  {RIP}
+  {Under Review, ICA 2027}
   {{}[\href{https://github.com/MiShenng/Bilibili-Health-Visual-Clickbait}{\textcolor{darkblue}{\faGlobe}}]}
-\resumeItemListStart
+\resumeProjectItemListStart
   \item This study examines how visual clickbait in health-related video thumbnails shapes stratified user engagement on Bilibili. Using 22,323 videos collected through 28 Chinese health-related keywords, it analyzes thumbnails, titles, video metadata, and platform-native engagement metrics including views, likes, coins, and favorites.
   \item The project combines human annotation, LLM-assisted classification, semi-supervised machine learning, and Chinese-CLIP image--text similarity to measure visual clickbait cues and thumbnail--title semantic congruence. By distinguishing low-cost attention from high-cost endorsement, the study investigates whether visual clickbait can increase exposure without producing stronger forms of user approval.
-\resumeItemListEnd
+\resumeProjectItemListEnd
 
-\resumeSubHeadingListEnd
+\resumeProjectListEnd
 
 %----------------------------------------------------------------------------------------
 %   RESEARCH EXPERIENCE
 %----------------------------------------------------------------------------------------
 \section{\textbf{Research Experience}}
 \vspace{-0.4mm}
-\resumeSubHeadingListStart
+\resumeProjectListStart
 
-\resumeSubheading
+\resumeExperience
   {A Study on Discourse Construction and Visual Narrative Strategies in the New Mainstream Media Environment of the Converged Media Era}{{}[\href{https://github.com/MiShenng/An_Analysis_of_Environmental_Discourse_in_Peoples_Daily}{\textcolor{darkblue}{\faGlobe}}]}
   {Research Assistant \textbar{} PI: Li Xinxin, Lanzhou University}{Dec. 2024 - Apr. 2025}
 \resumeItemListStart
@@ -282,7 +321,7 @@
   \item Using a self-built web crawler to collect Weibo posts related to environmental protection from the People's Daily to date, and conducted a comparative analysis of this data with content from the newspaper's print editions.
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperience
   {A Study on the ``Human-Machine Co-creation'' Mechanism and Innovative Practices in AI-Empowered Cultural Narratives Along the Silk Road}
   {}
   {Research Assistant \textbar{} PI: Li Xinxin, Lanzhou University}{Mar. 2025 - May. 2025}
@@ -291,7 +330,7 @@
 \item Synthesized research trends in Silk Road studies across multiple social science disciplines and developed them into a comprehensive literature review.
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperience
   {Lanzhou Bathing Assistant: Seeing Aging at Mobile Bathhouses}{{}[\href{https://some-link.com}{\textcolor{darkblue}{\faGlobe}}]}
   {Field Research \textbar{} Advisor: Shiping, Lanzhou University}{Aug. 2024 - Jan. 2025}
 \resumeItemListStart
@@ -299,7 +338,7 @@
 \item Conducted participant observation and semi-structured interviews with the company founder, bathing assistants, eldercare-center managers, and family caregivers. Analyzed how demographic change, local climate, economic conditions, bathing culture, and cultural attitudes toward aging shaped the industry’s development in northwest China, resulting in an in-depth written report and a short video documentary.
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperience
   {Why Do College Students Have a Particular Affinity for Life ``Within the System''?}
   {}
   {Student Research \textbar{} Advisor: Zhangchi, Lanzhou University}{Apr. 2024 - Apr. 2025}
@@ -308,7 +347,7 @@
   \item Complemented quantitative findings with semi-structured interviews, triangulating survey data with personal narratives to unpack the motivations fueling the civil-service-exam craze (\textit{kaogong} fever) and to formulate evidence-based policy recommendations.
 \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+\resumeProjectListEnd
 
 
 %----------------------------------------------------------------------------------------
