@@ -1,5 +1,5 @@
 ---
-title: 读书与观影笔记
+title: Reading and Film Notes
 layout: readings
 ---
 

@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Journalism Projects | Lizao&#39;s blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+
+  
+
+
+
+
+
+
+
+<meta name="description" content="Personal website of Lizao">
+<meta name="author" content="Lizao">
+
+<link rel="canonical" href="https://www.chiselli.com/categories/data-journalism-projects/">
+
+<link rel="alternate" hreflang="x-default" href="https://www.chiselli.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Data Journalism Projects | Lizao&#39;s blog">
+<meta property="og:description" content="Personal website of Lizao">
+<meta property="og:url" content="https://www.chiselli.com/categories/data-journalism-projects/">
+<meta property="og:image" content="https://www.chiselli.com/images/coverphoto2.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Lizao&#39;s blog">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data Journalism Projects | Lizao&#39;s blog">
+<meta name="twitter:description" content="Personal website of Lizao">
+<meta name="twitter:image" content="https://www.chiselli.com/images/coverphoto2.jpg">
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<link rel="icon" href="https://www.chiselli.com/media/symbol.png">
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+<script data-goatcounter="https://chiselli.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo" aria-label="Home">
+    <img src="/media/symbol.svg"
+         width="50"
+         height="50"
+         alt="Lizao">
+  </a>
+
+  <ul class="nav-links">
+    
+    
+    
+    
+    
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/en/about/">About</a></li>
+    
+      <li><a href="/categories/">Categories</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<style>
+.list-container {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 48px auto;
+  padding: 0 15px;
+  align-items: start;
+}
+
+.list-sidebar {
+  position: sticky;
+  top: 24px;
+  font-size: 0.88em;
+}
+
+.list-sidebar-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 6px;
+}
+
+.list-sidebar-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.list-sidebar-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-stat-num {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.1;
+}
+
+.list-stat-label {
+  font-size: 0.72em;
+  color: #aaa;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.list-sidebar hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+.list-year-label {
+  font-weight: 700;
+  color: #444;
+  margin: 12px 0 6px;
+  font-size: 0.9em;
+}
+
+.list-anchor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-anchor-list li { margin-bottom: 5px; }
+.list-anchor-list a { color: #999; text-decoration: none; }
+.list-anchor-list a:hover { color: #111; }
+
+ 
+.list-main { min-width: 0; }
+.list-container--projects {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 64px auto 48px;
+  padding: 0;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.project-list {
+  display: grid;
+  max-width: 900px;
+}
+
+.project-introduction {
+  margin: 0;
+}
+
+.project-introduction h1 {
+  margin: 0 0 34px;
+  color: #222;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.project-introduction p {
+  margin: 0;
+}
+
+.project-introduction-meta {
+  margin: 0;
+  color: #222;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.project-toc {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 34px 0 38px;
+  padding: 24px 28px;
+  border: 3px solid #777;
+}
+
+@media screen and (min-width: 1100px) {
+  .project-toc {
+    width: calc(100% + 80px);
+    margin-right: -40px;
+    margin-left: -40px;
+  }
+}
+
+.project-lede {
+  margin: 0 0 44px;
+  text-align: justify;
+}
+
+.project-lede p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.project-toc-title {
+  margin: 0 0 14px;
+  color: #222;
+  font-size: 1.05em;
+  font-weight: 400;
+}
+
+.project-toc ol {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.78em;
+  letter-spacing: -0.012em;
+}
+
+.project-toc li {
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.project-toc a {
+  color: #4a7fa5;
+  text-decoration: none;
+}
+
+.project-toc a:hover { text-decoration: underline; }
+}
+
+.project-card {
+  padding: 0 0 56px;
+}
+
+.project-card + .project-card {
+  border-top: 2px solid #c7c7c7;
+  margin-top: 8px;
+  padding-top: 56px;
+}
+
+.project-card--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  column-gap: 36px;
+  row-gap: 20px;
+}
+
+.project-card-copy {
+  min-width: 0;
+}
+
+.project-card-image {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  width: auto;
+  max-width: 100%;
+  max-height: 260px;
+  height: auto;
+  margin-left: auto;
+  align-self: center;
+}
+
+.project-card-image--portrait {
+  max-height: 380px;
+  justify-self: center;
+  margin-left: 0;
+}
+
+.project-card-title {
+  margin: 0 0 20px;
+  font-size: 1.55em;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.project-card-title a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.project-card-title a:hover { color: #4a7fa5; }
+
+.project-card-description {
+  max-width: 720px;
+  margin: 0 0 24px;
+  color: #666;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.project-card-description p {
+  margin: 0 0 16px;
+}
+
+.project-card-description p:last-child { margin-bottom: 0; }
+
+.project-card-copy .project-card-description { margin-bottom: 16px; }
+
+.project-card-production-date {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 0.9em;
+  text-align: right;
+}
+
+.project-card--with-image .project-card-production-date {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-introduction,
+.project-toc,
+.project-card { text-align: left; }
+
+.list-main-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+.list-year-group { margin-bottom: 32px; }
+
+.list-year-heading {
+  font-size: 0.82em;
+  color: #bbb;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.list-item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item-date {
+  color: #bbb;
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+  flex-shrink: 0;
+  width: 5em;
+}
+
+.list-item-title {
+  color: #1a1a1a;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+
+.list-item-title:hover { color: #4a7fa5; }
+
+@media screen and (max-width: 768px) {
+  .list-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 24px auto;
+  }
+  .list-sidebar {
+    position: static;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 16px;
+  }
+  .list-anchor-list { display: none; }
+  .list-item-date { width: auto; }
+  .list-container--projects {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    max-width: none;
+    margin: 32px auto 40px;
+    padding: 0;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .list-container--projects .list-main,
+  .project-introduction,
+  .project-toc,
+  .project-lede,
+  .project-list,
+  .project-card { max-width: 100%; min-width: 0; }
+  .project-introduction h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 1.25;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .project-introduction-meta { font-size: 16px; }
+  .project-toc { margin: 28px 0 32px; padding: 18px; overflow: hidden; }
+  .project-toc-title { font-size: 17px; }
+  .project-toc ol { font-size: 16px; letter-spacing: normal; }
+  .project-toc li { margin-bottom: 10px; white-space: normal; }
+  .project-toc a { overflow-wrap: anywhere; }
+  .project-lede { margin-bottom: 32px; }
+  .project-lede p { line-height: 1.7; text-align: left; }
+  .project-card { padding-bottom: 32px; }
+  .project-card + .project-card { margin-top: 0; padding-top: 32px; }
+  .project-card--with-image { grid-template-columns: 1fr; row-gap: 20px; }
+  .project-card-image {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 240px;
+    max-height: 240px;
+    margin: 0 auto;
+  }
+  .project-card-image--portrait { max-height: 320px; }
+  .project-card-title { margin-bottom: 14px; font-size: 22px; line-height: 1.35; }
+  .project-card-description { margin-bottom: 16px; line-height: 1.7; text-align: left; }
+  .project-card-description p { margin-bottom: 12px; }
+  .project-card--with-image .project-card-production-date {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+    font-size: 15px;
+  }
+}
+</style>
+
+
+
+
+
+<div class="list-container list-container--projects">
+
+  
+  
+
+  
+  <main class="list-main">
+    
+    <div class="project-introduction">
+      <h1>Data Journalism Projects</h1>
+      <p class="project-introduction-meta">Zao / 2026-6-30</p>
+    </div>
+    <nav class="project-toc" aria-label="Table of contents">
+      <p class="project-toc-title">Table of Contents:</p>
+      <ol>
+        
+        <li><a href="#project-project4">Ordering a “Family Member” Online: The Rise and Concerns of Patient Companions</a></li>
+        
+        <li><a href="#project-project2">Outsourcing Love to Algorithms: How Well Do AI Partners Fit—and How Far Can They Go?</a></li>
+        
+        <li><a href="#project-project1">Why Are Young People Turning to Scratch-Off Lottery Tickets?</a></li>
+        
+        <li><a href="#project-project3">Let’s Go to a Concert—If We Can Get Tickets!</a></li>
+        
+      </ol>
+    </nav>
+    <div class="project-lede">
+      <p>Below are some data journalism projects I have worked on in Chinese. Most were team projects, but I took the lead on many of them. I was usually responsible for developing the story idea, collecting and analyzing data, and writing the text. I also sometimes worked on data visualization and graphic design. Many of these projects now look a bit rough to me, but I hope they can still be useful to beginners.</p>
+
+    </div>
+    
+
+    
+    <section class="project-list">
+      
+      <article class="project-card project-card--with-image">
+        
+        
+        <div class="project-card-copy">
+          <h2 class="project-card-title" id="project-project4">
+            
+            <a href="/data-news-companion/index.html" target="_blank" rel="noopener">Ordering a “Family Member” Online: The Rise and Concerns of Patient Companions</a>
+            
+          </h2>
+          
+          <div class="project-card-description"><p>As China’s population ages and population mobility increases, the demand for medical care away from one’s home city has also grown. Patient companions have therefore emerged as a new profession. Their rise reflects several broader challenges in China, including limited healthcare resources, an aging population, and increasing social isolation.</p>
+<p>This project draws on public industry data, data from China’s National Health Commission, job postings on Chinese recruitment websites, and the experiences of frontline workers and users. It explores the social factors behind the rise of patient companions, uses data to describe the profession, and discusses the lack of industry regulation and the broader social issues behind it.</p>
+<p>This project was completed as the final assignment for a data journalism course.</p>
+</div>
+          
+        </div>
+        
+        <img class="project-card-image project-card-image--portrait" src="/images/projects/patient-companion.png" alt="Illustration of a patient companion" loading="lazy">
+        
+        
+        <p class="project-card-production-date">Produced: May 2026</p>
+        
+      </article>
+      
+      <article class="project-card project-card--with-image">
+        
+        
+        <div class="project-card-copy">
+          <h2 class="project-card-title" id="project-project2">
+            
+            <a href="https://ailianren.byecode.site/Vu4Zw0ta4NsU" target="_blank" rel="noopener">Outsourcing Love to Algorithms: How Well Do AI Partners Fit—and How Far Can They Go?</a>
+            
+          </h2>
+          
+          <div class="project-card-description"><p>AI companions are becoming part of more people’s intimate lives. But why are they so appealing? Is love between humans and AI a new kind of relationship, or simply a substitute for relationships between people?</p>
+<p>This project looks at user needs and product design, together with discussions on social media, to explore why people form emotional relationships with AI and how algorithms create a sense of intimacy. It also discusses the dependence and boundaries that may come with these digital relationships.</p>
+<p>This project won Second Prize in the 2025 China Data Journalism Competition.</p>
+</div>
+          
+        </div>
+        
+        <img class="project-card-image" src="/images/projects/ai-lover.png" alt="Illustration of two people connecting through a smartphone" loading="lazy">
+        
+        
+        <p class="project-card-production-date">Produced: August 2025</p>
+        
+      </article>
+      
+      <article class="project-card project-card--with-image">
+        
+        
+        <div class="project-card-copy">
+          <h2 class="project-card-title" id="project-project1">
+            
+            <a href="https://readymag.website/u1181391160/5168643/" target="_blank" rel="noopener">Why Are Young People Turning to Scratch-Off Lottery Tickets?</a>
+            
+          </h2>
+          
+          <div class="project-card-description"><p>Existing data shows that sales of scratch-off lottery tickets are growing rapidly in China, with young people becoming the main consumers. Why are they so interested in scratch-offs? And what does this trend tell us about the mindset of young people in China?</p>
+<p>This project combines lottery sales data, industry reports, and social media discussions to explore why scratch-offs have become so popular. From the perspective of youth culture, it looks at how pressure, instant gratification, and the appeal of low-cost hope shape this consumer trend.</p>
+<p>This project was completed as the final assignment for a computer graphics and design course.</p>
+</div>
+          
+        </div>
+        
+        <img class="project-card-image" src="/images/projects/guaguale.png" alt="Illustration of a young woman holding a scratch-off lottery ticket" loading="lazy">
+        
+        
+        <p class="project-card-production-date">Produced: Jan 2025</p>
+        
+      </article>
+      
+      <article class="project-card project-card--with-image">
+        
+        
+        <div class="project-card-copy">
+          <h2 class="project-card-title" id="project-project3">
+            
+            <a href="https://mp.weixin.qq.com/s/8jZD5DBcTaXjNvbd-Hpzow" target="_blank" rel="noopener">Let’s Go to a Concert—If We Can Get Tickets!</a>
+            
+          </h2>
+          
+          <div class="project-card-description"><p>China’s concert market is booming, but “I couldn’t get a ticket” has also become a common experience. Why are concert tickets so hard to get? And why does it sometimes feel like every popular concert sells out instantly?</p>
+<p>Using data on China’s live performance market, ticket prices, and ticket sales, this project explores the supply and demand behind the concert boom. It looks at which artists are easier to get tickets for, how ticket availability differs across regions, and how ticketing systems, platforms, and the resale market affect ordinary concertgoers.</p>
+<p>This was a campus media project, made just for fun.</p>
+</div>
+          
+        </div>
+        
+        <img class="project-card-image" src="/images/projects/concert.png" alt="Cover graphic for a story about concert ticket buying" loading="lazy">
+        
+        
+        <p class="project-card-production-date">Produced: Oct 2024</p>
+        
+      </article>
+      
+    </section>
+    
+  </main>
+
+</div>
+
+<style>
+   
+  .custom-footer {
+    text-align: center;
+    padding: 20px 0 40px;
+  }
+
+  .footer-copyright {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<footer class="custom-footer">
+   
+
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+
+  <div class="footer-copyright">
+    &copy; Lizao 2024-2026
+  </div>
+
+</footer>
+
+
