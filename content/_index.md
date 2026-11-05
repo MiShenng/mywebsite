@@ -58,7 +58,7 @@ title: Home
 <p class="academic-secondary">A draft paper submitted to ICA 2027</p>
 </article>
 <article class="academic-entry">
-<p class="academic-citation"><strong>Li, Zihao.</strong> <a class="academic-title-link" href="https://github.com/MiShenng/Gender-Polarization-and-Hate-Speech">Before the Insults Fly: How Do Emotional Expressions in TikTok Videos on Gender Issues Relate to Uncivil Comments in the Comment Section?</a></p>
+<p class="academic-citation"><strong>Zihao Li.</strong> <a class="academic-title-link" href="https://github.com/MiShenng/Gender-Polarization-and-Hate-Speech">Before the Insults Fly: How Do Emotional Expressions in TikTok Videos on Gender Issues Relate to Uncivil Comments in the Comment Section?</a></p>
 <p class="academic-secondary">A draft paper submitted to ICA 2027</p>
 </article>
 <article class="academic-entry">
