@@ -17,7 +17,7 @@ title: Home
 </div>
 </section>
 <div class="home-contact-links" aria-label="Contact links">
-<a class="home-contact-link home-contact-link-email" href="mailto:lizihao2023@lzu.edu.cn" aria-label="Email"><i class="fa fa-envelope" aria-hidden="true"></i><span>Email</span></a>
+<a class="home-contact-link home-contact-link-email" href="mailto:chiselli@outlook.com" aria-label="Email"><i class="fa fa-envelope" aria-hidden="true"></i><span>Email</span></a>
 <a class="home-contact-link home-contact-link-cv" href="/en/about/cv/" aria-label="CV"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>CV</span></a>
 <a class="home-contact-link home-contact-link-github" href="https://github.com/MiShenng" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span></a>
 <a class="home-contact-link home-contact-link-facebook" href="https://www.facebook.com/share/1CRZUWhnFp/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>

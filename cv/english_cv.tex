@@ -20,6 +20,7 @@
 \usepackage{lipsum}
 \usepackage{tabularx}
 \usepackage{titlesec}
+\usepackage{needspace}
 \usepackage{geometry}
 \usepackage{marvosym}
 \usepackage{verbatim}
@@ -27,8 +28,13 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{cfr-lm}
-\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% Match the reference CV while keeping all existing entry sizes consistent.
+\renewcommand{\normalsize}{\fontsize{10.5bp}{13.5bp}\selectfont}
+\renewcommand{\small}{\normalsize}
+\renewcommand{\footnotesize}{\normalsize}
 \usepackage{fontawesome5}
 
 % Color definitions
@@ -74,54 +80,50 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \bfseries\raggedright\fontsize{12bp}{14.4bp}\selectfont
+}{}{0em}{\MakeUppercase}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{8.665bp}{5bp}
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item{
-    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+    \textbf{#1}{\hspace{0.5mm}#2}
   }
 }
 
 \newcommand{\resumePOR}[3]{
-\vspace{0.2mm}\item
-    \begin{tabularx}{0.98\textwidth}{@{}X @{}>{\hspace{2mm}}r@{}}
-        \small\textbf{#1}\hspace{0.3mm}#2 & \textit{\footnotesize{#3}}
-    \end{tabularx}
-    \vspace{-5.8mm}
+    \resumeSubItem{#1}{#2\hfill #3}
 }
 
 \newcommand{\resumeSubheading}[4]{
 \vspace{0.5mm}\item
     \begin{tabularx}{0.98\textwidth}[t]{@{}L r@{}}
-        \textbf{#1} & \textit{\footnotesize{#4}} \\
-        \small\textbf{#3} &  \footnotesize{#2}\\
+        \textbf{#1} & \footnotesize{#4} \\
+        \small\textit{#3} &  \footnotesize\textit{#2}\\
     \end{tabularx}
     \vspace{-2.4mm}
 }
 
 \newcommand{\resumeProject}[4]{
+\Needspace{5\baselineskip}
 \item
-    \textbf{#1}\par
-    \vspace{0.3mm}
-    \begin{tabularx}{0.98\textwidth}{@{}X r@{}}
-        \small\textbf{#2} & \footnotesize\textit{#3}\hspace{1mm}#4
+    \textbf{#1}\\[1.65bp]
+    \begin{tabularx}{0.98\textwidth}[t]{@{}X r@{}}
+        \small #2 & \footnotesize #3\hspace{1mm}#4
     \end{tabularx}
     \vspace{-1mm}
 }
 
 \newcommand{\resumeExperience}[4]{
 \item
-    \textbf{#1}\par
-    \vspace{0.3mm}
-    \begin{tabularx}{0.98\textwidth}{@{}X r@{}}
-        \small\textbf{#3} & \footnotesize\textit{#4}\hspace{1mm}#2
+    \textbf{#1}\\[1.65bp]
+    \begin{tabularx}{0.98\textwidth}[t]{@{}X r@{}}
+        \small\textit{#3} & \footnotesize #4\hspace{1mm}#2
     \end{tabularx}
     \vspace{-1mm}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
@@ -131,20 +133,20 @@
 % (the tabularx body), so entry bullets drifted between sections and did not
 % line up. Explicit margins pin the entry bullets and the nested item bullets.
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=3.4mm,labelsep=1mm]}
-\newcommand{\resumeEducationListStart}{\begin{itemize}[leftmargin=3.4mm,labelsep=1mm,topsep=0mm,itemsep=1mm,parsep=0mm]}
-\newcommand{\resumeProjectListStart}{\begin{itemize}[leftmargin=0mm,label={},topsep=0mm,itemsep=1.2mm]}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=3.4mm,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,itemsep=0.5mm]}
-\newcommand{\resumeEducationItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0.6mm,itemsep=0.3mm,parsep=0mm]}
-\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=4mm,label=\textbullet,topsep=0.5mm,itemsep=0.4mm]\small}
+\newcommand{\resumeEducationListStart}{\begin{itemize}[leftmargin=3.4mm,labelsep=1mm,topsep=0pt,partopsep=0pt,itemsep=1mm,parsep=0pt]}
+\newcommand{\resumeProjectListStart}{\begin{itemize}[leftmargin=0mm,label={},topsep=0pt,partopsep=0pt,itemsep=1.2mm,parsep=0pt]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=3.4mm,topsep=0pt,partopsep=0pt,itemsep=3.9bp,parsep=0pt,rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0pt,partopsep=0pt,before=\vspace{4.65bp},itemsep=0.5mm]}
+\newcommand{\resumeEducationItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0pt,partopsep=0pt,before=\vspace{3.4bp},itemsep=0.3mm,parsep=0pt]}
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=4mm,label=\textbullet,topsep=0pt,partopsep=0pt,before=\vspace{4.65bp},itemsep=0.4mm]\small}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3mm}}
-\newcommand{\resumeEducationListEnd}{\end{itemize}\vspace{-3mm}}
-\newcommand{\resumeProjectListEnd}{\end{itemize}\vspace{-1mm}}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeEducationItemListEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{0.3mm}}
+\newcommand{\resumeEducationListEnd}{\end{itemize}}
+\newcommand{\resumeProjectListEnd}{\end{itemize}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeEducationItemListEnd}{\end{itemize}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}}
 \newcommand{\cvsection}[1]{%
 \vspace{2mm}
 \begin{tcolorbox}
@@ -189,41 +191,43 @@
 \makeatletter
 \@secpenalty=10000
 \makeatother
-\headerfontiii
+\normalfont\normalsize
+
+% Shift only the first page without changing its line or page breaks.
+\advance\voffset by 10bp
+\AddToHookNext{shipout/after}{\global\advance\voffset by -10bp}
 
 % Header
 \begin{center}
-    {\Huge\textbf{ZIHAO LI}}
+    {\fontsize{22bp}{20.4bp}\selectfont\textbf{ZIHAO LI}}
 \end{center}
 \vspace{-6mm}
 
 \begin{center}
-    \small{
-    +86 13618297005 | \href{mailto:lizihao2023@lzu.edu.cn}{lizihao2023@lzu.edu.cn} | 
+    \fontsize{12bp}{12bp}\selectfont{
+    +86 13618297005 | \href{mailto:chiselli@outlook.com}{chiselli@outlook.com} |
     \href{https://chiselli.com}{chiselli.com}
     }
 \end{center}
 \vspace{-6mm}
 
 \begin{center}
-    \small{
+    \fontsize{12bp}{12bp}\selectfont{
     \socialicon{\faGithub} \href{https://github.com/MiShenng}{MiShenng} | 
-    \socialicon{\faFacebookF} \href{https://www.facebook.com/profile.php?id=61580511956572}{chiselli} |
-    \socialicon{\faBookOpen} \href{https://www.douban.com/people/MiShenng}{Douban}
+    \socialicon{\faFacebookF} \href{https://www.facebook.com/profile.php?id=61580511956572}{Zihao Li}
     }
 \end{center}
-\vspace{-6mm}
+\vspace{-3.5mm}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION
 %----------------------------------------------------------------------------------------
 \section{\textbf{Education}}
-\vspace{-0.4mm}
 \resumeEducationListStart
 
 \resumeSubheading
 {Lanzhou University}{Lanzhou}
-{B.A. in Journalism}{Sep. 2023 - Present}
+{B.A. in Journalism}{Sep. 2023 - Jun. 2027}
 \resumeEducationItemListStart
 \item \textbf{Relevant Coursework:} New Media User Analysis (95), Media Criticism (95), Research Methods in Communication Studies (95), Data Journalism (95), Public Opinion (94), Introduction to Communication (95), Communication Psychology (91)
 \item \textbf{GPA:} \href{https://www.chiselli.com/media/pdfs/Lizihao_Transcript.pdf}{4.07/5}
@@ -243,23 +247,24 @@
 %   PUBLICATIONS
 %----------------------------------------------------------------------------------------
 \section{\textbf{Peer-reviewed publications \& Conference Papers}}
-\vspace{-0.4mm}
 \resumeProjectListStart
 
+% Full title: Should I Stay Calm: How Does the Combination of Visual and Textual Frames Influence Expressions of Anger in Short Video Comment Sections?
 \resumeProject
-  {Should I Stay Calm: How Does the Combination of Visual and Textual Frames Influence Expressions of Anger in Short Video Comment Sections?}
-  {Zihao Li.*}
-  {AEJMC 2026}
+  {Should I Stay Calm? Visual and Textual Frames and Anger in Short-Video Comments}
+  {\textbf{Zihao Li}.*}
+  {\textit{AEJMC} 2026}
   {{}[\href{https://github.com/MiShenng/visual_textual_frames_anger}{\textcolor{darkblue}{\faGlobe}}]}
 \resumeProjectItemListStart
-  \item Developed an AI-agent-based approach to analyze visual and textual affective frames in short videos, using machine learning to measure anger expressed in audience comments and examine how different multimodal frame combinations relate to anger during public controversies in China.
+  \item Developed an AI-agent-based approach to automate the analysis of visual and textual affective frames in short videos. Used machine learning to measure anger in audience comments and examined associations between multimodal frame combinations and anger around a controversial Chinese policy.
   \item Found that visual and textual frames tended to align and were independently associated with audience anger. A two-way ANOVA showed significant main effects for both modalities but no significant interaction.
 \resumeProjectItemListEnd
 
+% Full title: Generation, Negotiation, and Connection: Participatory Curation and Platformized Production of Urban Digital Memory on Short-Video Platforms
 \resumeProject
-  {Generation, Negotiation, and Connection: Participatory Curation and Platformized Production of Urban Digital Memory on Short-Video Platforms}
-  {M. Xiao, R. Zhao, \& Zihao Li.*}
-  {Chinese Platform Studies Academic Workshop 2026}
+  {Generation, Negotiation, and Connection: Participatory Curation and Platformized Urban Digital Memory}
+  {M. Xiao, R. Zhao, \& \textbf{Zihao Li}.*}
+  {\textit{Chinese Platform Studies Academic Workshop} 2026}
   {}
 \resumeProjectItemListStart
   \item Conducted computational analysis for a study of urban digital memory on Douyin. Collected and preprocessed video and comment data, developed a customized local place-name dictionary, and applied BERTopic, NMF, and topic similarity analysis to identify recurring discourse topics and examine semantic relationships.
@@ -271,12 +276,11 @@
 
 %----------------------------------------------------------------------------------------
 \section{\textbf{Working Papers}}
-\vspace{-0.4mm}
 \resumeProjectListStart
 
 \resumeProject
   {Moral Cues in Visual Misinformation: Visual Event Schemas and the Moral Reorientation of Authentic Images}
-  {Xinxin Li, \& Zihao Li.*}
+  {Xinxin Li, \& \textbf{Zihao Li}.*}
   {Manuscript in Preparation}
   {{}[\href{https://github.com/MiShenng/moral-images}{\textcolor{darkblue}{\faGlobe}}]}
 \resumeProjectItemListStart
@@ -284,20 +288,22 @@
   \item Contributed to research design, data collection, analysis, and manuscript writing. Paired false claims with the original contexts of corresponding images, extracted variables using computer vision, and conducted latent class analysis and linear regression.
 \resumeProjectItemListEnd
 
+% Full title: From Emotion to Hostility: Discrete Negative Emotions and Gender-Directed Incivility in Chinese Gender-Issue Short Videos
 \resumeProject
-  {From Emotion to Hostility: Discrete Negative Emotions and Gender-Directed Incivility in Chinese Gender-Issue Short Videos}
-  {Zihao Li.*}
-  {Under Review, ICA 2027}
+  {From Emotion to Hostility: Discrete Emotions and Gender-Directed Incivility in Chinese Gender-Issue Videos}
+  {\textbf{Zihao Li}.*}
+  {Under Review, \textit{ICA} 2027}
   {{}[\href{https://github.com/MiShenng/Gender-Polarization-and-Hate-Speech}{\textcolor{darkblue}{\faGlobe}}]}
 \resumeProjectItemListStart
-  \item Designed and conducted a computational study of gender-related discussions on Chinese TikTok. Used a multimodal emotion model to measure discrete emotions in videos and developed a supervised classifier to identify incivility and gender-directed hostility in comments. Applied binomial regression and interaction tests to examine emotion--incivility associations.
-  \item Found that anger was positively associated with incivility, while fear showed a negative association. These associations varied with video content context and the targets of hostile comments.
+  \item Studied gender-related discussions on Douyin using a multimodal emotion model to measure discrete negative emotions as predictors. Coded video topics and narrative techniques as moderators using a large vision model. Developed a supervised classifier to identify incivility and toxic comments targeting women and men. Applied binomial regression and interaction tests to examine emotion--incivility associations.
+  \item Found that anger was positively associated with incivility and fear negatively associated, with both associations moderated by video topics and selected narrative techniques. Across all topics, toxic comments targeting women outnumbered those targeting men.
 \resumeProjectItemListEnd
 
+% Full title: See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos on China's Bilibili
 \resumeProject
-  {See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos on China's Bilibili}
-  {Zihao Li.*}
-  {Under Review, ICA 2027}
+  {See It, Click It? Visual Clickbait and Stratified Engagement in Bilibili Health Videos}
+  {\textbf{Zihao Li}.*}
+  {Under Review, \textit{ICA} 2027}
   {{}[\href{https://github.com/MiShenng/Bilibili-Health-Visual-Clickbait}{\textcolor{darkblue}{\faGlobe}}]}
 \resumeProjectItemListStart
   \item Examined visual clickbait in health-related Bilibili videos using computational methods. Collected thumbnails and engagement data, using LLM-assisted coding and Chinese-CLIP to measure visual cues and thumbnail--title congruence. Applied negative binomial regression to examine engagement outcomes.
@@ -310,19 +316,20 @@
 %   RESEARCH EXPERIENCE
 %----------------------------------------------------------------------------------------
 \section{\textbf{Research Experience}}
-\vspace{-0.4mm}
 \resumeProjectListStart
 
+% Full title: A Study on Discourse Construction and Visual Narrative Strategies in the New Mainstream Media Environment of the Converged Media Era
 \resumeExperience
-  {A Study on Discourse Construction and Visual Narrative Strategies in the New Mainstream Media Environment of the Converged Media Era}{{}[\href{https://github.com/MiShenng/An_Analysis_of_Environmental_Discourse_in_Peoples_Daily}{\textcolor{darkblue}{\faGlobe}}]}
+  {Discourse Construction and Visual Narratives in Converged Media}{{}[\href{https://github.com/MiShenng/An_Analysis_of_Environmental_Discourse_in_Peoples_Daily}{\textcolor{darkblue}{\faGlobe}}]}
   {Research Assistant \textbar{} PI: Xinxin Li, Lanzhou University}{Dec. 2024 - Apr. 2025}
 \resumeItemListStart
-  \item Built a dataset of People's Daily environmental reporting from 1949 to the present and developed an LLM-based automated coding pipeline. Using Fairclough's discourse analysis framework and the history of China's environmental policies, identified distinct phases of environmental discourse and developed the findings into a research paper.
-  \item Developed a web crawler to collect environmental posts published by People's Daily on Weibo and compared them with its print editions to examine differences in environmental reporting across platforms.
+  \item Built a dataset of \textit{People's Daily} environmental reporting from 1949 to the present and developed an LLM-based automated coding pipeline. Using Fairclough's discourse analysis framework and the history of China's environmental policies, identified distinct phases of environmental discourse and developed the findings into a research paper.
+  \item Developed a web crawler to collect environmental posts published by \textit{People's Daily} on Weibo and compared them with its print editions to examine differences in environmental reporting across platforms.
 \resumeItemListEnd
 
+% Full title: A Study on the ``Human-Machine Co-creation'' Mechanism and Innovative Practices in AI-Empowered Cultural Narratives Along the Silk Road
 \resumeExperience
-  {A Study on the ``Human-Machine Co-creation'' Mechanism and Innovative Practices in AI-Empowered Cultural Narratives Along the Silk Road}
+  {Human-Machine Co-creation in AI-Empowered Silk Road Cultural Narratives}
   {}
   {Research Assistant \textbar{} PI: Xinxin Li, Lanzhou University}{Mar. 2025 - May. 2025}
 \resumeItemListStart
@@ -354,46 +361,44 @@
 %   AWARDS
 %----------------------------------------------------------------------------------------
 \section{\textbf{Selected Awards and Honors}}
-\vspace{-0.4mm}
-\resumeSubHeadingListStart
+\resumeHeadingSkillStart
 \resumePOR{China Data Journalism Competition}
-    {, \textit{Second Prize} [\href{https://www.chiselli.com/categories/data-journalism-projects/}{\textcolor{darkblue}{\faGlobe}}]}
+    {, Second Prize [\href{https://www.chiselli.com/categories/data-journalism-projects/}{\textcolor{darkblue}{\faGlobe}}]}
     {Nov. 2025}
 \resumePOR{China Statistical Modeling Competition, Lanzhou University Campus Round}
-    {, \textit{Second Prize} [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_China_Statistical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
+    {, Second Prize [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_China_Statistical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
     {May. 2026}
 \resumePOR{Central China Mathematical Modeling Competition}
-    {, \textit{Second Prize} [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_Huazhong_Cup_Mathematical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
+    {, Second Prize [\href{https://github.com/MiShenng/Mathematics_and_Statistical_Modeling_Competition_Record/tree/main/2026_Huazhong_Cup_Mathematical_Modeling_Competition}{\textcolor{darkblue}{\faGlobe}}]}
     {May. 2026}
 \resumePOR{China University Campus Media Competition}
-    {, \textit{Public Service Communication Award} [\href{https://www.chiselli.com/images/\%E6\%A0\%A1\%E5\%9B\%AD\%E5\%AA\%92\%E4\%BD\%93\%E5\%A4\%A7\%E8\%B5\%9B.jpg}{\textcolor{darkblue}{\faGlobe}}]}
+    {, Public Service Communication Award [\href{https://www.chiselli.com/images/\%E6\%A0\%A1\%E5\%9B\%AD\%E5\%AA\%92\%E4\%BD\%93\%E5\%A4\%A7\%E8\%B5\%9B.jpg}{\textcolor{darkblue}{\faGlobe}}]}
     {Nov. 2025}
 \resumePOR{14th China Tower Journalists' Day}
-    {, \textit{Grand Prize in the Communications Category} [\href{https://www.chiselli.com/images/\%E9\%93\%81\%E5\%A1\%94\%E8\%AE\%B0\%E8\%80\%85\%E8\%8A\%82.jpg}{\textcolor{darkblue}{\faGlobe}}]}
+    {, Grand Prize in the Communications Category [\href{https://www.chiselli.com/images/\%E9\%93\%81\%E5\%A1\%94\%E8\%AE\%B0\%E8\%80\%85\%E8\%8A\%82.jpg}{\textcolor{darkblue}{\faGlobe}}]}
     {Dec. 2025}
 \resumePOR{Lanzhou University Outstanding Student Scholarship}
     { [\href{https://www.chiselli.com/images/\%E4\%B8\%89\%E7\%AD\%89\%E5\%A5\%96\%E5\%AD\%A6\%E9\%87\%91.jpg}{\textcolor{darkblue}{\faGlobe}}]}
     {Sep. 2023 - Sep. 2024}
-\resumeSubHeadingListEnd
+\resumeHeadingSkillEnd
 
 %----------------------------------------------------------------------------------------
 %   SKILLS
 %----------------------------------------------------------------------------------------
 \section{\textbf{Skills}}
-\vspace{-0.4mm}
  \resumeHeadingSkillStart
   \resumeSubItem{Programming:}
-    {R, Python, web development (HTML, CSS), AI4SS}
+    {R, Python, Web Development (HTML, CSS), AI4SS}
   \resumeSubItem{Quantitative Methods:}
-    {Fundamentals of probability and statistics, regression, ANOVA}
+    {Fundamentals of probability and statistics, Regression, ANOVA}
   \resumeSubItem{Computational Methods:}
-    {Natural language processing, automated content analysis, topic modeling, machine learning, image-as-data}
+    {NLP, Automated content analysis, Topic modeling, Machine learning, Images-as-data}
   \resumeSubItem{Qualitative Methods:}
-    {Interviews, coding, content analysis, field research}
+    {Interviews, Coding, Content analysis, Field research}
   \resumeSubItem{Languages:}
     {Mandarin (Native), English (TOEFL iBT: 5.0/6.0 (equivalent to 100/120; CEFR C1))}
   \resumeSubItem{Production Tools:}
-    {\LaTeX, Microsoft Office Suite, photography}
+    {\LaTeX, Microsoft Office Suite, Photography}
  \resumeHeadingSkillEnd
 
 \end{document}
