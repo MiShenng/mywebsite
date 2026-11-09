@@ -79,7 +79,7 @@ posts = "/posts/:year/:month/:day/:slug/"
 
 [params.social]
     github = "https://github.com/MiShenng"
-    email = "lizihao2023@lzu.edu.cn"
+    email = "chiselli@outlook.com"
     douban = "https://www.douban.com/people/MiShenng/"
     facebook = "https://www.facebook.com/share/1CRZUWhnFp/"
 
