@@ -67,11 +67,11 @@ posts = "/posts/:year/:month/:day/:slug/"
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    favicon = "media/symbol.png"
+    favicon = "images/branding/favicon.png"
     # Edit by yourself:
     GithubEdit = "https://github.com/MiShenng/mywebsite/edit/main/content"
     copyright = "&copy;"
-    copyrightYear = "2024-2025"
+    copyrightStartYear = 2024
     # Edit by yourself:
     GithubRepo = "https://github.com/MiShenng/mywebsite"
     # Edit by yourself:
@@ -80,12 +80,11 @@ posts = "/posts/:year/:month/:day/:slug/"
 [params.social]
     github = "https://github.com/MiShenng"
     email = "chiselli@outlook.com"
-    douban = "https://www.douban.com/people/MiShenng/"
     facebook = "https://www.facebook.com/share/1CRZUWhnFp/"
 
 [params.logo]
   # Change the logo picture as your prefer:
-  url = "media/symbol.svg" # you can change it
+  url = "images/branding/symbol.svg" # you can change it
   width = 50.0
   height = 50.0
   alt = "Lizao"

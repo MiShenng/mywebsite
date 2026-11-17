@@ -18,7 +18,11 @@
   {{ partial "foot_custom.html" . }}
 
   <div class="footer-copyright">
-    &copy; Lizao 2024-2026
+    &copy; Lizao {{ .Site.Params.copyrightStartYear }}—<span id="copyright-current-year">{{ now.Year }}</span>
   </div>
+
+  <script>
+    document.getElementById('copyright-current-year').textContent = new Date().getFullYear();
+  </script>
 
 </footer>

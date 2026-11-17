@@ -2,8 +2,9 @@
 .DS_Store
 
 # Hugo
-# Note: /public/ is intentionally tracked because the current deploy flow commits it.
-# If Vercel rebuilds from source, you can add /public/ here too.
+# Vercel rebuilds from source; generated output stays local.
+/public/
+/publish/
 /resources/
 .hugo_build.lock
 
@@ -35,3 +36,11 @@ texput.log
 *.swp
 *~
 .vscode/
+.vercel
+.env*
+
+# Local previews, exports and assistant session logs
+/tmp/
+/output/
+/.claude/logs/
+__pycache__/

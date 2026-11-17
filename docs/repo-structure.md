@@ -1,126 +1,96 @@
-# Repository structure
+# 仓库结构与素材路径
 
-A Hugo static site (theme: `hugo-ht`, a git submodule), hosted on Vercel.
-This doc is a map for adding content later without breaking the build.
+网站以 `content/`、`layouts/`、`static/` 和 `config.toml` 为源文件，由 Hugo 构建到 `public/`。Vercel 从源码重新构建。
 
-## Top-level layout
+## 顶层目录
 
-```
+```text
 quickstart/
-├── config.toml          # Site config: baseURL, menus, params, markup. EDIT for nav/site settings.
-├── vercel.json          # Pins HUGO_VERSION=0.122.0 for Vercel builds. Rarely edit.
-├── .gitignore
-├── .gitmodules          # Declares the hugo-ht theme submodule
-├── README.md
-│
-├── content/             # ★ All site content (Markdown). This is where you ADD posts/pages.
-├── static/              # Files served as-is at the site root (images, media, css, favicon)
-├── layouts/             # HTML templates that override the theme
-├── archetypes/          # Front-matter templates used by `hugo new`
-├── themes/hugo-ht/      # Theme (git submodule — see "Theme" below)
-├── assets/ data/ i18n/  # Hugo pipeline dirs (currently mostly empty)
-│
-├── cv/                  # ★ LaTeX CV sources + compiled PDFs (see "CV" below)
-├── scripts/             # Project shell scripts (deploy.sh)
-├── docs/                # This documentation (deploy-notes.md, repo-structure.md)
-├── .claude/             # Claude Code config + the sync-cv.sh hook
-│
-├── public/              # Generated build output. STILL committed (legacy); Vercel rebuilds it.
-└── resources/           # Hugo's _gen cache (gitignored)
+├── config.toml                 # 网站配置
+├── vercel.json                 # 固定 Hugo 版本
+├── README.md                   # 日常入口
+├── content/                    # 中英文文章、首页、分类页
+├── layouts/                    # 主题模板覆盖
+├── static/                     # 直接发布的文件
+├── assets/archive/             # 非公开历史素材
+├── cv/                         # 正式简历源码和 PDF
+├── scripts/
+│   ├── deploy.sh               # 现有提交推送脚本
+│   └── content/                # 阅读笔记维护脚本
+├── docs/                       # 仓库、部署和 Git 说明
+├── archetypes/                 # Hugo 新页面模板
+├── themes/hugo-ht/             # 主题子模块
+├── .claude/                    # 工具配置及 CV 同步钩子
+├── public/                     # Hugo 生成目录，忽略
+├── resources/                  # Hugo 缓存，忽略
+├── tmp/                        # 临时检查、试排和旧构建，忽略
+└── output/                     # 本地导出，忽略
 ```
 
-## Content (`content/`) — how to add a page
+`public/`、`publish/` 的历史生成文件不再跟踪；`publish/` 的本地旧副本移入 `tmp/repo-organization/previous-publish/`。原 `public/` 副本也保存在 `tmp/repo-organization/previous-public/`，当前 `public/` 已按新路径重新构建。需要预览时重新运行 `hugo`，不要手动编辑生成的 HTML。
 
-Content is bilingual, split by top-level language folder:
+## 素材分类
 
-```
-content/
-├── _index.md            # Site landing
-├── en/                  # English site (default language)
-│   ├── _index.md
-│   ├── about/           # About page + CV.md (type: cv)
-│   └── posts/           # Blog posts
-├── cn/                  # Chinese site
-│   ├── about/           # 关于 + CV.md
-│   ├── posts/           # 日志
-│   ├── readings/        # 读书笔记
-│   ├── css-reading/     # CSS 阅读
-│   └── 留学/            # 留学相关
-└── categories/          # Taxonomy pages
-```
+| 用途 | 源文件目录 | 对应网页路径 |
+| --- | --- | --- |
+| 首页头像 | `static/images/profile/` | `/images/profile/portrait.jpg` |
+| 旅行照片 | `static/images/travel/` | `/images/travel/文件名` |
+| 项目封面 | `static/images/projects/` | `/images/projects/文件名` |
+| 其他证书 | `static/images/awards/` | `/images/awards/文件名` |
+| Logo、favicon、图标 | `static/images/branding/` | `/images/branding/文件名` |
+| 阅读文章 PDF | `static/documents/readings/` | `/documents/readings/文件名` |
+| 陪诊专题的图片、图表、脚本 | `static/data-news-companion/assets/`、`css/`、`js/` | `/data-news-companion/` 下同名路径 |
+| 未启用的旧素材 | `assets/archive/` | 不发布 |
 
-To add a blog post, create a Markdown file under the right language's `posts/`, e.g.
-`content/en/posts/2026-06-09-my-title.md`, with front matter (use
-`archetypes/default.md` as the template):
+`static/` 前缀不会出现在网址中。例如：
 
-```yaml
----
-title: "My Title"
-date: 2026-06-09
-slug: my-title          # becomes the URL segment
-draft: false
-categories: []
-tags: []
----
+```markdown
+![头像](/images/profile/portrait.jpg)
+[阅读材料](/documents/readings/bai.pdf)
 ```
 
-Permalinks (set in `config.toml`): `cn` and `en` posts resolve to
-`/{lang}/:year/:month/:day/:slug/`.
+移动素材时，搜索并更新 `content/`、`layouts/`、`config.toml` 中的引用；页面图片和分享卡片图片都要更新。文件名有中文时，引用仍可直接使用中文。
 
-### Known wart (not changed)
-`content/en/2026-5-8/index.html` is a single stray bundle sitting next to the real
-sections. Left in place because it may map to a live URL. Decide later whether to move
-it under `content/en/posts/` or delete it.
+根目录原来的五张图片与静态素材逐字节相同，已去重；项目封面统一保留在 `static/images/projects/`。
 
-## Static assets (`static/`)
+## 简历相关路径
 
-Everything here is served from the **site root**. Reference with an absolute path:
+正式英文简历是 `cv/english_cv.tex` 与 `cv/english_cv.pdf`。
 
-```
-static/
-├── media/               # PDFs, SVG logos. The CV PDF here is a SYMLINK -> ../../cv/english_cv.pdf
-│   ├── english_cv.pdf -> ../../cv/english_cv.pdf
-│   └── pdfs/            # Other linked PDFs (transcripts, papers)
-├── images/  css/  favicon.ico
+```text
+static/media/english_cv.pdf -> ../../cv/english_cv.pdf
+static/media/pdfs/          # 成绩单
 ```
 
-Example reference in Markdown: `[CV](/media/english_cv.pdf)`,
-`[transcript](/media/pdfs/lanzhou_transcript_en.pdf)`.
+已在简历中发送或嵌入的公开地址保持原样：
 
-## CV (`cv/`)
+- `/media/english_cv.pdf`
+- `/media/pdfs/Lizihao_Transcript.pdf`
+- `/media/pdfs/taiwan_transcript.pdf`
+- 其他现有成绩单文件
+- `/images/校园媒体大赛.jpg`
+- `/images/铁塔记者节.jpg`
+- `/images/三等奖学金.jpg`
 
-```
-cv/
-├── english_cv.tex       # English CV source (XeLaTeX)
-├── english_cv.pdf       # ★ Tracked final PDF (served via the static/media symlink)
-├── photo-for-cv.png
-└── build/               # Compile here; gitignored. Keeps aux/log/fls out of the source dir.
-```
+最后三张证书因被简历 PDF 直接引用，暂留 `static/images/` 根目录；后续改简历时再一起调整。不要仅移动图片而不重新生成简历内的链接。
 
-Compile + publish:
+编译临时文件放在 `cv/build/`。原来散落在根目录及 `cv/` 的编译产物已收进 `cv/build/legacy/`。
+
+## 内容与脚本
+
+- 中文页面：`content/cn/`；英文页面：`content/en/`。
+- 首页：`content/_index.md`；分类：`content/categories/`。
+- 阅读维护脚本：`scripts/content/update_headings.py`、`scripts/content/update_translations.py`。两者按脚本所在位置定位仓库，不再绑定个人电脑的绝对路径。
+- 这两个脚本会批量改写阅读笔记，属于按需运行的维护工具，本次没有执行它们。
+- `layouts/partials/foot_custom.html` 覆盖主题中写错的脚本路径，实际加载现有的 `js/center-image.js`。无需修改主题子模块。
+
+## 验证
 
 ```bash
-cd cv
-xelatex -output-directory=build english_cv.tex   # build artifacts stay in build/
-cp build/english_cv.pdf english_cv.pdf           # update the tracked PDF the site serves
+hugo --destination tmp/site-check --cleanDestinationDir
+git diff --check
 ```
 
-A PostToolUse hook (`.claude/sync-cv.sh`) keeps `static/media/*.pdf` in sync with
-`cv/*.pdf`. The static files are symlinks, so updating `cv/*.pdf` is usually enough.
+检查首页图片、导航 Logo、favicon、分享卡片图片、阅读材料下载、CV 页面及陪诊专题。英文简历 PDF 须与最新源码对应；成绩单和简历引用的证书地址保持有效。
 
-## Theme (`themes/hugo-ht`)
-
-A git submodule. After a fresh clone it is empty — initialize it before building:
-
-```bash
-git submodule update --init --recursive
-```
-
-`layouts/` in the repo root overrides matching theme templates (e.g. `layouts/cv/single.html`
-renders the CV page).
-
-## Build & deploy
-
-- Local preview: `hugo server --buildDrafts --disableFastRender` → http://localhost:1313/
-- Deploy: `bash scripts/deploy.sh` (commits + pushes; Vercel rebuilds from source).
-- See `docs/deploy-notes.md` for details.
+构建产物、预览 PDF 和会话日志都应留在忽略目录中。新增素材只放一份可维护的源文件，不要再从构建目录复制回仓库根目录。

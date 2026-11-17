@@ -199,7 +199,7 @@ figure {
   gap: 12px;
   flex-wrap: nowrap;
   white-space: nowrap;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .home-contact-link {
@@ -217,9 +217,9 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 19px;
-  height: 19px;
-  font-size: 19px;
+  width: 21px;
+  height: 21px;
+  font-size: 21px;
   line-height: 1;
 }
 
