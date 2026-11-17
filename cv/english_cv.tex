@@ -43,7 +43,7 @@
 % Page layout
 \setlength{\multicolsep}{0pt} 
 \pagestyle{empty}
-\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\geometry{left=1.4cm, top=0.6cm, right=1.2cm, bottom=1cm}
 
 % Hyperlink setup (moved after fancyhdr to address warning)
 \usepackage[hidelinks]{hyperref}
@@ -136,9 +136,9 @@
 \newcommand{\resumeEducationListStart}{\begin{itemize}[leftmargin=3.4mm,labelsep=1mm,topsep=0pt,partopsep=0pt,itemsep=1mm,parsep=0pt]}
 \newcommand{\resumeProjectListStart}{\begin{itemize}[leftmargin=0mm,label={},topsep=0pt,partopsep=0pt,itemsep=1.2mm,parsep=0pt]}
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=3.4mm,topsep=0pt,partopsep=0pt,itemsep=3.9bp,parsep=0pt,rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0pt,partopsep=0pt,before=\vspace{4.65bp},itemsep=0.5mm]}
-\newcommand{\resumeEducationItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0pt,partopsep=0pt,before=\vspace{3.4bp},itemsep=0.3mm,parsep=0pt]}
-\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=4mm,label=\textbullet,topsep=0pt,partopsep=0pt,before=\vspace{4.65bp},itemsep=0.4mm]\small}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0pt,partopsep=0pt,before=\vspace{4.65bp},itemsep=0.5mm]\justifying}
+\newcommand{\resumeEducationItemListStart}{\begin{itemize}[leftmargin=3.6mm,labelsep=1mm,topsep=0pt,partopsep=0pt,before=\vspace{3.4bp},itemsep=0.3mm,parsep=0pt]\justifying}
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=4mm,label=\textbullet,topsep=0pt,partopsep=0pt,before=\vspace{4.65bp},itemsep=0.4mm]\small\justifying}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3mm}}
 \newcommand{\resumeEducationListEnd}{\end{itemize}}
@@ -199,12 +199,12 @@
 
 % Header
 \begin{center}
-    {\fontsize{22bp}{20.4bp}\selectfont\textbf{ZIHAO LI}}
+    {\fontsize{20bp}{20.4bp}\selectfont\textbf{ZIHAO LI}}
 \end{center}
 \vspace{-6mm}
 
 \begin{center}
-    \fontsize{12bp}{12bp}\selectfont{
+    \fontsize{10bp}{12bp}\selectfont{
     +86 13618297005 | \href{mailto:chiselli@outlook.com}{chiselli@outlook.com} |
     \href{https://chiselli.com}{chiselli.com}
     }
@@ -212,12 +212,12 @@
 \vspace{-6mm}
 
 \begin{center}
-    \fontsize{12bp}{12bp}\selectfont{
+    \fontsize{10bp}{12bp}\selectfont{
     \socialicon{\faGithub} \href{https://github.com/MiShenng}{MiShenng} | 
     \socialicon{\faFacebookF} \href{https://www.facebook.com/profile.php?id=61580511956572}{Zihao Li}
     }
 \end{center}
-\vspace{-3.5mm}
+\vspace{\dimexpr-5mm-1.5bp\relax}
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION
@@ -229,7 +229,7 @@
 {Lanzhou University}{Lanzhou}
 {B.A. in Journalism}{Sep. 2023 - Jun. 2027}
 \resumeEducationItemListStart
-\item \textbf{Relevant Coursework:} New Media User Analysis (95), Media Criticism (95), Research Methods in Communication Studies (95), Data Journalism (95), Public Opinion (94), Introduction to Communication (95), Communication Psychology (91)
+\item \textbf{Relevant Coursework:} New Media User Analysis (95), Media Criticism (95), Research Methods in Communication Studies (95), Data Journalism (95), Public Opinion (94), Introduction to Communication (95), Introduction to the New Media (95), Communication Psychology (91)
 \item \textbf{GPA:} \href{https://www.chiselli.com/media/pdfs/Lizihao_Transcript.pdf}{4.07/5}
 \resumeEducationItemListEnd
 
@@ -251,18 +251,18 @@
 
 % Full title: Should I Stay Calm: How Does the Combination of Visual and Textual Frames Influence Expressions of Anger in Short Video Comment Sections?
 \resumeProject
-  {Should I Stay Calm? Visual and Textual Frames and Anger in Short-Video Comments}
+  {Should I Stay Calm: How Does the Combination of Visual and Textual Frames Influence Expressions of Anger in Short Video Comment Sections?}
   {\textbf{Zihao Li}.*}
   {\textit{AEJMC} 2026}
   {{}[\href{https://github.com/MiShenng/visual_textual_frames_anger}{\textcolor{darkblue}{\faGlobe}}]}
 \resumeProjectItemListStart
   \item Developed an AI-agent-based approach to automate the analysis of visual and textual affective frames in short videos. Used machine learning to measure anger in audience comments and examined associations between multimodal frame combinations and anger around a controversial Chinese policy.
-  \item Found that visual and textual frames tended to align and were independently associated with audience anger. A two-way ANOVA showed significant main effects for both modalities but no significant interaction.
+  \item Found that visual and textual frames in short videos tended to align and were independently associated with audience anger. A two-way ANOVA showed significant main effects for both modalities but no significant interaction.
 \resumeProjectItemListEnd
 
 % Full title: Generation, Negotiation, and Connection: Participatory Curation and Platformized Production of Urban Digital Memory on Short-Video Platforms
 \resumeProject
-  {Generation, Negotiation, and Connection: Participatory Curation and Platformized Urban Digital Memory}
+  {Generation, Negotiation, and Connection: Participatory Curation and Platformized Production of Urban Digital Memory on Short-Video Platforms}
   {M. Xiao, R. Zhao, \& \textbf{Zihao Li}.*}
   {\textit{Chinese Platform Studies Academic Workshop} 2026}
   {}
@@ -273,10 +273,31 @@
 
 \resumeProjectListEnd
 
-
 %----------------------------------------------------------------------------------------
 \section{\textbf{Working Papers}}
 \resumeProjectListStart
+
+% Full title: From Emotion to Hostility: Discrete Negative Emotions and Gender-Directed Incivility in Chinese Gender-Issue Short Videos
+\resumeProject
+  {From Emotion to Hostility: Discrete Negative Emotions and Gender-Directed Incivility in Chinese Gender-Issue Short Videos}
+  {\textbf{Zihao Li}.*}
+  {Under Review, \textit{ICA} 2027}
+  {{}[\href{https://github.com/MiShenng/Gender-Polarization-and-Hate-Speech}{\textcolor{darkblue}{\faGlobe}}]}
+\resumeProjectItemListStart
+  \item Studied gender-related discussions on Douyin using a multimodal emotion model to measure discrete negative emotions as predictors. Coded video topics and narrative techniques as moderators using a large vision model. Developed a supervised classifier to identify incivility and toxic comments targeting women and men. Applied binomial regression and interaction tests to examine emotion--incivility associations.
+  \item Found that anger was positively associated with incivility and fear negatively associated, with both associations moderated by video topics and selected narrative techniques. Across all topics, toxic comments targeting women outnumbered those targeting men.
+\resumeProjectItemListEnd
+
+% Full title: See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos in China
+\resumeProject
+  {See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos in China}
+  {\textbf{Zihao Li}.*}
+  {Under Review, \textit{ICA} 2027}
+  {{}[\href{https://github.com/MiShenng/Bilibili-Health-Visual-Clickbait}{\textcolor{darkblue}{\faGlobe}}]}
+\resumeProjectItemListStart
+  \item Examined visual clickbait in health-related Bilibili videos using computational methods. Collected thumbnails and engagement data, using LLM-assisted coding and Chinese-CLIP to measure visual cues and thumbnail--title congruence. Applied negative binomial regression to examine engagement outcomes.
+  \item Found that binary clickbait measures may obscure differences among visual strategies. Clickbait was positively associated with views; after adjusting for view counts, it was negatively associated with likes, coins, favorites, and shares, highlighting differences between attention and deeper engagement.
+\resumeProjectItemListEnd
 
 \resumeProject
   {Moral Cues in Visual Misinformation: Visual Event Schemas and the Moral Reorientation of Authentic Images}
@@ -286,28 +307,6 @@
 \resumeProjectItemListStart
   \item Combined Moral Foundations Theory with visual event schemas to examine how false captions reconstruct the moral meanings of authentic images in cheap fakes, providing a framework for understanding image--text interactions in multimodal misinformation.
   \item Contributed to research design, data collection, analysis, and manuscript writing. Paired false claims with the original contexts of corresponding images, extracted variables using computer vision, and conducted latent class analysis and linear regression.
-\resumeProjectItemListEnd
-
-% Full title: From Emotion to Hostility: Discrete Negative Emotions and Gender-Directed Incivility in Chinese Gender-Issue Short Videos
-\resumeProject
-  {From Emotion to Hostility: Discrete Emotions and Gender-Directed Incivility in Chinese Gender-Issue Videos}
-  {\textbf{Zihao Li}.*}
-  {Under Review, \textit{ICA} 2027}
-  {{}[\href{https://github.com/MiShenng/Gender-Polarization-and-Hate-Speech}{\textcolor{darkblue}{\faGlobe}}]}
-\resumeProjectItemListStart
-  \item Studied gender-related discussions on Douyin using a multimodal emotion model to measure discrete negative emotions as predictors. Coded video topics and narrative techniques as moderators using a large vision model. Developed a supervised classifier to identify incivility and toxic comments targeting women and men. Applied binomial regression and interaction tests to examine emotion--incivility associations.
-  \item Found that anger was positively associated with incivility and fear negatively associated, with both associations moderated by video topics and selected narrative techniques. Across all topics, toxic comments targeting women outnumbered those targeting men.
-\resumeProjectItemListEnd
-
-% Full title: See It, Click It? How Visual Clickbait Shapes Stratified User Engagement in Health-Related Videos on China's Bilibili
-\resumeProject
-  {See It, Click It? Visual Clickbait and Stratified Engagement in Bilibili Health Videos}
-  {\textbf{Zihao Li}.*}
-  {Under Review, \textit{ICA} 2027}
-  {{}[\href{https://github.com/MiShenng/Bilibili-Health-Visual-Clickbait}{\textcolor{darkblue}{\faGlobe}}]}
-\resumeProjectItemListStart
-  \item Examined visual clickbait in health-related Bilibili videos using computational methods. Collected thumbnails and engagement data, using LLM-assisted coding and Chinese-CLIP to measure visual cues and thumbnail--title congruence. Applied negative binomial regression to examine engagement outcomes.
-  \item Found that binary clickbait measures may obscure differences among visual strategies. Clickbait was positively associated with views; after adjusting for view counts, it was negatively associated with likes, coins, favorites, and shares, highlighting differences between attention and deeper engagement.
 \resumeProjectItemListEnd
 
 \resumeProjectListEnd
@@ -334,7 +333,7 @@
   {Research Assistant \textbar{} PI: Xinxin Li, Lanzhou University}{Mar. 2025 - May. 2025}
 \resumeItemListStart
 \item Compiled and organized narrative materials on the historical development of the Silk Road.
-\item Synthesized research trends in Silk Road studies across multiple social science disciplines and developed them into a comprehensive literature review.
+\item Synthesized research trends in Silk Road studies across multiple social science disciplines and developed them into a comprehensive literature review. Serve as a research assistant to support applications for the National Social Science Fund.
 \resumeItemListEnd
 
 \resumeExperience
@@ -387,12 +386,12 @@
 %----------------------------------------------------------------------------------------
 \section{\textbf{Skills}}
  \resumeHeadingSkillStart
-  \resumeSubItem{Programming:}
-    {R, Python, Web Development (HTML, CSS), AI4SS}
+   \resumeSubItem{Programming:}
+    {R, Python, Web development (HTML, CSS)}
   \resumeSubItem{Quantitative Methods:}
     {Fundamentals of probability and statistics, Regression, ANOVA}
   \resumeSubItem{Computational Methods:}
-    {NLP, Automated content analysis, Topic modeling, Machine learning, Images-as-data}
+    {Computational Text Analysis, Computer Vision, Machine Learning, AI4SS}
   \resumeSubItem{Qualitative Methods:}
     {Interviews, Coding, Content analysis, Field research}
   \resumeSubItem{Languages:}
