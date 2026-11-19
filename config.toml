@@ -72,6 +72,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     GithubEdit = "https://github.com/MiShenng/mywebsite/edit/main/content"
     copyright = "&copy;"
     copyrightStartYear = 2024
+    clarityProjectID = "zfyn1x41nt"
     # Edit by yourself:
     GithubRepo = "https://github.com/MiShenng/mywebsite"
     # Edit by yourself:
